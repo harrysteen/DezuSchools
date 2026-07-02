@@ -2,6 +2,9 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import tenageboy from "../Assets/image 25.png"
+import heroStar from "../Assets/Home-herosection-start.png"
+import creatorsUnderline from "../Assets/home-hero-create-underline.png"
 import { 
   ArrowRight, 
   ArrowDown, 
@@ -42,8 +45,7 @@ export default function Home() {
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
           <Link href="#workshop" className="hover:text-secondary transition relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-secondary after:scale-x-100">3-day workshop</Link>
           <Link href="#programs" className="hover:text-secondary transition">programs</Link>
-          <Link href="#why-dezu" className="hover:text-secondary transition">why dezu</Link>
-          <Link href="#mentors" className="hover:text-secondary transition">mentors</Link>
+          <Link href="/why-dezu" className="hover:text-secondary transition">why dezu</Link>
           <Link href="#stories" className="hover:text-secondary transition">stories</Link>
           <Link href="#contact" className="hover:text-secondary transition">contact</Link>
         </nav>
@@ -80,8 +82,7 @@ export default function Home() {
           <nav className="flex flex-col items-center gap-6 text-2xl font-bold">
             <Link href="#workshop" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">3-day workshop</Link>
             <Link href="#programs" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">programs</Link>
-            <Link href="#why-dezu" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">why dezu</Link>
-            <Link href="#mentors" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">mentors</Link>
+            <Link href="/why-dezu" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">why dezu</Link>
             <Link href="#stories" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">stories</Link>
             <Link href="#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">contact</Link>
           </nav>
@@ -97,12 +98,12 @@ export default function Home() {
       )}
 
       {/* SECTION 1: HERO */}
-      <section className="pt-36 pb-0 px-6 max-w-7xl mx-auto relative overflow-hidden min-h-[85vh] flex flex-col justify-end">
+      <section className="pt-36 pb-0 w-full relative overflow-hidden min-h-[85vh] flex flex-col justify-end">
         {/* Background decorative elements */}
-        <div className="absolute top-24 left-6 w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10"></div>
+        <div className="absolute top-16 left-[-40px] w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10"></div>
         <div className="absolute bottom-24 right-48 w-48 h-48 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+        <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
           
           {/* Hero Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left pb-16">
@@ -113,16 +114,35 @@ export default function Home() {
                 Future
               </span>
               <br />
-              <span className="text-5xl md:text-7xl text-dark relative mt-4 inline-block font-normal font-serif italic tracking-wide">
+              <span 
+                style={{
+                  fontFamily: "var(--font-instrument), serif",
+                  fontWeight: 400,
+                  fontStyle: "italic",
+                  letterSpacing: "-1.52px",
+                  verticalAlign: "middle",
+                }}
+                className="text-5xl md:text-[100px] text-dark relative mt-4 inline-block tracking-wide"
+              >
                 creators.
                 {/* Custom Orange Paint Stroke */}
-                <svg className="absolute bottom-[-15px] left-0 w-full h-[20px] text-secondary" viewBox="0 0 300 20" fill="none" preserveAspectRatio="none">
-                  <path d="M5 15C50 15 150 5 295 12" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
-                </svg>
+                <img 
+                  src={creatorsUnderline.src} 
+                  alt="creators underline" 
+                  className="absolute bottom-[-15px] left-0 w-full object-contain"
+                />
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-dark/80 font-medium max-w-xl mb-8 leading-relaxed mt-4">
+            <p 
+              style={{
+                fontFamily: "var(--font-bai-jamjuree), sans-serif",
+                fontWeight: 400,
+                letterSpacing: "normal",
+                verticalAlign: "middle",
+              }}
+              className="text-base md:text-[19.86px] md:leading-[28.79px] text-dark/80 max-w-xl mb-8 mt-4"
+            >
               DEZU isn't a school — it's a studio for the kids who will design what comes next. 
               We turn curious minds into <strong className="font-extrabold text-primary">researchers, makers, storytellers</strong> and confident creative thinkers, from <strong className="font-extrabold text-secondary">age 8</strong> onwards.
             </p>
@@ -146,12 +166,14 @@ export default function Home() {
           {/* Hero Right Content - Student Cutout & Stickers */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[500px] items-end overflow-visible">
             
-            <div className="relative w-full max-w-[420px] h-[520px] flex items-end">
+            <div className="relative w-full max-w-[420px] h-[520px] flex items-end isolate">
               {/* Orange Star sits behind boy's head */}
-              <div className="absolute top-[8%] left-[45%] -translate-x-1/2 -z-10 text-secondary w-36 h-36 animate-pulse">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full">
-                  <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192L12 .587z"/>
-                </svg>
+              <div className="absolute top-[-10%] left-[72%] -translate-x-1/2   h-44  ">
+                <img 
+                  src={heroStar.src} 
+                  alt="Hero Star" 
+                  className="w-full h-full object-contain"
+                />
               </div>
 
               {/* Purple outline concentric loops */}
@@ -168,7 +190,7 @@ export default function Home() {
               
               {/* Teenager Boy Image Cutout */}
               <img 
-                src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop" 
+                src={tenageboy.src} 
                 alt="Student future creator" 
                 className="w-full h-full object-contain object-bottom mix-blend-multiply grayscale-[10%]"
               />
@@ -1215,7 +1237,7 @@ export default function Home() {
           <div className="md:col-span-3">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">ABOUT</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
-              <li><Link href="#why-dezu" className="hover:text-secondary transition">Our Philosophy</Link></li>
+              <li><Link href="/why-dezu" className="hover:text-secondary transition">Our Philosophy</Link></li>
               <li><Link href="#mentors" className="hover:text-secondary transition">Faculty</Link></li>
               <li><Link href="#programs" className="hover:text-secondary transition">Schools</Link></li>
               <li><Link href="#stories" className="hover:text-secondary transition">Journal</Link></li>
