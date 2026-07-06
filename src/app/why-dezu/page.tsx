@@ -42,17 +42,17 @@ export default function WhyDezu() {
 
         {/* Desktop Nav Links */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
-          <Link href="/#workshop" className="hover:text-secondary transition">3-day workshop</Link>
+          <Link href="/workshop" className="hover:text-secondary transition">3-day workshop</Link>
           <Link href="/#programs" className="hover:text-secondary transition">programs</Link>
           <Link href="/why-dezu" className="hover:text-secondary transition relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-secondary after:scale-x-100">why dezu</Link>
-          <Link href="/#stories" className="hover:text-secondary transition">stories</Link>
-          <Link href="/#contact" className="hover:text-secondary transition">contact</Link>
+          <Link href="/stories" className="hover:text-secondary transition">stories</Link>
+          <Link href="/contact" className="hover:text-secondary transition">contact</Link>
         </nav>
 
         {/* Right Action Button */}
         <div className="hidden md:block">
           <Link 
-            href="/#contact" 
+            href="/contact" 
             className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-opacity-95 transition shadow-md flex items-center gap-1 active:scale-95"
           >
             Book a Presentation
@@ -79,15 +79,15 @@ export default function WhyDezu() {
           </button>
           
           <nav className="flex flex-col items-center gap-6 text-2xl font-bold">
-            <Link href="/#workshop" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">3-day workshop</Link>
+            <Link href="/workshop" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">3-day workshop</Link>
             <Link href="/#programs" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">programs</Link>
             <Link href="/why-dezu" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display text-secondary">why dezu</Link>
-            <Link href="/#stories" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">stories</Link>
-            <Link href="/#contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">contact</Link>
+            <Link href="/stories" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">stories</Link>
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">contact</Link>
           </nav>
 
           <Link 
-            href="/#contact" 
+            href="/contact" 
             onClick={() => setMobileMenuOpen(false)}
             className="bg-secondary text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-opacity-95 transition shadow-lg mt-4 font-display"
           >
@@ -144,7 +144,7 @@ export default function WhyDezu() {
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link 
-                href="/#contact" 
+                href="/contact" 
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200 w-full sm:w-auto text-center"
               >
                 More On dezu <ArrowRight size={18} />
@@ -425,7 +425,7 @@ export default function WhyDezu() {
             </p>
             <div>
               <Link 
-                href="/#contact" 
+                href="/contact" 
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
               >
                 Apply to Mentor <ArrowRight size={18} />
@@ -463,7 +463,7 @@ export default function WhyDezu() {
           <div className="md:col-span-3">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">PROGRAMS</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
-              <li><Link href="/#workshop" className="hover:text-secondary transition">Workshop</Link></li>
+              <li><Link href="/workshop" className="hover:text-secondary transition">Workshop</Link></li>
               <li><Link href="/#programs" className="hover:text-secondary transition">Design Elective</Link></li>
               <li><Link href="/#programs" className="hover:text-secondary transition">Cross-Curricular</Link></li>
               <li><Link href="/#programs" className="hover:text-secondary transition">DEZU Studio</Link></li>
@@ -477,7 +477,7 @@ export default function WhyDezu() {
               <li><Link href="/why-dezu" className="hover:text-secondary transition">Our Philosophy</Link></li>
               <li><Link href="/#mentors" className="hover:text-secondary transition">Faculty</Link></li>
               <li><Link href="/#programs" className="hover:text-secondary transition">Schools</Link></li>
-              <li><Link href="/#stories" className="hover:text-secondary transition">Journal</Link></li>
+              <li><Link href="/stories" className="hover:text-secondary transition">Journal</Link></li>
             </ul>
           </div>
 
