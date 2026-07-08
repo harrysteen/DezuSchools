@@ -1,22 +1,11 @@
 import type { Metadata } from "next";
-import { Bakbak_One, Inter, Playfair_Display, Instrument_Serif, Bai_Jamjuree } from "next/font/google";
+import { Bakbak_One, Instrument_Serif, Bai_Jamjuree } from "next/font/google";
 import "./globals.css";
 
 const bakbakOne = Bakbak_One({
   variable: "--font-bakbak-one",
   subsets: ["latin"],
   weight: "400",
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
-
-const playfairDisplay = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-  style: ["normal", "italic"],
 });
 
 const instrumentSerif = Instrument_Serif({
@@ -45,7 +34,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${bakbakOne.variable} ${inter.variable} ${playfairDisplay.variable} ${instrumentSerif.variable} ${baiJamjuree.variable} h-full antialiased`}
+      className={`${bakbakOne.variable} ${instrumentSerif.variable} ${baiJamjuree.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

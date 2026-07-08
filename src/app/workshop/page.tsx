@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { 
-  ArrowRight, 
-  Check, 
-  Menu, 
-  X, 
-  Sparkles, 
+import {
+  ArrowRight,
+  Check,
+  Menu,
+  X,
+  Sparkles,
   Instagram,
   Linkedin,
   Eye,
@@ -29,13 +29,15 @@ import {
 // Import Assets
 import heroStar from "../../Assets/Home-herosection-start.png";
 import creatorsUnderline from "../../Assets/home-hero-create-underline.png";
+import workshopHeroImage from "../../Assets/3daysworkshop-herossection image.png";
+import workshopBackgroundLine from "../../Assets/3daysworkshop backgroundline.png";
 
 export default function WorkshopPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(to_right,rgba(28,27,31,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(28,27,31,0.04)_1px,transparent_1px)] bg-[size:120px_120px] relative text-dark font-sans selection:bg-primary selection:text-white">
-      
+
       {/* FLOATING HEADER */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-primary text-white py-3 px-6 rounded-full flex items-center justify-between shadow-2xl z-50 transition-all duration-300 border border-white/10">
         <Link href="/" className="flex items-center gap-2">
@@ -53,8 +55,8 @@ export default function WorkshopPage() {
 
         {/* Right Action Button */}
         <div className="hidden md:block">
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-opacity-95 transition shadow-md flex items-center gap-1 active:scale-95"
           >
             Book a Presentation
@@ -62,7 +64,7 @@ export default function WorkshopPage() {
         </div>
 
         {/* Mobile menu button */}
-        <button 
+        <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="md:hidden p-1 text-white hover:text-secondary transition focus:outline-none"
         >
@@ -73,13 +75,13 @@ export default function WorkshopPage() {
       {/* MOBILE NAV OVERLAY */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 bg-primary z-40 flex flex-col justify-center items-center gap-8 text-white">
-          <button 
+          <button
             onClick={() => setMobileMenuOpen(false)}
             className="absolute top-8 right-8 p-1 hover:text-secondary transition"
           >
             <X size={32} />
           </button>
-          
+
           <nav className="flex flex-col items-center gap-6 text-2xl font-bold">
             <Link href="/workshop" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display text-secondary">3-day workshop</Link>
             <Link href="/#programs" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">programs</Link>
@@ -88,8 +90,8 @@ export default function WorkshopPage() {
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">contact</Link>
           </nav>
 
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             onClick={() => setMobileMenuOpen(false)}
             className="bg-secondary text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-opacity-95 transition shadow-lg mt-4 font-display"
           >
@@ -103,24 +105,38 @@ export default function WorkshopPage() {
         {/* Background decorative elements */}
         <div className="absolute top-16 left-[-40px] w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10 blur-xl"></div>
         <div className="absolute bottom-24 right-48 w-48 h-48 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
-        
+
         <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-black text-dark tracking-tight leading-tight mb-6">
-              The Dezu <br className="hidden sm:inline" />
-              <span className="font-serif italic font-normal text-primary">3-day design</span> <br className="sm:hidden" />
-              <span className="bg-primary text-white px-4 py-1.5 rounded-full inline-block text-xl md:text-3xl font-display transform -rotate-1 relative top-[-4px] uppercase tracking-normal mt-2 sm:mt-0">
-                Immersion
-              </span> <br />
-              <span className="relative inline-block mt-2">
-                Program
-                {/* Underline */}
-                <Image 
-                  src={creatorsUnderline} 
-                  alt="Accent Underline" 
-                  className="absolute bottom-[-16px] left-0 w-full h-[16px] object-contain"
-                />
+            <h1 className="font-display text-dark tracking-tight leading-tight mb-6">
+              <span className="text-3xl md:text-[48px] font-black block mb-3">
+                The Dezu{" "}
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+
+                  }}
+                  className="font-normal text-dark relative inline-block tracking-wide"
+                >
+                  3-day design
+                  {/* Custom Orange Paint Stroke */}
+                  <Image
+                    src={creatorsUnderline}
+                    alt="Accent Underline"
+                    className="absolute bottom-[-12px] left-0 w-full object-contain"
+                  />
+                </span>
+              </span>
+              <span className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
+                <span className="bg-primary text-white px-6 py-2 rounded-full inline-flex items-center justify-center text-2xl md:text-[48px] font-display shadow-md transform -rotate-1 uppercase tracking-normal">
+                  Immersion
+                </span>
+                <span className="font-display font-black text-dark tracking-tight leading-none text-3xl md:text-[48px]">
+                  Program
+                </span>
               </span>
             </h1>
 
@@ -130,34 +146,39 @@ export default function WorkshopPage() {
 
             {/* Quick Stats Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 w-full max-w-2xl mb-8">
-              <div className="bg-[#F1EFE9] border border-dark/5 p-4 rounded-2xl flex flex-col text-left">
-                <span className="text-3xl font-display font-black text-primary">3</span>
-                <span className="text-[10px] font-black uppercase text-dark/60 tracking-wider">Days Duration</span>
+              <div className="bg-white border border-secondary/25 p-4 rounded-2xl flex flex-col text-left shadow-sm">
+                <span className="text-3xl font-display font-black text-dark">3</span>
+                <span className="text-[10px] font-black uppercase text-dark/40 tracking-wider">DAYS</span>
               </div>
-              <div className="bg-[#F1EFE9] border border-dark/5 p-4 rounded-2xl flex flex-col text-left">
-                <span className="text-3xl font-display font-black text-primary">1000+</span>
-                <span className="text-[10px] font-black uppercase text-dark/60 tracking-wider">Students Taught</span>
+              <div className="bg-white border border-secondary/25 p-4 rounded-2xl flex flex-col text-left shadow-sm">
+                <span className="text-3xl font-display font-black text-dark">
+                  1000<span className="text-secondary font-black">+</span>
+                </span>
+                <span className="text-[10px] font-black uppercase text-dark/40 tracking-wider">STUDENTS</span>
               </div>
-              <div className="bg-[#F1EFE9] border border-dark/5 p-4 rounded-2xl flex flex-col text-left">
-                <span className="text-3xl font-display font-black text-primary">20+</span>
-                <span className="text-[10px] font-black uppercase text-dark/60 tracking-wider">Partner Schools</span>
+              <div className="bg-white border border-secondary/25 p-4 rounded-2xl flex flex-col text-left shadow-sm">
+                <span className="text-3xl font-display font-black text-dark">
+                  20<span className="text-secondary font-black">+</span>
+                </span>
+                <span className="text-[10px] font-black uppercase text-dark/40 tracking-wider">SCHOOLS</span>
               </div>
-              <div className="bg-[#F1EFE9] border border-dark/5 p-4 rounded-2xl flex flex-col text-left">
-                <span className="text-3xl font-display font-black text-primary">100%</span>
-                <span className="text-[10px] font-black uppercase text-dark/60 tracking-wider">Hands-on Studio</span>
+              <div className="bg-white border border-secondary/25 p-4 rounded-2xl flex flex-col text-left shadow-sm">
+                <span className="text-3xl font-display font-black text-secondary">100%</span>
+                <span className="text-[10px] font-black uppercase text-dark/40 tracking-wider">HANDS-ON</span>
               </div>
             </div>
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Link 
-                href="/contact" 
+              <Link
+                href="/contact"
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200 w-full sm:w-auto text-center"
               >
                 Book a presentation <ArrowRight size={18} />
               </Link>
-              <a 
-                href="#download" 
+              <a
+                href="/dezu schools Browcher.pdf"
+                download="dezu schools Browcher.pdf"
                 className="border-2 border-secondary text-secondary font-bold px-8 py-4 rounded-full hover:bg-secondary/5 transition flex items-center justify-center gap-2 w-full sm:w-auto text-center"
               >
                 Download brochure <Download size={18} />
@@ -168,7 +189,7 @@ export default function WorkshopPage() {
           {/* Right Content - Visual Image with Star/Loops */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[480px] items-center overflow-visible mt-8 lg:mt-0">
             <div className="relative w-full max-w-[420px] h-full flex items-center justify-center">
-              
+
               {/* Purple Circle Background */}
               <div className="absolute w-[340px] h-[340px] bg-primary/20 rounded-full -z-10"></div>
 
@@ -179,9 +200,9 @@ export default function WorkshopPage() {
 
               {/* Main Student Image */}
               <div className="w-[300px] h-[380px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-[-4deg] transition-all duration-300 hover:rotate-0 hover:scale-105 z-10 relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?q=80&w=800&auto=format&fit=crop" 
-                  alt="Smiling student sketching designs" 
+                <Image
+                  src={workshopHeroImage}
+                  alt="Smiling student sketching designs"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -199,11 +220,13 @@ export default function WorkshopPage() {
         </div>
       </section>
 
-      {/* WAVY LINE DIVIDER */}
-      <div className="w-full overflow-hidden leading-[0] my-4 text-secondary">
-        <svg className="w-full h-[30px]" viewBox="0 0 1200 30" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4">
-          <path d="M0,15 Q150,0 300,15 T600,15 T900,15 T1200,15" />
-        </svg>
+      {/* BACKGROUND LINE DIVIDER */}
+      <div className="w-full relative my-2">
+        <Image
+          src={workshopBackgroundLine}
+          alt="Workshop Background Line"
+          className="w-full h-[40px] md:h-[60px] pointer-events-none"
+        />
       </div>
 
       {/* SECTION: THE WORKSHOP DESIGN */}
@@ -223,7 +246,7 @@ export default function WorkshopPage() {
 
         {/* Day Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
+
           {/* DAY 01 */}
           <div className="bg-primary text-white rounded-3xl p-8 flex flex-col justify-between shadow-xl border border-white/10 hover:translate-y-[-4px] transition-transform duration-300 min-h-[420px]">
             <div>
@@ -346,19 +369,19 @@ export default function WorkshopPage() {
             {/* Visual Images Grid (Right) */}
             <div className="lg:col-span-5 grid grid-cols-1 gap-6 relative">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-secondary/15 rounded-full blur-3xl -z-10"></div>
-              
+
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white rotate-[3deg] transition-all hover:rotate-0 duration-300 h-64 relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop" 
-                  alt="Students in creative design lab" 
+                <img
+                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop"
+                  alt="Students in creative design lab"
                   className="w-full h-full object-cover"
                 />
               </div>
 
               <div className="rounded-3xl overflow-hidden shadow-xl border-4 border-white rotate-[-3deg] transition-all hover:rotate-0 duration-300 h-64 relative ml-8">
-                <img 
-                  src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop" 
-                  alt="Student workshop presentation" 
+                <img
+                  src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?q=80&w=800&auto=format&fit=crop"
+                  alt="Student workshop presentation"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -366,8 +389,8 @@ export default function WorkshopPage() {
           </div>
 
           <div className="mt-16 flex justify-center">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center gap-2 hover:translate-x-1 duration-200"
             >
               Book a presentation <ArrowRight size={18} />
@@ -394,7 +417,7 @@ export default function WorkshopPage() {
 
         {/* Deliverables Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-          
+
           {/* Card 1 */}
           <div className="bg-[#E5E4DE] border border-dark/5 p-6 rounded-3xl flex flex-col justify-between min-h-[280px]">
             <div>
@@ -454,8 +477,8 @@ export default function WorkshopPage() {
         </div>
 
         <div className="flex justify-center">
-          <Link 
-            href="/contact" 
+          <Link
+            href="/contact"
             className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center gap-2 hover:translate-x-1 duration-200"
           >
             Book a presentation <ArrowRight size={18} />
@@ -482,9 +505,9 @@ export default function WorkshopPage() {
               { src: "https://images.unsplash.com/photo-1542744173-8e0ee26cf15a?q=80&w=800&auto=format&fit=crop", desc: "Presenting to faculty & classmates" }
             ].map((img, index) => (
               <div key={index} className="group relative rounded-3xl overflow-hidden shadow-lg h-72 border border-dark/5 bg-primary/5 hover:translate-y-[-4px] transition-transform duration-300">
-                <img 
-                  src={img.src} 
-                  alt={img.desc} 
+                <img
+                  src={img.src}
+                  alt={img.desc}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -512,14 +535,14 @@ export default function WorkshopPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200 w-full sm:w-auto"
             >
               Book a presentation <ArrowRight size={18} />
             </Link>
-            <a 
-              href="#download" 
+            <a
+              href="#download"
               className="border-2 border-secondary text-secondary font-bold px-8 py-4 rounded-full hover:bg-secondary/5 transition flex items-center justify-center gap-2 w-full sm:w-auto"
             >
               Download brochure <Download size={18} />
@@ -530,16 +553,16 @@ export default function WorkshopPage() {
 
       {/* FOOTER */}
       <footer className="bg-primary text-white pt-20 pb-8 px-6 relative border-t border-white/10">
-        
+
         {/* Floating Orange Badge/Flower sitting on top border */}
         <div className="absolute top-[-25px] left-1/2 -translate-x-1/2 text-secondary z-10">
           <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192L12 .587z"/>
+            <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192L12 .587z" />
           </svg>
         </div>
 
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left">
-          
+
           {/* Programs Links */}
           <div className="md:col-span-3">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">PROGRAMS</h4>
@@ -596,7 +619,7 @@ export default function WorkshopPage() {
 
         {/* Bottom bar with orange stair decoration */}
         <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60">
-          
+
           {/* Orange stair decoration on bottom left */}
           <div className="flex items-end gap-0.5 mb-4 md:mb-0">
             <div className="w-6 h-6 bg-secondary"></div>

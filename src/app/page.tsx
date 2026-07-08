@@ -7,6 +7,11 @@ import heroStar from "../Assets/Home-herosection-start.png"
 import creatorsUnderline from "../Assets/home-hero-create-underline.png"
 import scrollStar from "../Assets/herosection-scrollanimation-star.png"
 import secondSectionLine from "../Assets/home seconsection background line.png"
+import footerBackgroundLine from "../Assets/Footer background line.png"
+import homeSecondSecImg1 from "../Assets/home second section img1.png"
+import homeSecondSecImg2 from "../Assets/home second section img2.png"
+import homeSecondSecImg3 from "../Assets/home second section img3.png"
+import homeSecondSecImg4 from "../Assets/home second section img4.png"
 import {
   ArrowLeft,
   ArrowRight,
@@ -24,10 +29,10 @@ export default function Home() {
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const cards = [
-    { id: 1, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop", link: "/mrecw", tilt: "" },
-    { id: 2, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=600&auto=format&fit=crop", tilt: "" },
-    { id: 3, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=600&auto=format&fit=crop", tilt: "" },
-    { id: 4, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=600&auto=format&fit=crop", tilt: "" },
+    { id: 1, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: homeSecondSecImg1.src, link: "/mrecw", tilt: "" },
+    { id: 2, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: homeSecondSecImg2.src, tilt: "" },
+    { id: 3, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: homeSecondSecImg3.src, tilt: "" },
+    { id: 4, title: "GREENFIELD INTERNATIONAL", location: "Hyderabad · Telangana", image: homeSecondSecImg4.src, tilt: "" },
   ];
 
   const setWidth = 1296; // (300px width + 24px gap) * 4 cards
@@ -146,29 +151,30 @@ export default function Home() {
           {/* Hero Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left pb-16">
 
-            <h1 className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-6">
-              Build{" "}
-              <span className="bg-primary text-white px-8 py-2.5 rounded-full inline-flex items-center justify-center text-4xl md:text-6xl font-display shadow-lg transform -rotate-1 relative top-[-4px] uppercase tracking-normal">
-                Future
+            <h1 className="font-display text-dark tracking-tight leading-tight mb-6">
+              <span className="text-3xl md:text-5xl lg:text-6xl font-black block mb-3">
+                21st-century skills for
               </span>
-              <br />
-              <span
-                style={{
-                  fontFamily: "var(--font-instrument), serif",
-                  fontWeight: 400,
-                  fontStyle: "italic",
-                  letterSpacing: "-1.52px",
-                  verticalAlign: "middle",
-                }}
-                className="text-5xl md:text-[100px] text-dark relative mt-4 inline-block tracking-wide"
-              >
-                creators.
-                {/* Custom Orange Paint Stroke */}
-                <img
-                  src={creatorsUnderline.src}
-                  alt="creators underline"
-                  className="absolute bottom-[-15px] left-0 w-full object-contain"
-                />
+              <span className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
+                <span className="bg-primary text-white px-6 py-2 rounded-full inline-flex items-center justify-center text-3xl md:text-5xl lg:text-6xl font-display shadow-md transform -rotate-1 uppercase tracking-normal">
+                  Future
+                </span>
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                  }}
+                  className="text-4xl md:text-[75px] lg:text-[90px] text-dark relative inline-block tracking-wide leading-none"
+                >
+                  Innovators.
+                  {/* Custom Orange Paint Stroke */}
+                  <img
+                    src={creatorsUnderline.src}
+                    alt="innovators underline"
+                    className="absolute bottom-[-15px] left-0 w-full object-contain"
+                  />
+                </span>
               </span>
             </h1>
 
@@ -179,11 +185,12 @@ export default function Home() {
                 letterSpacing: "normal",
                 verticalAlign: "middle",
               }}
-              className="text-base md:text-[19.86px] md:leading-[28.79px] text-dark/80 max-w-xl mb-8 mt-4"
+              className="text-base md:text-[19.86px] md:leading-[28.79px] text-dark/80 max-w-2xl mb-8 mt-4"
             >
-              DEZU isn't a school — it's a studio for the kids who will<br />
-              design what comes next.
-              We turn curious minds into <strong className="font-extrabold text-primary">researchers, makers, storytellers</strong> and confident creative thinkers, from <strong className="font-extrabold text-secondary">age 8</strong> onwards.
+              Dezu partners with schools to develop creativity, critical thinking,
+              communication, collaboration, and innovation through hands-on<br /> {" "}
+              <strong className="font-extrabold text-dark">Design Thinking</strong> and future skills
+              programs for students.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -193,12 +200,13 @@ export default function Home() {
               >
                 Book a presentation →
               </Link>
-              <Link
-                href="#brochure"
+              <a
+                href="/dezu schools Browcher.pdf"
+                download="dezu schools Browcher.pdf"
                 className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 w-full sm:w-auto text-center"
               >
                 Download brochure ↓
-              </Link>
+              </a>
             </div>
           </div>
 
@@ -252,19 +260,28 @@ export default function Home() {
           }}
         >
           <span>DESIGN THINKING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>UI / UX</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>RESEARCH</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>STORYBOARDING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CREATIVITY</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CRITICAL THINKING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>PROBLEM SOLVING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>INNOVATION</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CONFIDENCE</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>COMMUNICATION</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
 
           <span>DESIGN THINKING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>UI / UX</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>RESEARCH</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>STORYBOARDING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CREATIVITY</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CRITICAL THINKING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>PROBLEM SOLVING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>INNOVATION</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CONFIDENCE</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>COMMUNICATION</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
 
           <span>DESIGN THINKING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>UI / UX</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>RESEARCH</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
-          <span>STORYBOARDING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CREATIVITY</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CRITICAL THINKING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>PROBLEM SOLVING</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>INNOVATION</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>CONFIDENCE</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
+          <span>COMMUNICATION</span> <img src={scrollStar.src} alt="✦" className="w-[24px] h-[24px] md:w-[30px] md:h-[30px] inline-block object-contain" />
         </div>
       </section>
 
@@ -301,13 +318,13 @@ export default function Home() {
 
             {/* Slider Arrow Controls */}
             <div className="flex gap-4">
-              <button 
+              <button
                 onClick={() => scroll('left')}
                 className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
               >
                 <ArrowLeft size={20} />
               </button>
-              <button 
+              <button
                 onClick={() => scroll('right')}
                 className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
               >
@@ -316,7 +333,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div 
+          <div
             ref={sliderRef}
             onScroll={handleScroll}
             className="flex overflow-x-auto pb-6 gap-6 scrollbar-hide w-full justify-start"
@@ -332,7 +349,7 @@ export default function Home() {
                   <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
 
                   <div className="relative p-6 text-white text-left">
-                    <h3 
+                    <h3
                       style={{
                         fontFamily: "var(--font-display), sans-serif",
                         fontWeight: 400,
@@ -345,7 +362,7 @@ export default function Home() {
                     >
                       {card.title}
                     </h3>
-                    <p 
+                    <p
                       style={{
                         fontFamily: "var(--font-sans), sans-serif",
                         fontWeight: 400,
@@ -402,18 +419,21 @@ export default function Home() {
               </h2>
             </div>
             <div className="lg:col-span-5 text-dark/75 font-medium leading-relaxed">
-              The world our students will inherit is changing too quickly for a content-first model to be enough.
-              Our studio practice builds capabilities that remain <strong className="text-primary font-bold">relevant for life</strong> across any subject, any future career role.
+              In a world increasingly shaped by technology, the ability to think visually, communicate clearly,
+              and solve problems creatively is no longer a "nice to have." It is the <strong className="text-primary font-extrabold">competitive edge</strong> your students deserve.
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
 
             {/* Card 01 - Design Thinking (Orange) */}
-            <div className="bg-secondary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[300px] shadow-lg hover:shadow-xl transition-all relative overflow-hidden group lg:col-span-5 md:col-span-1">
+            <div className="bg-secondary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[300px] shadow-lg hover:shadow-xl transition-all relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <div className="flex justify-between items-start">
                 <span className="text-sm font-bold opacity-75">01</span>
-                <span className="bg-white/20 text-white border border-white/30 text-xs font-bold uppercase px-3 py-1 rounded-full">CORE</span>
+                <span className="bg-white/20 text-white text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  CORE
+                </span>
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Design Thinking</h3>
@@ -428,10 +448,13 @@ export default function Home() {
             </div>
 
             {/* Card 05 - Field Research (Beige) */}
-            <div className="bg-muted/40 rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg border border-dark/5 transition-all relative group lg:col-span-4 md:col-span-1">
+            <div className="bg-muted/40 rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all relative group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <div className="flex justify-between items-start">
                 <span className="text-sm font-bold text-dark/65">05</span>
-                <span className="bg-dark/5 text-dark border border-dark/10 text-xs font-bold uppercase px-3 py-1 rounded-full">FIELD</span>
+                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  FIELD
+                </span>
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Field Research</h3>
@@ -446,10 +469,13 @@ export default function Home() {
             </div>
 
             {/* Card 03 - Storytelling & Voice (Peach) */}
-            <div className="bg-[#FED2B3] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg border border-dark/5 transition-all group lg:col-span-3 md:col-span-1">
+            <div className="bg-[#FED2B3] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <div className="flex justify-between items-start">
                 <span className="text-sm font-bold text-dark/65">03</span>
-                <span className="bg-dark/5 text-dark border border-dark/10 text-xs font-bold uppercase px-3 py-1 rounded-full">CORE</span>
+                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  CORE
+                </span>
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Storytelling & Voice</h3>
@@ -463,10 +489,13 @@ export default function Home() {
             </div>
 
             {/* Card 06 - Systems Thinking (Lavender) */}
-            <div className="bg-[#E4DDFF] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg border border-dark/5 transition-all group relative overflow-hidden lg:col-span-5 md:col-span-1">
+            <div className="bg-[#E4DDFF] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all group relative overflow-hidden lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <div className="flex justify-between items-start">
                 <span className="text-sm font-bold text-dark/65">06</span>
-                <span className="bg-dark/5 text-dark border border-dark/10 text-xs font-bold uppercase px-3 py-1 rounded-full">CORE</span>
+                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  CORE
+                </span>
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Systems Thinking</h3>
@@ -481,10 +510,13 @@ export default function Home() {
             </div>
 
             {/* Card 07 - Creative Confidence (Beige) */}
-            <div className="bg-muted/40 rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg border border-dark/5 transition-all group lg:col-span-3 md:col-span-1">
+            <div className="bg-muted/40 rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <div className="flex justify-between items-start">
                 <span className="text-sm font-bold text-dark/65">07</span>
-                <span className="bg-dark/5 text-dark border border-dark/10 text-xs font-bold uppercase px-3 py-1 rounded-full">SOFT</span>
+                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  SOFT
+                </span>
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Creative Confidence</h3>
@@ -495,10 +527,13 @@ export default function Home() {
             </div>
 
             {/* Card 04 - AI as a Co-Creator (Purple) */}
-            <div className="bg-primary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[300px] shadow-lg hover:shadow-xl transition-all group lg:col-span-4 md:col-span-1">
+            <div className="bg-primary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[300px] shadow-lg hover:shadow-xl transition-all group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <div className="flex justify-between items-start">
                 <span className="text-sm font-bold opacity-75">04</span>
-                <span className="bg-white/20 text-white border border-white/30 text-xs font-bold uppercase px-3 py-1 rounded-full">LAB</span>
+                <span className="bg-white/20 text-white text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
+                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
+                  LAB
+                </span>
               </div>
               <div className="mt-12">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">AI as a Co-Creator</h3>
@@ -521,9 +556,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
           {/* Quote Header / Side */}
-          <div className="lg:col-span-4 flex flex-col items-start text-left">
-            <span className="text-xs font-extrabold tracking-widest text-primary uppercase mb-4">— 04 / THOUGHT LEADERSHIP</span>
-            <span className="text-7xl font-display text-primary leading-none mb-6">“</span>
+          <div className="lg:col-span-4 flex flex-col items-center text-center justify-center">
+            <span className="text-8xl font-display text-primary leading-none mb-2">“</span>
             <p className="text-sm text-primary/80 font-bold leading-relaxed max-w-xs">
               A reminder from the field — quoted often, lived rarely.
             </p>
@@ -532,7 +566,19 @@ export default function Home() {
           {/* Quote Body */}
           <div className="lg:col-span-8 flex flex-col items-start">
             <blockquote className="text-3xl md:text-5xl font-display font-black tracking-tight text-dark leading-tight mb-8">
-              Creativity is now <span className="italic text-primary">as important</span> in education as literacy and we should treat it with{" "}
+              Creativity is now{" "}
+              <span
+                style={{
+                  fontFamily: "var(--font-instrument), serif",
+                  fontWeight: 400,
+                  fontStyle: "italic",
+                  verticalAlign: "middle",
+                }}
+                className="text-primary italic font-normal"
+              >
+                as important
+              </span>{" "}
+              in education as literacy and we should treat it with{" "}
               <span className="bg-secondary text-white px-6 py-2 rounded-full inline-block mt-2 shadow-md transform rotate-1">
                 the same status.
               </span>
@@ -642,7 +688,18 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
             <div className="lg:col-span-6">
               <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                <span className="text-primary italic">one vision</span> <br />
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    verticalAlign: "middle",
+                  }}
+                  className="text-primary italic font-normal"
+                >
+                  one vision
+                </span>{" "}
+                <br />
                 Many entry points
               </h2>
             </div>
@@ -747,78 +804,97 @@ export default function Home() {
 
       {/* SECTION 7: FLAGSHIP PROGRAM (WORKSHOP DAYS & TAKEAWAYS) */}
       <section id="workshop" className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        {/* Header Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-start text-left">
+          <div className="lg:col-span-7">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-dark tracking-tight mb-2">
+              Our Flagship Program
+            </h2>
+            <div
+              style={{
+                fontFamily: "var(--font-instrument), serif",
+                fontWeight: 400,
+                fontStyle: "italic",
+              }}
+              className="text-primary text-4xl md:text-5xl lg:text-6xl"
+            >
+              3 day workshop
+            </div>
+          </div>
+          <div className="lg:col-span-5 text-sm md:text-base text-dark/75 font-medium leading-relaxed pt-2">
+            A focused three-day arc that takes students from empathy to artifact. Built for school leaders who want to see DEZU's method in action — and the data to back it.
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
 
           {/* Days Timeline (Left Column) */}
-          <div className="lg:col-span-7 flex flex-col">
-            <div className="mb-12">
-              <span className="text-xs font-extrabold tracking-widest text-primary uppercase block mb-3">— FLAGSHIP FORMAT</span>
-              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-none mb-3">Our Flagship Program</h2>
-              <span className="text-primary text-4xl font-display">3 day workshop</span>
+          <div className="lg:col-span-7 flex flex-col gap-6">
+
+            {/* Day 1 */}
+            <div className="bg-[#E4DDFF] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center shadow-sm relative" style={{ border: "1.17px solid #1A15171A" }}>
+              <div className="flex flex-col items-center justify-center min-w-[70px] text-center">
+                <span className="text-4xl md:text-5xl font-display font-black text-dark leading-none">01</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-dark/60 mt-1">Day one</span>
+              </div>
+              <div className="flex-1 text-left">
+                <h3 className="text-xl md:text-2xl font-display font-black text-dark mb-4 leading-tight uppercase">UNDERSTAND HUMANS BEFORE SOLVING PROBLEMS</h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white/85 text-primary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Empathy</span>
+                  <span className="bg-white/85 text-primary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Observation</span>
+                  <span className="bg-white/85 text-primary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Curiosity</span>
+                  <span className="bg-white/85 text-primary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Field interviews</span>
+                </div>
+              </div>
             </div>
 
-            {/* Vertical Cards Loop */}
-            <div className="space-y-8 relative">
-              {/* Backing connecting line */}
-              <div className="absolute left-10 top-8 bottom-8 w-1.5 bg-secondary/15 -z-10 hidden md:block"></div>
-
-              {/* Day 1 */}
-              <div className="bg-[#E4DDFF] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start shadow-sm border border-dark/5 relative">
-                <div className="bg-primary text-white py-3 px-4 rounded-2xl flex flex-col items-center justify-center min-w-[70px]">
-                  <span className="text-3xl font-display font-black leading-none">01</span>
-                  <span className="text-[9px] font-extrabold uppercase mt-1">Day one</span>
-                </div>
-                <div className="flex-1 text-left">
-                  <h3 className="text-xl font-display font-black text-dark mb-4 leading-tight">UNDERSTAND HUMANS BEFORE SOLVING PROBLEMS</h3>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-white/80 text-primary border border-primary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Empathy</span>
-                    <span className="bg-white/80 text-primary border border-primary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Observation</span>
-                    <span className="bg-white/80 text-primary border border-primary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Curiosity</span>
-                    <span className="bg-white/80 text-primary border border-primary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Field interviews</span>
-                  </div>
+            {/* Day 2 */}
+            <div className="bg-[#FED2B3] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center shadow-sm relative" style={{ border: "1.17px solid #1A15171A" }}>
+              <div className="flex flex-col items-center justify-center min-w-[70px] text-center">
+                <span className="text-4xl md:text-5xl font-display font-black text-dark leading-none">02</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-dark/60 mt-1">Day two</span>
+              </div>
+              <div className="flex-1 text-left">
+                <h3 className="text-xl md:text-2xl font-display font-black text-dark mb-4 leading-tight uppercase">THINK BEYOND OBVIOUS ANSWERS</h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white/85 text-secondary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Research</span>
+                  <span className="bg-white/85 text-secondary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Problem framing</span>
+                  <span className="bg-white/85 text-secondary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Idea generation</span>
+                  <span className="bg-white/85 text-secondary text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Systems thinking</span>
                 </div>
               </div>
-
-              {/* Day 2 */}
-              <div className="bg-[#FED2B3] rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start shadow-sm border border-dark/5 relative">
-                <div className="bg-secondary text-white py-3 px-4 rounded-2xl flex flex-col items-center justify-center min-w-[70px]">
-                  <span className="text-3xl font-display font-black leading-none">02</span>
-                  <span className="text-[9px] font-extrabold uppercase mt-1">Day two</span>
-                </div>
-                <div className="flex-1 text-left">
-                  <h3 className="text-xl font-display font-black text-dark mb-4 leading-tight">THINK BEYOND OBVIOUS ANSWERS</h3>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-white/80 text-secondary border border-secondary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Research</span>
-                    <span className="bg-white/80 text-secondary border border-secondary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Problem framing</span>
-                    <span className="bg-white/80 text-secondary border border-secondary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Idea generation</span>
-                    <span className="bg-white/80 text-secondary border border-secondary/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Systems thinking</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Day 3 */}
-              <div className="bg-muted/40 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-start shadow-sm border border-dark/5 relative">
-                <div className="bg-dark/70 text-white py-3 px-4 rounded-2xl flex flex-col items-center justify-center min-w-[70px]">
-                  <span className="text-3xl font-display font-black leading-none">03</span>
-                  <span className="text-[9px] font-extrabold uppercase mt-1">Day three</span>
-                </div>
-                <div className="flex-1 text-left">
-                  <h3 className="text-xl font-display font-black text-dark mb-4 leading-tight">COMMUNICATE IDEAS LIKE INNOVATORS DO</h3>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="bg-white/80 text-dark/75 border border-dark/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Storytelling</span>
-                    <span className="bg-white/80 text-dark/75 border border-dark/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Prototyping</span>
-                    <span className="bg-white/80 text-dark/75 border border-dark/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Presentation</span>
-                    <span className="bg-white/80 text-dark/75 border border-dark/10 text-[10px] font-extrabold uppercase px-3 py-1 rounded-full font-display">Innovation showcase</span>
-                  </div>
-                </div>
-              </div>
-
             </div>
+
+            {/* Day 3 */}
+            <div className="bg-muted/40 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center shadow-sm relative" style={{ border: "1.17px solid #1A15171A" }}>
+              <div className="flex flex-col items-center justify-center min-w-[70px] text-center">
+                <span className="text-4xl md:text-5xl font-display font-black text-dark leading-none">03</span>
+                <span className="text-[10px] font-bold uppercase tracking-wider text-dark/60 mt-1">Day three</span>
+              </div>
+              <div className="flex-1 text-left">
+                <h3 className="text-xl md:text-2xl font-display font-black text-dark mb-4 leading-tight uppercase">COMMUNICATE IDEAS LIKE INNOVATORS DO</h3>
+                <div className="flex flex-wrap gap-2">
+                  <span className="bg-white/85 text-dark/75 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Storytelling</span>
+                  <span className="bg-white/85 text-dark/75 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Prototyping</span>
+                  <span className="bg-white/85 text-dark/75 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Presentation</span>
+                  <span className="bg-white/85 text-dark/75 text-[10px] font-extrabold uppercase px-3 py-1.5 rounded-full font-display" style={{ border: "1.17px solid #0000001A" }}>Innovation showcase</span>
+                </div>
+              </div>
+            </div>
+
           </div>
 
           {/* Takeaways & CTA (Right Column) */}
-          <div className="lg:col-span-5 flex flex-col justify-between">
-            <div className="bg-primary text-white rounded-[36px] p-8 shadow-xl flex-1 flex flex-col justify-between border border-white/10 min-h-[500px]">
+          <div className="lg:col-span-5 relative flex flex-col">
+
+            {/* Orange Starburst Badge */}
+            <div className="absolute -top-7 -right-7 w-20 h-20 text-secondary -z-10 transform rotate-12">
+              <svg viewBox="0 0 100 100" fill="currentColor" className="w-full h-full">
+                <path d="M50 5 L55 21 L70 11 L69 28 L84 22 L77 38 L91 38 L80 50 L91 62 L77 62 L84 78 L69 72 L70 89 L55 79 L50 95 L45 79 L30 89 L31 72 L16 78 L23 62 L9 62 L20 50 L9 38 L23 38 L16 22 L31 28 L30 11 L45 21 Z" />
+              </svg>
+            </div>
+
+            <div className="bg-primary text-white rounded-[32px] p-8 shadow-xl flex flex-col justify-between relative z-10 flex-1">
               <div>
                 <h3 className="text-2xl font-display font-black uppercase tracking-wider mb-6 text-left border-b border-white/10 pb-4">
                   WHAT SCHOOLS TAKE AWAY
@@ -829,7 +905,7 @@ export default function Home() {
                     <span className="bg-secondary text-white text-[10px] font-extrabold py-1 px-2.5 rounded-full mt-0.5">01</span>
                     <div>
                       <h4 className="font-extrabold text-md leading-none mb-1 text-white">Future-ready learners</h4>
-                      <p className="text-xs text-white/70 leading-normal">Documented evidence of student growth across core capabilities.</p>
+                      <p className="text-xs text-white/70 leading-normal">Documented evidence of student growth across five core capabilities.</p>
                     </div>
                   </li>
 
@@ -874,13 +950,24 @@ export default function Home() {
       </section>
 
       {/* SECTION 8: MENTORS / PROFESSIONALS */}
-      <section id="mentors" className="py-20 bg-cream/50 border-y border-dark/5">
-        <div className="max-w-7xl mx-auto px-6">
+      <section id="mentors" className="py-20 bg-cream/50 border-y border-dark/5 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative">
+          {/* Decorative Orange Grid Boxes */}
+          <div className="absolute bottom-[-80px] left-[-56px] w-20 h-20 bg-[#FF7122] -z-10"></div>
+          <div className="absolute bottom-0 left-[24px] w-20 h-20 bg-[#FF7122] -z-10"></div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end mb-16">
             <div>
               <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
                 Taught By Practicing <br />
-                <span className="text-primary italic">Professionals</span>
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                  }}
+                  className="text-primary italic font-normal text-5xl md:text-6xl"
+                >
+                  Professionals
+                </span>
               </h2>
             </div>
             <div className="text-dark/75 font-medium max-w-md">
@@ -955,57 +1042,83 @@ export default function Home() {
       </section>
 
       {/* SECTION 9: MEASURABLE RESULTS / METRICS */}
-      <section className="bg-lavender py-20 px-6 relative overflow-hidden">
-        {/* Background wavy pink stroke line */}
-        <div className="absolute top-[35%] left-0 w-full h-[60px] opacity-25 pointer-events-none -z-10">
-          <svg width="100%" height="60" viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none">
-            <path d="M0 30 Q360 0, 720 30 T1440 30" stroke="#FF6A00" strokeWidth="8" fill="none" />
+      <section className="bg-lavender py-24 px-6 relative overflow-hidden">
+        {/* Background wavy pink stroke line with orange starburst */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
+          <svg width="100%" height="100%" viewBox="0 0 1440 400" preserveAspectRatio="none">
+            <path
+              d="M -50 380 C 200 260, 350 130, 520 150 C 690 170, 780 250, 920 220 C 1100 180, 1250 80, 1380 48"
+              stroke="#FED2B3"
+              strokeWidth="8"
+              strokeLinecap="round"
+              fill="none"
+            />
           </svg>
+          {/* Starburst absolute positioned to align with the path end */}
+          <div className="absolute top-[10%] right-[3%] md:right-[4%] lg:right-[5%] transform translate-x-1/2 -translate-y-1/2">
+            <svg viewBox="0 0 100 100" fill="#FF7122" className="w-16 h-16 md:w-20 md:h-20" style={{ animation: "spin 25s linear infinite" }}>
+              <path d="M50 0 L56 12 L68 6 L70 19 L82 17 L80 30 L91 32 L85 44 L95 50 L85 56 L91 68 L80 70 L82 83 L70 81 L68 94 L56 88 L50 100 L44 88 L32 94 L30 81 L18 83 L20 70 L9 68 L15 56 L5 50 L15 44 L9 32 L20 30 L18 17 L30 19 L32 6 L44 12 Z" />
+            </svg>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Left-aligned Header */}
+          <h2 className="text-4xl md:text-5xl font-display font-black text-dark tracking-tight mb-16 text-left">
+            Design Education Delivers <br />
+            <span
+              style={{
+                fontFamily: "var(--font-instrument), serif",
+                fontWeight: 400,
+              }}
+              className="text-primary italic font-normal text-4xl md:text-[52px] lg:text-[56px] block mt-1"
+            >
+              measurable results
+            </span>
+          </h2>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
 
             {/* Metric 1 */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="text-5xl md:text-7xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex">
-                91<span className="text-2xl md:text-4xl font-extrabold text-secondary">%</span>
+            <div className="flex flex-col items-start text-left">
+              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
+                91<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">%</span>
               </span>
-              <h4 className="text-xs font-extrabold tracking-wider text-primary uppercase mb-2">HIGHER CONFIDENCE</h4>
-              <p className="text-sm text-dark/75 leading-relaxed font-semibold max-w-[240px]">
+              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">HIGHER CONFIDENCE</h4>
+              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
                 Students self-report higher creative confidence after a single DEZU cohort.
               </p>
             </div>
 
             {/* Metric 2 */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="text-5xl md:text-7xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex">
-                78<span className="text-2xl md:text-4xl font-extrabold text-secondary">%</span>
+            <div className="flex flex-col items-start text-left">
+              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
+                78<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">%</span>
               </span>
-              <h4 className="text-xs font-extrabold tracking-wider text-primary uppercase mb-2">BETTER COLLABORATION</h4>
-              <p className="text-sm text-dark/75 leading-relaxed font-semibold max-w-[240px]">
+              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">BETTER COLLABORATION</h4>
+              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
                 Teachers observe stronger team dynamics in cross-subject project work.
               </p>
             </div>
 
             {/* Metric 3 */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="text-5xl md:text-7xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex">
-                3<span className="text-2xl md:text-4xl font-extrabold text-secondary">x</span>
+            <div className="flex flex-col items-start text-left">
+              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
+                3<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">x</span>
               </span>
-              <h4 className="text-xs font-extrabold tracking-wider text-primary uppercase mb-2">MORE PARTICIPATION</h4>
-              <p className="text-sm text-dark/75 leading-relaxed font-semibold max-w-[240px]">
+              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">MORE PARTICIPATION</h4>
+              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
                 Quiet students contribute three times more often in studio-format classes.
               </p>
             </div>
 
             {/* Metric 4 */}
-            <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <span className="text-5xl md:text-7xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex">
-                100<span className="text-2xl md:text-4xl font-extrabold text-secondary">%</span>
+            <div className="flex flex-col items-start text-left">
+              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
+                100<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">%</span>
               </span>
-              <h4 className="text-xs font-extrabold tracking-wider text-primary uppercase mb-2">PROJECT COMPLETION</h4>
-              <p className="text-sm text-dark/75 leading-relaxed font-semibold max-w-[240px]">
+              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">PROJECT COMPLETION</h4>
+              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
                 Every student finishes the program with a presented, peer-reviewed prototype.
               </p>
             </div>
@@ -1020,7 +1133,16 @@ export default function Home() {
           <div>
             <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
               Three Ways to <br />
-              <span className="text-primary italic">Partner with</span> dezu
+              <span
+                style={{
+                  fontFamily: "var(--font-instrument), serif",
+                  fontWeight: 400,
+                }}
+                className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
+              >
+                Partner with
+              </span>{" "}
+              dezu
             </h2>
           </div>
           <div className="text-dark/75 font-medium max-w-md">
@@ -1149,8 +1271,16 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
             <div className="lg:col-span-6">
               <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                From first call <br />
-                to first <span className="text-primary italic">studio</span> <br />
+                From first call to first <br />
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                  }}
+                  className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
+                >
+                  studio
+                </span>{" "}
                 in 4 weeks.
               </h2>
             </div>
@@ -1214,67 +1344,99 @@ export default function Home() {
       </section>
 
       {/* SECTION 12: TESTIMONIALS */}
-      <section id="stories" className="py-20 bg-lavender px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-display font-black text-dark">Stories from the Studio</h2>
-          </div>
+      <section id="stories" className="py-24 bg-lavender px-6 overflow-hidden">
+        {/* Testimonials List */}
+        {(() => {
+          const testimonialsList = [
+            {
+              quote: (
+                <>
+                  "It changed how I teach. The studio model gives me permission to be a coach instead of a <span className="italic text-primary font-bold">lecturer</span> — and the students respond instantly."
+                </>
+              ),
+              name: "Mr. Aniket Rao",
+              role: "Head of Design · Pathways Pune",
+              avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+            },
+            {
+              quote: (
+                <>
+                  "I didn't know I was a <span className="italic text-primary font-bold">creator</span>. I have a portfolio, three prototypes, and I presented to actual designers from Bengaluru."
+                </>
+              ),
+              name: "Aarav, Grade 8",
+              role: "Student · Ekya School",
+              avatar: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=150&auto=format&fit=crop"
+            },
+            {
+              quote: (
+                <>
+                  "DEZU gave our students something the textbook simply <span className="italic text-primary font-bold">cannot</span>. Within five days, I saw the quiet ones leading critiques and the noisy ones listening."
+                </>
+              ),
+              name: "Mrs. Lakshmi Pillai",
+              role: "Principal · DPS Noida",
+              avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop"
+            }
+          ];
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            {/* Testimonial 1 */}
-            <div className="bg-white rounded-[32px] p-8 shadow-lg flex flex-col justify-between min-h-[300px] text-left border border-dark/5">
-              <p className="text-lg text-dark/80 font-medium leading-relaxed italic mb-8">
-                "It changed how I teach. The studio model gives me permission to be a coach instead of a <span className="italic text-primary">lecturer</span> — and the students respond instantly."
-              </p>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10">
-                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop" alt="Mr. Aniket Rao" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h4 className="font-extrabold text-dark leading-none mb-1">Mr. Aniket Rao</h4>
-                  <p className="text-xs text-dark/60 font-semibold">Head of Design · Pathways Pune</p>
+          return (
+            <>
+              {/* Header block */}
+              <div className="max-w-7xl mx-auto mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+                  <div className="lg:col-span-7">
+                    <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight text-left">
+                      What the people <br />
+                      in the room{" "}
+                      <span
+                        style={{
+                          fontFamily: "var(--font-instrument), serif",
+                          fontWeight: 400,
+                        }}
+                        className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
+                      >
+                        say.
+                      </span>
+                    </h2>
+                  </div>
+                  <div className="lg:col-span-5 text-dark/75 font-semibold leading-relaxed text-left lg:max-w-md lg:ml-auto">
+                    Unedited reflections from principals, teachers and students after their first DEZU studio.
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Testimonial 2 */}
-            <div className="bg-white rounded-[32px] p-8 shadow-lg flex flex-col justify-between min-h-[300px] text-left border border-dark/5">
-              <p className="text-lg text-dark/80 font-medium leading-relaxed italic mb-8">
-                "I didn't know I was a <span className="italic text-primary">creator</span>. I have a portfolio, three prototypes, and I presented to actual designers from Bengaluru."
-              </p>
+              {/* Infinite Scrolling Loop Wrapper (Full Width) */}
+              <div className="w-full overflow-hidden py-4">
+                <div className="animate-marquee-inline flex gap-6 hover:[animation-play-state:paused] w-max">
+                  {[...testimonialsList, ...testimonialsList, ...testimonialsList, ...testimonialsList].map((t, idx) => (
+                    <div 
+                      key={idx} 
+                      className="bg-white rounded-[32px] p-8 shadow-lg flex flex-col justify-between min-h-[280px] w-[320px] md:w-[380px] text-left border border-dark/5 flex-shrink-0 relative"
+                    >
+                      {/* Big Quote Symbol */}
+                      <span className="absolute top-6 right-6 text-primary text-4xl font-display font-black leading-none opacity-80">”</span>
+                      
+                      <p className="text-base md:text-lg text-dark/80 font-medium leading-relaxed italic mb-8 relative pr-6">
+                        {t.quote}
+                      </p>
 
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10">
-                  <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=150&auto=format&fit=crop" alt="Aarav Student" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h4 className="font-extrabold text-dark leading-none mb-1">Aarav</h4>
-                  <p className="text-xs text-dark/60 font-semibold">Student, Grade 8 · Ekya School</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Testimonial 3 */}
-            <div className="bg-white rounded-[32px] p-8 shadow-lg flex flex-col justify-between min-h-[300px] text-left border border-dark/5">
-              <p className="text-lg text-dark/80 font-medium leading-relaxed italic mb-8">
-                "I didn't know I was a <span className="italic text-primary">creator</span>. I have a portfolio, three prototypes, and I presented to actual designers from Bengaluru."
-              </p>
-
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10">
-                  <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=150&auto=format&fit=crop" alt="Aarav Student" className="w-full h-full object-cover" />
-                </div>
-                <div>
-                  <h4 className="font-extrabold text-dark leading-none mb-1">Aarav</h4>
-                  <p className="text-xs text-dark/60 font-semibold">Student, Grade 8 · Ekya School</p>
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
+                          <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                          <h4 className="font-extrabold text-dark leading-none mb-1">{t.name}</h4>
+                          <p className="text-xs text-dark/60 font-semibold">{t.role}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
-
-          </div>
-        </div>
+            </>
+          );
+        })()}
       </section>
 
       {/* SECTION 13: FOOTER CALL TO ACTION */}
@@ -1297,29 +1459,36 @@ export default function Home() {
           >
             Book a presentation <ArrowRight size={18} />
           </Link>
-          <Link
-            href="#brochure"
+          <a
+            href="/dezu schools Browcher.pdf"
+            download="dezu schools Browcher.pdf"
             className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 w-full sm:w-auto text-center font-display"
           >
             Download brochure <ArrowDown size={18} />
-          </Link>
+          </a>
         </div>
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-primary text-white pt-20 pb-8 px-6 relative border-t border-white/10">
+      <footer className="bg-primary text-white pt-24 pb-8 px-6 relative border-t border-white/10 overflow-hidden">
+        {/* Footer Background Line Image */}
+        <img
+          src={footerBackgroundLine.src}
+          alt="Footer Background Line"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+        />
 
-        {/* Floating Orange Badge/Flower sitting on top border */}
-        <div className="absolute top-[-25px] left-1/2 -translate-x-1/2 text-secondary z-10">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192L12 .587z" />
+        {/* Floating Orange starburst sitting on top border */}
+        <div className="absolute top-[-32px] left-1/2 -translate-x-1/2 text-secondary z-20">
+          <svg viewBox="0 0 100 100" fill="#FF7122" className="w-16 h-16" style={{ animation: "spin 25s linear infinite" }}>
+            <path d="M50 0 L56 12 L68 6 L70 19 L82 17 L80 30 L91 32 L85 44 L95 50 L85 56 L91 68 L80 70 L82 83 L70 81 L68 94 L56 88 L50 100 L44 88 L32 94 L30 81 L18 83 L20 70 L9 68 L15 56 L5 50 L15 44 L9 32 L20 30 L18 17 L30 19 L32 6 L44 12 Z" />
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left relative z-10">
 
           {/* Programs Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">PROGRAMS</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
               <li><Link href="/workshop" className="hover:text-secondary transition">Workshop</Link></li>
@@ -1330,7 +1499,7 @@ export default function Home() {
           </div>
 
           {/* About Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">ABOUT</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
               <li><Link href="/why-dezu" className="hover:text-secondary transition">Our Philosophy</Link></li>
@@ -1341,15 +1510,15 @@ export default function Home() {
           </div>
 
           {/* Logo Brand Center-Right */}
-          <div className="md:col-span-3 flex flex-col justify-center items-start md:items-center">
+          <div className="md:col-span-4 flex flex-col justify-center items-start md:items-center">
             <div className="text-left font-black leading-none font-display">
-              <span className="text-4xl text-white/50 block">dezu</span>
-              <span className="text-6xl text-white block">Schools</span>
+              <span className="text-[52px] md:text-[84px] text-white block">dezu</span>
+              <span className="text-[52px] md:text-[84px] text-white block">Schools</span>
             </div>
           </div>
 
           {/* Connect Column (Far Right) */}
-          <div className="md:col-span-3 flex flex-col justify-between">
+          <div className="md:col-span-4 flex flex-col justify-between">
             <div>
               <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">CONNECT</h4>
               <ul className="space-y-3 text-sm font-semibold opacity-80">
@@ -1359,31 +1528,36 @@ export default function Home() {
               </ul>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-8">
-              <Link href="https://instagram.com" className="w-9 h-9 rounded-full bg-white/10 hover:bg-secondary hover:text-white transition flex items-center justify-center text-white">
-                <Instagram size={18} />
-              </Link>
-              <Link href="https://linkedin.com" className="w-9 h-9 rounded-full bg-white/10 hover:bg-secondary hover:text-white transition flex items-center justify-center text-white">
-                <Linkedin size={18} />
+            {/* Social Icons Row + CTA Button */}
+            <div className="flex items-center gap-4 flex-wrap mt-8">
+              <div className="flex gap-2">
+                <Link href="https://instagram.com" className="w-8 h-8 rounded-full border border-white/20 hover:bg-secondary hover:border-secondary transition flex items-center justify-center text-white">
+                  <Instagram size={14} />
+                </Link>
+                <Link href="https://linkedin.com" className="w-8 h-8 rounded-full border border-white/20 hover:bg-secondary hover:border-secondary transition flex items-center justify-center text-white">
+                  <Linkedin size={14} />
+                </Link>
+              </div>
+              <Link
+                href="/contact"
+                className="bg-[#FF7122] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-1 active:scale-95 whitespace-nowrap ml-auto"
+              >
+                Book a presentation &rarr;
               </Link>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom bar with orange stair decoration */}
-        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60">
-
-          {/* Orange stair decoration on bottom left */}
-          <div className="flex items-end gap-0.5 mb-4 md:mb-0">
-            <div className="w-6 h-6 bg-secondary"></div>
-            <div className="w-6 h-3 bg-secondary"></div>
-            <div className="w-6 h-1.5 bg-secondary"></div>
-          </div>
-
+        {/* Bottom bar */}
+        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60 relative z-10">
           <div>
             &copy; {new Date().getFullYear()} DEZU Schools. All rights reserved.
+          </div>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="hover:text-secondary transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-secondary transition">Terms</Link>
+            <Link href="/press" className="hover:text-secondary transition">Press kit</Link>
           </div>
         </div>
 
