@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   ArrowRight, 
   Check, 
@@ -14,6 +15,15 @@ import {
   BookOpen,
   Users
 } from "lucide-react";
+import footerBackgroundLine from "../../Assets/Footer background line.png";
+import himajaaImg from "../../Assets/Himajaa Indukuri.png";
+import balamuraliImg from "../../Assets/Balamurali Bhaskaran.png";
+import bhavanaImg from "../../Assets/Bhavana Ghanta.png";
+import prathikImg from "../../Assets/Prathik Gadde.png";
+import whyDezuHeroImage from "../../Assets/whydezu hero section image.png";
+import heroStar from "../../Assets/Home-herosection-start.png";
+import whyDezuHeroLine from "../../Assets/why dezu hero line.png";
+import creatorsUnderline from "../../Assets/home-hero-create-underline.png";
 
 export default function WhyDezu() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -37,7 +47,7 @@ export default function WhyDezu() {
       {/* FLOATING HEADER */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-primary text-white py-3 px-6 rounded-full flex items-center justify-between shadow-2xl z-50 transition-all duration-300 border border-white/10">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl md:text-2xl font-display font-black tracking-tight">dezu schools</span>
+          <span className="text-xl md:text-2xl font-display font-normal tracking-tight">dezu schools</span>
         </Link>
 
         {/* Desktop Nav Links */}
@@ -97,83 +107,82 @@ export default function WhyDezu() {
       )}
 
       {/* SECTION 1: HERO */}
-      <section className="pt-36 pb-20 w-full relative overflow-hidden min-h-[80vh] flex flex-col justify-center">
+      <section className="pt-36 pb-0 w-full relative overflow-visible flex flex-col justify-center">
         {/* Background decorative elements */}
         <div className="absolute top-16 left-[-40px] w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10"></div>
         <div className="absolute bottom-24 right-48 w-48 h-48 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
 
-        {/* Purple abstract line loops (top-left) */}
-        <div className="absolute top-[20%] left-[8%] -z-10 text-primary/30 w-44 h-44 hidden lg:block">
-          <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full">
-            <path d="M10,50 Q25,20 50,20 T90,50 T50,80 Z" />
-            <path d="M15,48 Q28,25 50,25 T85,48 T50,75 Z" />
-            <path d="M20,46 Q31,30 50,30 T80,46 T50,70 Z" />
-          </svg>
-        </div>
 
         <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Hero Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
-            <h1 className="text-5xl md:text-7xl font-display font-black text-dark tracking-tight leading-none mb-6">
-              <span className="bg-primary text-white px-5 py-1.5 rounded-full inline-block text-2xl md:text-4xl font-display transform -rotate-1 relative top-[-4px] uppercase tracking-normal mr-2">
+            <h1 className="text-4xl md:text-6xl font-display font-black text-dark tracking-tight leading-[1.25] mb-6">
+              <span className="bg-primary text-white px-5 py-1.5 rounded-full inline-block text-xl md:text-3xl font-display transform -rotate-1 relative top-[-4px] uppercase tracking-normal mr-2">
                 Taught
               </span>
-              by{" "}
-              <span className="text-primary relative font-normal font-serif italic tracking-wide">
+              <span className="font-sans font-medium text-dark text-3xl md:text-5xl mx-2 align-baseline">
+                by
+              </span>
+              <span className="text-primary relative font-normal font-serif italic tracking-wide whitespace-nowrap">
                 real-time experts
                 {/* Custom Orange Paint Stroke */}
-                <svg className="absolute bottom-[-8px] left-0 w-full h-[12px] text-secondary" viewBox="0 0 300 20" fill="none" preserveAspectRatio="none">
-                  <path d="M5 15C50 15 150 5 295 12" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
-                </svg>
+                <img
+                  src={creatorsUnderline.src}
+                  alt="underline"
+                  className="absolute bottom-[-15px] left-0 w-full object-contain"
+                />
               </span>
               <br />
               from <span className="font-extrabold">Different</span>{" "}
               <span className="text-primary relative font-normal font-serif italic tracking-wide">
                 industries.
                 {/* Custom Orange Paint Stroke */}
-                <svg className="absolute bottom-[-8px] left-0 w-full h-[12px] text-secondary" viewBox="0 0 300 20" fill="none" preserveAspectRatio="none">
-                  <path d="M5 15C50 15 150 5 295 12" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
-                </svg>
+                <img
+                  src={creatorsUnderline.src}
+                  alt="underline"
+                  className="absolute bottom-[-15px] left-0 w-full object-contain"
+                />
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-dark/80 font-medium max-w-xl mb-8 leading-relaxed mt-4">
+            <p className="text-base md:text-lg font-medium max-w-xl mb-8 leading-relaxed mt-4 text-[#1E293BCC]">
               Dezu bridges the foundational academic years with the pulse of modern design, founding, planning, and design-thinking. We connect practicing designers, technology innovators, architects, and researchers directly with school environments.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-              <Link 
-                href="/contact" 
-                className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200 w-full sm:w-auto text-center"
-              >
-                More On dezu <ArrowRight size={18} />
-              </Link>
-            </div>
+            <Link 
+              href="https://studiodezu.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200 mt-2"
+            >
+              More On dezu <ArrowRight size={18} />
+            </Link>
           </div>
 
-          {/* Hero Right Content - Images and Purple Semi-circle */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[450px] items-center overflow-visible">
-            <div className="relative w-full max-w-[400px] h-full flex items-center justify-center">
+          {/* Hero Right Content - Cutout with Background Circle & Star */}
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[450px] items-end overflow-visible">
+            <div className="relative w-full max-w-[400px] h-[450px] flex items-end justify-center">
               
-              {/* Purple Semi-Circle in Background */}
-              <div className="absolute w-[320px] h-[320px] bg-primary/20 rounded-full -z-10"></div>
+              {/* Purple Circle in Background */}
+              <div className="absolute top-[12%] w-[320px] h-[320px] bg-[#C3B3F9] rounded-full -z-10 shadow-inner"></div>
               
-              {/* Photo 1 (Man in black shirt - overlapping left) */}
-              <div className="absolute left-4 top-[10%] w-[180px] h-[220px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-[-6deg] transition-all duration-300 hover:rotate-0 hover:scale-105 z-10">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop" 
-                  alt="Mentor from creative industry" 
-                  className="w-full h-full object-cover"
+              {/* Orange Star Decal */}
+              <div className="absolute top-[8%] -right-8 w-24 h-24 z-0">
+                <Image
+                  src={heroStar}
+                  alt="Orange star decor"
+                  className="w-full h-full object-contain animate-[pulse_3s_infinite]"
                 />
               </div>
 
-              {/* Photo 2 (Woman in white shirt - overlapping right) */}
-              <div className="absolute right-4 bottom-[10%] w-[180px] h-[220px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white rotate-[6deg] transition-all duration-300 hover:rotate-0 hover:scale-105 z-20">
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" 
-                  alt="Mentor from technology industry" 
-                  className="w-full h-full object-cover"
+              {/* Three Experts Cutout */}
+              <div className="relative w-[550px] h-[550px] flex items-end justify-center z-10 overflow-visible translate-y-6 md:translate-y-10">
+                <Image 
+                  src={whyDezuHeroImage} 
+                  alt="Taught by real-time experts from different industries" 
+                  className="w-full h-full object-contain object-bottom select-none"
+                  priority
                 />
               </div>
 
@@ -184,10 +193,12 @@ export default function WhyDezu() {
       </section>
 
       {/* WAVY LINE DIVIDER */}
-      <div className="w-full overflow-hidden leading-[0] my-4 text-secondary">
-        <svg className="w-full h-[30px]" viewBox="0 0 1200 30" preserveAspectRatio="none" fill="none" stroke="currentColor" strokeWidth="4">
-          <path d="M0,15 Q150,0 300,15 T600,15 T900,15 T1200,15" />
-        </svg>
+      <div className="w-full overflow-hidden leading-[0] relative -mt-16 md:-mt-24 lg:-mt-32 -mb-8 md:-mb-12 lg:-mb-16 z-20 pointer-events-none">
+        <Image
+          src={whyDezuHeroLine}  
+          alt="Background Line Divider"
+          className="w-full h-auto object-cover"
+        />
       </div>
 
       {/* SECTION 2: WHO ARE WE & DESIGN X EDUCATION */}
@@ -216,10 +227,12 @@ export default function WhyDezu() {
 
             <div>
               <Link 
-                href="/#programs" 
+                href="https://studiodezu.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
               >
-                Learn more <ArrowRight size={18} />
+                Learn more <ArrowRight size={18} /> 
               </Link>
             </div>
           </div>
@@ -345,14 +358,14 @@ export default function WhyDezu() {
             <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
               <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
-                  alt="Himajaa Indukuri - CEO dezu" 
+                  src={himajaaImg.src} 
+                  alt="Himajaa Indukuri - CEO, Studio Dezu" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div>
-                <h3 className="font-serif italic text-2xl text-dark leading-tight">Himajaa Indukuri</h3>
-                <p className="text-xs text-dark/70 font-extrabold uppercase mt-1 tracking-wider">CEO, dezu</p>
+              <div className="text-left px-1">
+                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, Studio Dezu</p>
               </div>
             </div>
 
@@ -360,14 +373,14 @@ export default function WhyDezu() {
             <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
               <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
-                  alt="Himajaa Indukuri - CEO dezu" 
+                  src={balamuraliImg.src} 
+                  alt="Balamurali Bhaskaran - Design Thinking Mentor" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div>
-                <h3 className="font-serif italic text-2xl text-dark leading-tight">Himajaa Indukuri</h3>
-                <p className="text-xs text-dark/70 font-extrabold uppercase mt-1 tracking-wider">CEO, dezu</p>
+              <div className="text-left px-1">
+                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Design Thinking Mentor (IBM certified)</p>
               </div>
             </div>
 
@@ -375,14 +388,14 @@ export default function WhyDezu() {
             <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
               <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
-                  alt="Himajaa Indukuri - CEO dezu" 
+                  src={bhavanaImg.src} 
+                  alt="Bhavana Ghanta - Senior Designer, Schlemberger" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div>
-                <h3 className="font-serif italic text-2xl text-dark leading-tight">Himajaa Indukuri</h3>
-                <p className="text-xs text-dark/70 font-extrabold uppercase mt-1 tracking-wider">CEO, dezu</p>
+              <div className="text-left px-1">
+                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Senior Designer, Schlemberger</p>
               </div>
             </div>
 
@@ -390,14 +403,14 @@ export default function WhyDezu() {
             <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
               <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop" 
-                  alt="Himajaa Indukuri - CEO dezu" 
+                  src={prathikImg.src} 
+                  alt="Prathik Gadde - CEO, PhotonX" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
-              <div>
-                <h3 className="font-serif italic text-2xl text-dark leading-tight">Himajaa Indukuri</h3>
-                <p className="text-xs text-dark/70 font-extrabold uppercase mt-1 tracking-wider">CEO, dezu</p>
+              <div className="text-left px-1">
+                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, PhotonX</p>
               </div>
             </div>
 
@@ -425,7 +438,7 @@ export default function WhyDezu() {
             </p>
             <div>
               <Link 
-                href="/contact" 
+                href="mailto:info@dezu.in" 
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
               >
                 Apply to Mentor <ArrowRight size={18} />
@@ -448,19 +461,25 @@ export default function WhyDezu() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-primary text-white pt-20 pb-8 px-6 relative border-t border-white/10">
-        
-        {/* Floating Orange Badge/Flower sitting on top border */}
-        <div className="absolute top-[-25px] left-1/2 -translate-x-1/2 text-secondary z-10">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192L12 .587z"/>
+      <footer className="bg-primary text-white pt-24 pb-8 px-6 relative border-t border-white/10 overflow-hidden">
+        {/* Footer Background Line Image */}
+        <img
+          src={footerBackgroundLine.src}
+          alt="Footer Background Line"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+        />
+
+        {/* Floating Orange starburst sitting on top border */}
+        <div className="absolute top-[-32px] left-1/2 -translate-x-1/2 text-secondary z-20">
+          <svg viewBox="0 0 100 100" fill="#FF7122" className="w-16 h-16" style={{ animation: "spin 25s linear infinite" }}>
+            <path d="M50 0 L56 12 L68 6 L70 19 L82 17 L80 30 L91 32 L85 44 L95 50 L85 56 L91 68 L80 70 L82 83 L70 81 L68 94 L56 88 L50 100 L44 88 L32 94 L30 81 L18 83 L20 70 L9 68 L15 56 L5 50 L15 44 L9 32 L20 30 L18 17 L30 19 L32 6 L44 12 Z" />
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left">
-          
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left relative z-10">
+
           {/* Programs Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">PROGRAMS</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
               <li><Link href="/workshop" className="hover:text-secondary transition">Workshop</Link></li>
@@ -471,7 +490,7 @@ export default function WhyDezu() {
           </div>
 
           {/* About Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">ABOUT</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
               <li><Link href="/why-dezu" className="hover:text-secondary transition">Our Philosophy</Link></li>
@@ -482,15 +501,15 @@ export default function WhyDezu() {
           </div>
 
           {/* Logo Brand Center-Right */}
-          <div className="md:col-span-3 flex flex-col justify-center items-start md:items-center">
+          <div className="md:col-span-4 flex flex-col justify-center items-start md:items-center">
             <div className="text-left font-black leading-none font-display">
-              <span className="text-4xl text-white/50 block">dezu</span>
-              <span className="text-6xl text-white block">Schools</span>
+              <span className="text-[52px] md:text-[84px] text-white block">dezu</span>
+              <span className="text-[52px] md:text-[84px] text-white block">Schools</span>
             </div>
           </div>
 
           {/* Connect Column (Far Right) */}
-          <div className="md:col-span-3 flex flex-col justify-between">
+          <div className="md:col-span-4 flex flex-col justify-between">
             <div>
               <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">CONNECT</h4>
               <ul className="space-y-3 text-sm font-semibold opacity-80">
@@ -500,31 +519,36 @@ export default function WhyDezu() {
               </ul>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-8">
-              <Link href="https://instagram.com" className="w-9 h-9 rounded-full bg-white/10 hover:bg-secondary hover:text-white transition flex items-center justify-center text-white">
-                <Instagram size={18} />
-              </Link>
-              <Link href="https://linkedin.com" className="w-9 h-9 rounded-full bg-white/10 hover:bg-secondary hover:text-white transition flex items-center justify-center text-white">
-                <Linkedin size={18} />
+            {/* Social Icons Row + CTA Button */}
+            <div className="flex items-center gap-4 flex-wrap mt-8">
+              <div className="flex gap-2">
+                <Link href="https://instagram.com" className="w-8 h-8 rounded-full border border-white/20 hover:bg-secondary hover:border-secondary transition flex items-center justify-center text-white">
+                  <Instagram size={14} />
+                </Link>
+                <Link href="https://linkedin.com" className="w-8 h-8 rounded-full border border-white/20 hover:bg-secondary hover:border-secondary transition flex items-center justify-center text-white">
+                  <Linkedin size={14} />
+                </Link>
+              </div>
+              <Link
+                href="/contact"
+                className="bg-[#FF7122] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-1 active:scale-95 whitespace-nowrap ml-auto"
+              >
+                Book a presentation &rarr;
               </Link>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom bar with orange stair decoration */}
-        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60">
-          
-          {/* Orange stair decoration on bottom left */}
-          <div className="flex items-end gap-0.5 mb-4 md:mb-0">
-            <div className="w-6 h-6 bg-secondary"></div>
-            <div className="w-6 h-3 bg-secondary"></div>
-            <div className="w-6 h-1.5 bg-secondary"></div>
-          </div>
-
+        {/* Bottom bar */}
+        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60 relative z-10">
           <div>
             &copy; {new Date().getFullYear()} DEZU Schools. All rights reserved.
+          </div>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="hover:text-secondary transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-secondary transition">Terms</Link>
+            <Link href="/press" className="hover:text-secondary transition">Press kit</Link>
           </div>
         </div>
 

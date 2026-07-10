@@ -14,7 +14,7 @@ export default function MrecwPage() {
           <ArrowLeft size={18} className="text-secondary group-hover:-translate-x-1 transition-transform" />
           <span className="text-sm font-bold text-dark/70 group-hover:text-dark">Back to Home</span>
         </Link>
-        <Link href="/" className="text-2xl font-display font-black text-secondary tracking-tight">
+        <Link href="/" className="text-2xl font-display font-normal text-secondary tracking-tight">
           dezu.
         </Link>
       </header>

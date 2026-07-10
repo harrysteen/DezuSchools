@@ -12,6 +12,7 @@ import {
   Mail,
   ChevronRight
 } from "lucide-react";
+import footerBackgroundLine from "../../Assets/Footer background line.png";
 
 export default function Stories() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -102,7 +103,7 @@ export default function Stories() {
       {/* FLOATING HEADER */}
       <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-primary text-white py-3 px-6 rounded-full flex items-center justify-between shadow-2xl z-50 transition-all duration-300 border border-white/10">
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl md:text-2xl font-display font-black tracking-tight">dezu schools</span>
+          <span className="text-xl md:text-2xl font-display font-normal tracking-tight">dezu schools</span>
         </Link>
 
         {/* Desktop Nav Links */}
@@ -436,19 +437,25 @@ export default function Stories() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-primary text-white pt-20 pb-8 px-6 relative border-t border-white/10">
-        
-        {/* Floating Orange Badge/Flower sitting on top border */}
-        <div className="absolute top-[-25px] left-1/2 -translate-x-1/2 text-secondary z-10">
-          <svg width="50" height="50" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.786 1.4 8.168L12 18.896l-7.334 3.857 1.4-8.168L.132 9.21l8.2-1.192L12 .587z"/>
+      <footer className="bg-primary text-white pt-24 pb-8 px-6 relative border-t border-white/10 overflow-hidden">
+        {/* Footer Background Line Image */}
+        <img
+          src={footerBackgroundLine.src}
+          alt="Footer Background Line"
+          className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+        />
+
+        {/* Floating Orange starburst sitting on top border */}
+        <div className="absolute top-[-32px] left-1/2 -translate-x-1/2 text-secondary z-20">
+          <svg viewBox="0 0 100 100" fill="#FF7122" className="w-16 h-16" style={{ animation: "spin 25s linear infinite" }}>
+            <path d="M50 0 L56 12 L68 6 L70 19 L82 17 L80 30 L91 32 L85 44 L95 50 L85 56 L91 68 L80 70 L82 83 L70 81 L68 94 L56 88 L50 100 L44 88 L32 94 L30 81 L18 83 L20 70 L9 68 L15 56 L5 50 L15 44 L9 32 L20 30 L18 17 L30 19 L32 6 L44 12 Z" />
           </svg>
         </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left">
-          
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 text-left relative z-10">
+
           {/* Programs Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">PROGRAMS</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
               <li><Link href="/workshop" className="hover:text-secondary transition">Workshop</Link></li>
@@ -459,7 +466,7 @@ export default function Stories() {
           </div>
 
           {/* About Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-2">
             <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">ABOUT</h4>
             <ul className="space-y-3 text-sm font-semibold opacity-80">
               <li><Link href="/why-dezu" className="hover:text-secondary transition">Our Philosophy</Link></li>
@@ -470,15 +477,15 @@ export default function Stories() {
           </div>
 
           {/* Logo Brand Center-Right */}
-          <div className="md:col-span-3 flex flex-col justify-center items-start md:items-center">
+          <div className="md:col-span-4 flex flex-col justify-center items-start md:items-center">
             <div className="text-left font-black leading-none font-display">
-              <span className="text-4xl text-white/50 block">dezu</span>
-              <span className="text-6xl text-white block">Schools</span>
+              <span className="text-[52px] md:text-[84px] text-white block">dezu</span>
+              <span className="text-[52px] md:text-[84px] text-white block">Schools</span>
             </div>
           </div>
 
           {/* Connect Column (Far Right) */}
-          <div className="md:col-span-3 flex flex-col justify-between">
+          <div className="md:col-span-4 flex flex-col justify-between">
             <div>
               <h4 className="text-xs font-black tracking-widest text-secondary uppercase mb-6 font-display">CONNECT</h4>
               <ul className="space-y-3 text-sm font-semibold opacity-80">
@@ -488,31 +495,36 @@ export default function Stories() {
               </ul>
             </div>
 
-            {/* Social Icons */}
-            <div className="flex gap-4 mt-8">
-              <Link href="https://instagram.com" className="w-9 h-9 rounded-full bg-white/10 hover:bg-secondary hover:text-white transition flex items-center justify-center text-white">
-                <Instagram size={18} />
-              </Link>
-              <Link href="https://linkedin.com" className="w-9 h-9 rounded-full bg-white/10 hover:bg-secondary hover:text-white transition flex items-center justify-center text-white">
-                <Linkedin size={18} />
+            {/* Social Icons Row + CTA Button */}
+            <div className="flex items-center gap-4 flex-wrap mt-8">
+              <div className="flex gap-2">
+                <Link href="https://instagram.com" className="w-8 h-8 rounded-full border border-white/20 hover:bg-secondary hover:border-secondary transition flex items-center justify-center text-white">
+                  <Instagram size={14} />
+                </Link>
+                <Link href="https://linkedin.com" className="w-8 h-8 rounded-full border border-white/20 hover:bg-secondary hover:border-secondary transition flex items-center justify-center text-white">
+                  <Linkedin size={14} />
+                </Link>
+              </div>
+              <Link
+                href="/contact"
+                className="bg-[#FF7122] text-white px-5 py-2.5 rounded-full text-xs font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-1 active:scale-95 whitespace-nowrap ml-auto"
+              >
+                Book a presentation &rarr;
               </Link>
             </div>
           </div>
 
         </div>
 
-        {/* Bottom bar with orange stair decoration */}
-        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60">
-          
-          {/* Orange stair decoration on bottom left */}
-          <div className="flex items-end gap-0.5 mb-4 md:mb-0">
-            <div className="w-6 h-6 bg-secondary"></div>
-            <div className="w-6 h-3 bg-secondary"></div>
-            <div className="w-6 h-1.5 bg-secondary"></div>
-          </div>
-
+        {/* Bottom bar */}
+        <div className="max-w-7xl mx-auto pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between text-xs font-semibold opacity-60 relative z-10">
           <div>
             &copy; {new Date().getFullYear()} DEZU Schools. All rights reserved.
+          </div>
+          <div className="flex gap-6 mt-4 md:mt-0">
+            <Link href="/privacy" className="hover:text-secondary transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-secondary transition">Terms</Link>
+            <Link href="/press" className="hover:text-secondary transition">Press kit</Link>
           </div>
         </div>
 
