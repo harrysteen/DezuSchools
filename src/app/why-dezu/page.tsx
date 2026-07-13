@@ -161,14 +161,14 @@ export default function WhyDezu() {
           </div>
 
           {/* Hero Right Content - Cutout with Background Circle & Star */}
-          <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[450px] items-end overflow-visible">
-            <div className="relative w-full max-w-[400px] h-[450px] flex items-end justify-center">
+          <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[340px] md:h-[400px] lg:h-[450px] items-end overflow-visible">
+            <div className="relative w-full max-w-[340px] md:max-w-[400px] lg:max-w-[440px] h-[340px] md:h-[400px] lg:h-[450px] flex items-end justify-center">
               
               {/* Purple Circle in Background */}
-              <div className="absolute top-[12%] w-[320px] h-[320px] bg-[#C3B3F9] rounded-full -z-10 shadow-inner"></div>
+              <div className="absolute top-[10%] md:top-[8%] lg:top-[6%] w-[240px] md:w-[280px] lg:w-[340px] h-[240px] md:h-[280px] lg:h-[340px] bg-[#C3B3F9] rounded-full -z-10 shadow-inner"></div>
               
               {/* Orange Star Decal */}
-              <div className="absolute top-[8%] -right-8 w-24 h-24 z-0">
+              <div className="absolute top-[6%] md:top-[4%] lg:top-[2%] -right-8 md:-right-12 lg:-right-16 w-16 md:w-20 lg:w-24 h-16 md:h-20 lg:h-24 z-0">
                 <Image
                   src={heroStar}
                   alt="Orange star decor"
@@ -177,7 +177,7 @@ export default function WhyDezu() {
               </div>
 
               {/* Three Experts Cutout */}
-              <div className="relative w-[550px] h-[550px] flex items-end justify-center z-10 overflow-visible translate-y-6 md:translate-y-10">
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[480px] md:w-[560px] lg:w-[660px] h-[480px] md:h-[560px] lg:h-[660px] flex items-end justify-center z-10 overflow-visible">
                 <Image 
                   src={whyDezuHeroImage} 
                   alt="Taught by real-time experts from different industries" 
@@ -190,42 +190,42 @@ export default function WhyDezu() {
           </div>
 
         </div>
-      </section>
 
-      {/* WAVY LINE DIVIDER */}
-      <div className="w-full overflow-hidden leading-[0] relative -mt-16 md:-mt-24 lg:-mt-32 -mb-8 md:-mb-12 lg:-mb-16 z-20 pointer-events-none">
-        <Image
-          src={whyDezuHeroLine}  
-          alt="Background Line Divider"
-          className="w-full h-auto object-cover"
-        />
-      </div>
+        {/* WAVY LINE DIVIDER INSIDE HERO */}
+        {/* <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+          <Image
+            src={whyDezuHeroLine}  
+            alt="Background Line Divider"
+            className="w-full h-auto object-cover"
+          />
+        </div> */}
+      </section>
 
       {/* SECTION 2: WHO ARE WE & DESIGN X EDUCATION */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
           {/* Left Column: Text & CTA */}
-          <div className="lg:col-span-6 space-y-12 text-left">
+          <div className="lg:col-span-6 space-y-8 text-left">
             <div>
-              <h2 className="text-4xl font-display font-black text-dark leading-tight mb-4">
-                Who are we?
+              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight mb-4">
+                Who are <span className="font-serif italic font-normal text-primary">we</span>?
               </h2>
-              <p className="text-lg text-dark/85 font-medium leading-relaxed">
+              <p className="text-base md:text-lg font-medium leading-relaxed text-[#1E293BCC]">
                 Dezu is a design education platform that bridges the gap between classroom learning and industry practice. We bring working professionals into schools to teach, mentor, and inspire the next generation of creative thinkers.
               </p>
             </div>
 
             <div>
-              <h2 className="text-4xl font-display font-black text-dark leading-tight mb-4">
+              <h2 className="text-3xl md:text-4xl font-serif italic font-normal text-primary leading-tight mb-4">
                 design X education
               </h2>
-              <p className="text-lg text-dark/85 font-medium leading-relaxed">
+              <p className="text-base md:text-lg font-medium leading-relaxed text-[#1E293BCC]">
                 Through hands-on workshops, semester-long programs, and year-round partnerships, we help schools integrate real-world design thinking, innovation, and problem-solving into their curriculum.
               </p>
             </div>
 
-            <div>
+            <div className="pt-2">
               <Link 
                 href="https://studiodezu.com" 
                 target="_blank" 
@@ -238,70 +238,73 @@ export default function WhyDezu() {
           </div>
 
           {/* Right Column: Stats Grid */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
-            
-            {/* Card 1: Industry Studios */}
-            <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-              <div className="flex justify-between items-start">
-                <span className="text-xs font-bold text-dark/50">20+</span>
-                <div className="text-secondary p-2 bg-white rounded-full shadow-sm">
-                  <Briefcase size={20} />
-                </div>
-              </div>
-              <div>
-                <h3 className="text-xl font-display font-black text-dark mb-2">Industry Studios</h3>
-                <p className="text-xs text-dark/75 font-semibold leading-relaxed">
-                  Practicing creative labs offering studio modules directly to partner classrooms.
-                </p>
-              </div>
+          <div className="lg:col-span-6 relative pb-8 pr-4">
+            {/* Orange overlapping squares in bottom right */}
+            <div className="absolute -bottom-2 -right-2 w-32 h-32 pointer-events-none hidden sm:block z-0">
+              {/* Square 1 (bottom-right) */}
+              <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#F97316]"></div>
+              {/* Square 2 (shifted) */}
+              <div className="absolute bottom-8 right-8 w-16 h-16 bg-[#F97316]"></div>
             </div>
 
-            {/* Card 2: Partner Schools */}
-            <div className="bg-primary text-white rounded-3xl p-8 border border-white/5 text-left flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1 shadow-lg">
-              <div className="flex justify-between items-start">
-                <span className="text-xs font-bold opacity-60">50+</span>
-                <div className="text-secondary p-2 bg-white/10 rounded-full">
-                  <BookOpen size={20} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+              
+              {/* Card 1: Industry Studios */}
+              <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
+                <div className="text-secondary">
+                  <Briefcase size={28} className="stroke-[2.5]" />
+                </div>
+                <div className="mt-6">
+                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">20+</span>
+                  <h3 className="text-base font-display font-black text-dark mb-2">Industry Studios</h3>
+                  <p className="text-xs text-dark/75 font-semibold leading-relaxed">
+                    Practicing creative labs offering studio modules directly to partner classrooms.
+                  </p>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-display font-black mb-2">Partner Schools</h3>
-                <p className="text-xs text-white/80 font-medium leading-relaxed">
-                  Leading educational institutions running standard Dezu-powered classes weekly.
-                </p>
-              </div>
-            </div>
 
-            {/* Card 3: Students Educated */}
-            <div className="bg-[#FED2B3] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-              <div className="flex justify-between items-start">
-                <span className="text-xs font-bold text-dark/50">1000+</span>
-                <div className="text-secondary p-2 bg-white rounded-full shadow-sm">
-                  <Users size={20} />
+              {/* Card 2: Partner Schools */}
+              <div className="bg-primary text-white rounded-3xl p-8 border border-white/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1 shadow-lg">
+                <div className="text-secondary">
+                  <BookOpen size={28} className="stroke-[2.5]" />
+                </div>
+                <div className="mt-6">
+                  <span className="text-3xl md:text-4xl font-display font-black text-white block mb-1">50+</span>
+                  <h3 className="text-base font-display font-black text-white mb-2">Partner Schools</h3>
+                  <p className="text-xs text-white/80 font-medium leading-relaxed">
+                    Leading educational institutions running standard Dezu-powered classes weekly.
+                  </p>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-display font-black text-dark mb-2">Students Educated</h3>
-                <p className="text-xs text-dark/75 font-semibold leading-relaxed">
-                  Active school kids acquiring design research, sketching, and prototype capabilities.
-                </p>
-              </div>
-            </div>
 
-            {/* Card 4: Projects Built */}
-            <div className="bg-muted/60 rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-              <div className="flex justify-between items-start">
-                <span className="text-xs font-bold text-dark/50">200+</span>
-                <div className="text-secondary p-2 bg-white rounded-full shadow-sm">
-                  <Sparkles size={20} />
+              {/* Card 3: Students Educated */}
+              <div className="bg-[#FFE5D3] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
+                <div className="text-secondary">
+                  <Users size={28} className="stroke-[2.5]" />
+                </div>
+                <div className="mt-6">
+                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">1000+</span>
+                  <h3 className="text-base font-display font-black text-dark mb-2">Students Educated</h3>
+                  <p className="text-xs text-dark/75 font-semibold leading-relaxed">
+                    Active school kids acquiring design research, sketching, and prototype capabilities.
+                  </p>
                 </div>
               </div>
-              <div>
-                <h3 className="text-xl font-display font-black text-dark mb-2">Projects Built</h3>
-                <p className="text-xs text-dark/75 font-semibold leading-relaxed">
-                  Real functional ideas, models, physical architecture prototypes, user layouts.
-                </p>
+
+              {/* Card 4: Projects Built */}
+              <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
+                <div className="text-secondary">
+                  <Sparkles size={28} className="stroke-[2.5]" />
+                </div>
+                <div className="mt-6">
+                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">200+</span>
+                  <h3 className="text-base font-display font-black text-dark mb-2">Projects Built</h3>
+                  <p className="text-xs text-dark/75 font-semibold leading-relaxed">
+                    Real functional ideas, models, physical architecture prototypes, and user layouts.
+                  </p>
+                </div>
               </div>
+
             </div>
 
           </div>
@@ -310,30 +313,37 @@ export default function WhyDezu() {
       </section>
 
       {/* SECTION 3: PARTNER LOGOS MARQUEE */}
-      <section className="bg-primary text-white py-12 overflow-hidden border-y-2 border-dark/10 shadow-md">
-        <div className="max-w-7xl mx-auto px-6 mb-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-black tracking-tight mb-2">
-            Associated with <span className="text-secondary italic font-serif font-normal">industry leaders</span>
+      <section className="py-16 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 mb-10 text-center">
+          <h2 className="text-3xl md:text-5xl font-display font-black text-dark tracking-tight mb-4">
+            Associated with <span className="text-primary italic font-serif font-normal">industry leaders</span>
           </h2>
-          <p className="text-sm text-white/80 font-medium max-w-xl mx-auto">
+          <p className="text-sm md:text-base text-[#1E293BCC] font-medium max-w-xl mx-auto leading-relaxed">
             Our expert curriculum integrates the technical and process benchmarks of globally distinguished brands, giving students real-world context.
           </p>
         </div>
 
-        <div className="animate-marquee-inline whitespace-nowrap flex items-center gap-16 text-2xl font-bold uppercase tracking-widest text-white/50 select-none">
-          <span>Adobe</span> <span>✦</span>
-          <span>Google</span> <span>✦</span>
-          <span>Microsoft</span> <span>✦</span>
-          <span>Figma</span> <span>✦</span>
-          <span>Zoho</span> <span>✦</span>
-          <span>TCS</span> <span>✦</span>
+        <div className="animate-marquee-inline whitespace-nowrap flex items-center gap-24 text-3xl md:text-4xl font-black text-[#94A3B8] select-none">
+          <span>Adobe</span>
+          <span>Google</span>
+          <span>Microsoft</span>
+          <span>Figma</span>
+          <span>Zoho</span>
+          <span>TCS</span>
           
-          <span>Adobe</span> <span>✦</span>
-          <span>Google</span> <span>✦</span>
-          <span>Microsoft</span> <span>✦</span>
-          <span>Figma</span> <span>✦</span>
-          <span>Zoho</span> <span>✦</span>
-          <span>TCS</span> <span>✦</span>
+          <span>Adobe</span>
+          <span>Google</span>
+          <span>Microsoft</span>
+          <span>Figma</span>
+          <span>Zoho</span>
+          <span>TCS</span>
+
+          <span>Adobe</span>
+          <span>Google</span>
+          <span>Microsoft</span>
+          <span>Figma</span>
+          <span>Zoho</span>
+          <span>TCS</span>
         </div>
       </section>
 
@@ -348,115 +358,133 @@ export default function WhyDezu() {
               </h2>
             </div>
             <div className="text-dark/75 font-medium max-w-md text-left">
-              Our facilitators are working designers, technologists and researchers who bring studios into your school. Every mentor is trained and DEZU-certified.
+              Our facilitators are working designers, technologists and researchers who bring real-world studios into your school. Every mentor is vetted, trained and DEZU-certified.
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            
-            {/* Card 1 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img 
-                  src={himajaaImg.src} 
-                  alt="Himajaa Indukuri - CEO, Studio Dezu" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, Studio Dezu</p>
-              </div>
+          <div className="relative pl-4 pb-8">
+            {/* Orange overlapping squares in bottom left */}
+            <div className="absolute -bottom-2 -left-2 w-32 h-32 pointer-events-none hidden sm:block z-0">
+              {/* Square 1 (bottom-left) */}
+              <div className="absolute bottom-0 left-0 w-16 h-16 bg-[#F97316]"></div>
+              {/* Square 2 (shifted) */}
+              <div className="absolute bottom-8 left-8 w-16 h-16 bg-[#F97316]"></div>
             </div>
 
-            {/* Card 2 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img 
-                  src={balamuraliImg.src} 
-                  alt="Balamurali Bhaskaran - Design Thinking Mentor" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
+              
+              {/* Card 1 */}
+              <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                  <img 
+                    src={himajaaImg.src} 
+                    alt="Himajaa Indukuri - CEO, Studio Dezu" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="text-left px-1">
+                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
+                  <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, Studio Dezu</p>
+                </div>
               </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Design Thinking Mentor (IBM certified)</p>
-              </div>
-            </div>
 
-            {/* Card 3 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img 
-                  src={bhavanaImg.src} 
-                  alt="Bhavana Ghanta - Senior Designer, Schlemberger" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              {/* Card 2 */}
+              <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                  <img 
+                    src={balamuraliImg.src} 
+                    alt="Balamurali Bhaskaran - Design Thinking Mentor" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="text-left px-1">
+                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
+                  <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Design Thinking Mentor (IBM certified)</p>
+                </div>
               </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Senior Designer, Schlemberger</p>
-              </div>
-            </div>
 
-            {/* Card 4 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img 
-                  src={prathikImg.src} 
-                  alt="Prathik Gadde - CEO, PhotonX" 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+              {/* Card 3 */}
+              <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                  <img 
+                    src={prathikImg.src} 
+                    alt="Prathik Gadde - CEO, PhotonX" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="text-left px-1">
+                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
+                  <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, PhotonX</p>
+                </div>
               </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, PhotonX</p>
-              </div>
-            </div>
 
+              {/* Card 4 */}
+              <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+                <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                  <img 
+                    src={bhavanaImg.src} 
+                    alt="Bhavana Ghanta - Senior Designer, Schlemberger" 
+                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="text-left px-1">
+                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
+                  <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Senior Designer, Schlemberger</p>
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
 
       {/* SECTION 5: APPLY TO MENTOR CTA */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="bg-primary rounded-[36px] p-8 md:p-16 text-white relative overflow-hidden shadow-xl border border-white/10 flex flex-col lg:flex-row gap-12 items-center justify-between text-left">
+        
+        {/* Card Wrapper */}
+        <div className="relative w-full overflow-visible pb-8 pr-4">
           
-          {/* Background Decorative Graphic (Left) */}
-          <div className="absolute top-[-20%] left-[-10%] opacity-10 text-white w-96 h-96 -z-10">
-            <svg viewBox="0 0 100 100" fill="currentColor" className="w-full h-full">
-              <rect x="10" y="10" width="80" height="80" transform="rotate(45 50 50)" />
+          {/* Orange Scalloped Badge on Top-Left */}
+          <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-20 w-16 h-16 md:w-20 md:h-20 pointer-events-none">
+            <svg viewBox="0 0 100 100" fill="#FF6A1F" className="w-full h-full drop-shadow-lg">
+              <path d="M50 2.5 L55.3 10.6 L64.4 6.3 L67.1 15.8 L76.7 13.8 L76.8 23.6 L86.4 24.1 L83.8 33.5 L92.5 37.3 L87.4 45.7 L95 52.1 L87.8 58.8 L93.4 67 L84.8 71.2 L88 80.5 L78.8 82.4 L79.6 92.2 L70.4 91.4 L68.4 101 L60 97.6 L55.3 105.8 L48.3 100 L41.3 105.8 L36.7 97.6 L28.3 101 L26.3 91.4 L17.1 92.2 L17.9 82.4 L8.7 80.5 L12 71.2 L3.4 67 L9 58.8 L1.8 52.1 L9.4 45.7 L4.3 37.3 L13 33.5 L10.4 24.1 L20 23.6 L20.1 13.8 L29.7 15.8 L32.4 6.3 L41.5 10.6 Z" />
             </svg>
           </div>
 
-          <div className="flex-1 space-y-6">
-            <h2 className="text-4xl md:text-5xl font-display font-black leading-tight">
-              Are you a designer, architect, or creative practitioner?
-            </h2>
-            <p className="text-base text-white/80 font-medium leading-relaxed max-w-2xl">
-              Dezu is always looking to expand its mentor cohort. If you believe that design education should be available to every student in India not just the ones in metros we'd love to hear from you. Mentors commit to 2-3 school visits per year. Everything else is flexible.
-            </p>
-            <div>
-              <Link 
-                href="mailto:info@dezu.in" 
-                className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
-              >
-                Apply to Mentor <ArrowRight size={18} />
-              </Link>
-            </div>
+          {/* Orange overlapping squares in bottom right */}
+          <div className="absolute -bottom-2 -right-2 w-32 h-32 pointer-events-none hidden sm:block z-0">
+            {/* Square 1 (bottom-right) */}
+            <div className="absolute bottom-0 right-0 w-16 h-16 bg-[#F97316]"></div>
+            {/* Square 2 (shifted) */}
+            <div className="absolute bottom-8 right-8 w-16 h-16 bg-[#F97316]"></div>
           </div>
 
-          {/* Graphical overlay elements on the right of card */}
-          <div className="relative w-48 h-48 flex items-center justify-center shrink-0">
-            {/* Orange diagonal squares */}
-            <div className="absolute w-28 h-28 bg-secondary rounded-3xl rotate-45 transform translate-x-4 translate-y-4 shadow-lg"></div>
-            <div className="absolute w-24 h-24 bg-[#FED2B3]/90 rounded-2xl rotate-12 shadow-md"></div>
-            {/* Scalloped badge styled circle */}
-            <div className="absolute w-16 h-16 bg-white text-secondary rounded-full flex items-center justify-center shadow-lg font-black font-display text-xl border-4 border-secondary rotate-[-15deg]">
-              DEZU
-            </div>
-          </div>
+          <div className="bg-primary rounded-[36px] p-8 md:p-16 text-white relative overflow-hidden shadow-xl border border-white/10 flex flex-col items-start justify-center text-left min-h-[360px] z-10">
+            
+            {/* Background Decorative Waves */}
+            <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 300" fill="none" preserveAspectRatio="none">
+              <path d="M-100,300 C200,280 400,100 1100,220" stroke="white" strokeWidth="4" strokeOpacity="0.12" />
+              <path d="M-100,260 C200,240 400,60 1100,180" stroke="white" strokeWidth="4" strokeOpacity="0.08" />
+            </svg>
 
+            <div className="max-w-3xl space-y-6 relative z-10">
+              <h2 className="text-3xl md:text-5xl font-display font-black leading-tight">
+                Are you a designer, architect, or creative practitioner?
+              </h2>
+              <p className="text-sm md:text-base text-white/90 font-medium leading-relaxed">
+                Dezu is always looking to expand its mentor cohort. If you believe that design education should be available to every student in India not just the ones in metros we'd love to hear from you. Mentors commit to 2-3 school visits per year. Everything else is flexible.
+              </p>
+              <div className="pt-2">
+                <Link 
+                  href="mailto:info@dezu.in" 
+                  className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
+                >
+                  Apply to Mentor <ArrowRight size={18} />
+                </Link>
+              </div>
+            </div>
+
+          </div>
         </div>
       </section>
 
