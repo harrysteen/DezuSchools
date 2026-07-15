@@ -84,7 +84,7 @@ export default function Navbar() {
           <Link href="/workshop" className={linkClass("/workshop")}>
             3-day workshop
           </Link>
-          <Link href="/#programs" className="hover:text-secondary transition relative py-1">
+          <Link href="/programs" className={linkClass("/programs")}>
             programs
           </Link>
           <Link href="/why-dezu" className={linkClass("/why-dezu")}>
@@ -169,9 +169,9 @@ export default function Navbar() {
               3-day workshop
             </Link>
             <Link
-              href="/#programs"
+              href="/programs"
               onClick={() => setMobileMenuOpen(false)}
-              className="hover:text-secondary transition font-display"
+              className={mobileLinkClass("/programs")}
             >
               programs
             </Link>
