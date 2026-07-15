@@ -31,8 +31,12 @@ export default function LoginPage() {
         throw new Error(data.error || "Something went wrong. Please try again.");
       }
 
+      // Read redirect path from query string if available
+      const searchParams = new URLSearchParams(window.location.search);
+      const redirectTo = searchParams.get("redirect") || "/";
+
       // Successful login
-      router.push("/");
+      router.push(redirectTo);
       router.refresh();
     } catch (err: any) {
       setError(err.message);

@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import { Sparkles, Check, X, ArrowRight, RotateCcw, Award, ArrowLeft } from "lucide-react";
 
@@ -138,6 +139,8 @@ const TASKS_DATA = [
 ];
 
 export default function ProgramsDemoPage() {
+  const router = useRouter();
+  const [authLoading, setAuthLoading] = useState(true);
   const [currentTaskIndex, setCurrentTaskIndex] = useState(0);
   const [selectedOptionKey, setSelectedOptionKey] = useState<string | null>(null);
   const [isAnswered, setIsAnswered] = useState(false);
@@ -146,7 +149,41 @@ export default function ProgramsDemoPage() {
   const [firstAttempt, setFirstAttempt] = useState(true);
   const [showScoreCard, setShowScoreCard] = useState(false);
 
+  // Authenticate and protect this route client-side
+  useEffect(() => {
+    async function checkAuth() {
+      try {
+        const res = await fetch("/api/auth/me");
+        if (res.ok) {
+          const data = await res.json();
+          if (data.authenticated) {
+            setAuthLoading(false);
+          } else {
+            router.push("/login?redirect=/programs");
+          }
+        } else {
+          router.push("/login?redirect=/programs");
+        }
+      } catch (error) {
+        console.error("Auth check failed:", error);
+        router.push("/login?redirect=/programs");
+      }
+    }
+    checkAuth();
+  }, [router]);
+
   const currentTask = TASKS_DATA[currentTaskIndex];
+
+  if (authLoading) {
+    return (
+      <div className="min-h-screen bg-cream flex items-center justify-center font-sans">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
+          <p className="text-sm font-semibold text-dark/70">Checking authentication...</p>
+        </div>
+      </div>
+    );
+  }
 
   const handleOptionClick = (option: { key: string; isCorrect: boolean }) => {
     if (isAnswered) return; // Prevent clicking other options after selection
