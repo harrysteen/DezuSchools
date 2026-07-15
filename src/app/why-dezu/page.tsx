@@ -3,11 +3,10 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import Navbar from "@/components/Navbar";
 import { 
   ArrowRight, 
   Check, 
-  Menu, 
-  X, 
   Sparkles, 
   Instagram,
   Linkedin,
@@ -26,7 +25,6 @@ import whyDezuHeroLine from "../../Assets/why dezu hero line.png";
 import creatorsUnderline from "../../Assets/home-hero-create-underline.png";
 
 export default function WhyDezu() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-[linear-gradient(to_right,rgba(28,27,31,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(28,27,31,0.04)_1px,transparent_1px)] bg-[size:120px_120px] relative text-dark font-sans selection:bg-primary selection:text-white">
@@ -45,66 +43,7 @@ export default function WhyDezu() {
       `}} />
 
       {/* FLOATING HEADER */}
-      <header className="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-6xl bg-primary text-white py-3 px-6 rounded-full flex items-center justify-between shadow-2xl z-50 transition-all duration-300 border border-white/10">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl md:text-2xl font-display font-normal tracking-tight">dezu schools</span>
-        </Link>
-
-        {/* Desktop Nav Links */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-semibold tracking-wide">
-          <Link href="/workshop" className="hover:text-secondary transition">3-day workshop</Link>
-          <Link href="/#programs" className="hover:text-secondary transition">programs</Link>
-          <Link href="/why-dezu" className="hover:text-secondary transition relative after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-secondary after:scale-x-100">why dezu</Link>
-          <Link href="/stories" className="hover:text-secondary transition">stories</Link>
-          <Link href="/contact" className="hover:text-secondary transition">contact</Link>
-        </nav>
-
-        {/* Right Action Button */}
-        <div className="hidden md:block">
-          <Link 
-            href="/contact" 
-            className="bg-secondary text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-opacity-95 transition shadow-md flex items-center gap-1 active:scale-95"
-          >
-            Book a Presentation
-          </Link>
-        </div>
-
-        {/* Mobile menu button */}
-        <button 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-1 text-white hover:text-secondary transition focus:outline-none"
-        >
-          {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </header>
-
-      {/* MOBILE NAV OVERLAY */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-primary z-40 flex flex-col justify-center items-center gap-8 text-white">
-          <button 
-            onClick={() => setMobileMenuOpen(false)}
-            className="absolute top-8 right-8 p-1 hover:text-secondary transition"
-          >
-            <X size={32} />
-          </button>
-          
-          <nav className="flex flex-col items-center gap-6 text-2xl font-bold">
-            <Link href="/workshop" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">3-day workshop</Link>
-            <Link href="/#programs" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">programs</Link>
-            <Link href="/why-dezu" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display text-secondary">why dezu</Link>
-            <Link href="/stories" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">stories</Link>
-            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="hover:text-secondary transition font-display">contact</Link>
-          </nav>
-
-          <Link 
-            href="/contact" 
-            onClick={() => setMobileMenuOpen(false)}
-            className="bg-secondary text-white px-8 py-3 rounded-full text-lg font-bold hover:bg-opacity-95 transition shadow-lg mt-4 font-display"
-          >
-            Book a Presentation
-          </Link>
-        </div>
-      )}
+      <Navbar />
 
       {/* SECTION 1: HERO */}
       <section className="pt-36 pb-0 w-full relative overflow-visible flex flex-col justify-center">
