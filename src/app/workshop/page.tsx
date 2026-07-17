@@ -33,6 +33,7 @@ import workshopBackgroundLine from "../../Assets/3daysworkshop backgroundline.pn
 import footerBackgroundLine from "../../Assets/Footer background line.png";
 import scrollStar from "../../Assets/herosection-scrollanimation-star.png";
 import workshopSection3Image from "../../Assets/3daysworkshop section3 image.png";
+import homeHeroCurvs from "../../Assets/Home herosection curvs.png";
 import workgallary1 from "../../Assets/workgallary1.png";
 import workgallary2 from "../../Assets/workgallary2.png";
 import workgallary3 from "../../Assets/workgallary3.png";
@@ -50,7 +51,11 @@ export default function WorkshopPage() {
       {/* HERO SECTION */}
       <section className="pt-36 pb-0 w-full relative overflow-hidden flex flex-col justify-center">
         {/* Background decorative elements */}
-        <div className="absolute top-16 left-[-40px] w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10 blur-xl"></div>
+        <Image
+          src={homeHeroCurvs} 
+          alt="Hero Curves"
+          className="absolute top-8 left-[-40px] w-56 h-56 object-contain -z-10"
+        />
         <div className="absolute bottom-24 right-48 w-48 h-48 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
 
         <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -434,9 +439,8 @@ export default function WorkshopPage() {
             ].map((img, index) => (
               <div
                 key={index}
-                className={`relative rounded-3xl overflow-hidden shadow-lg border border-dark/5 bg-primary/5 transition-transform duration-500 hover:scale-[1.03] aspect-[3/4] ${
-                  index % 2 === 0 ? "translate-y-8 md:translate-y-12" : "translate-y-0"
-                }`}
+                className={`relative rounded-3xl overflow-hidden shadow-lg border border-dark/5 bg-primary/5 transition-transform duration-500 hover:scale-[1.03] aspect-[3/4] ${index % 2 === 0 ? "translate-y-8 md:translate-y-12" : "translate-y-0"
+                  }`}
               >
                 <Image
                   src={img.src}

@@ -6,6 +6,8 @@ import Navbar from "@/components/Navbar";
 import tenageboy from "../Assets/image 25.png"
 import heroStar from "../Assets/Home-herosection-start.png"
 import creatorsUnderline from "../Assets/home-hero-create-underline.png"
+import homeHeroCurvs from "../Assets/Home herosection curvs.png"
+import heroBlob from "../Assets/Home herosection blob.png"
 import scrollStar from "../Assets/herosection-scrollanimation-star.png"
 import secondSectionLine from "../Assets/home seconsection background line.png"
 import footerBackgroundLine from "../Assets/Footer background line.png"
@@ -24,7 +26,8 @@ import {
   Check,
   Sparkles,
   Instagram,
-  Linkedin
+  Linkedin,
+  Download
 } from "lucide-react";
 
 export default function Home() {
@@ -87,7 +90,11 @@ export default function Home() {
       {/* SECTION 1: HERO */}
       <section className="pt-36 pb-0 w-full relative overflow-hidden min-h-[85vh] flex flex-col justify-end">
         {/* Background decorative elements */}
-        <div className="absolute top-16 left-[-40px] w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10"></div>
+        <img
+          src={homeHeroCurvs.src}
+          alt="Hero Curves"
+          className="absolute top-8 left-[-40px] w-56 h-56 object-contain -z-10"
+        />
         <div className="absolute bottom-24 right-48 w-48 h-48 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
 
         <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
@@ -95,13 +102,14 @@ export default function Home() {
           {/* Hero Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left pb-16">
 
-            <h1 className="font-display text-dark tracking-tight leading-tight mb-6">
-              <span className="text-3xl md:text-5xl lg:text-6xl font-black block mb-3">
-                21st-century skills for
+            <h1 className="text-dark tracking-tight leading-tight mb-6 text-3xl md:text-5xl lg:text-[52px] font-black">
+              <span className="font-display font-normal block mb-3">
+                Building 21st-century skills
               </span>
               <span className="flex flex-wrap items-center gap-x-3 gap-y-2 mt-2">
-                <span className="bg-primary text-white px-6 py-2 rounded-full inline-flex items-center justify-center text-3xl md:text-5xl lg:text-6xl font-display shadow-md transform -rotate-1 uppercase tracking-normal">
-                  Future
+                <span className="font-display font-normal">for an</span>
+                <span className="bg-primary text-white px-7 py-2 rounded-full inline-flex items-center justify-center font-display font-normal shadow-md transform -rotate-1 normal-case tracking-normal text-2xl md:text-4xl lg:text-[42px] mx-2">
+                  AI driven
                 </span>
                 <span
                   style={{
@@ -109,13 +117,13 @@ export default function Home() {
                     fontWeight: 400,
                     fontStyle: "italic",
                   }}
-                  className="text-4xl md:text-[75px] lg:text-[90px] text-dark relative inline-block tracking-wide leading-none"
+                  className="text-3xl md:text-[60px] lg:text-[72px] text-dark relative inline-block tracking-wide leading-none font-normal"
                 >
-                  Innovators.
+                  future.
                   {/* Custom Orange Paint Stroke */}
                   <img
                     src={creatorsUnderline.src}
-                    alt="innovators underline"
+                    alt="future underline"
                     className="absolute bottom-[-15px] left-0 w-full object-contain"
                   />
                 </span>
@@ -124,32 +132,60 @@ export default function Home() {
 
             <p
               style={{
-                fontFamily: "var(--font-bai-jamjuree), sans-serif",
+                fontFamily: "var(--font-sans), sans-serif",
                 fontWeight: 400,
                 letterSpacing: "normal",
                 verticalAlign: "middle",
               }}
               className="text-base md:text-[19.86px] md:leading-[28.79px] text-dark/80 max-w-2xl mb-8 mt-4"
             >
-              Dezu partners with schools to develop creativity, critical thinking,
-              communication, collaboration, and innovation through hands-on<br /> {" "}
-              <strong className="font-extrabold text-dark">Design Thinking</strong> and future skills
-              programs for students.
+              <strong className="font-bold text-dark">We partner with schools</strong> to develop important growth skills to develop creativity, critical thinking, communication, collaboration, and innovation for <strong className="font-bold text-dark">students from grades 6 -10</strong>.
             </p>
+
+            {/* Stats Cards */}
+            <div className="flex flex-wrap gap-4 mb-8">
+              {/* Stat 1 */}
+              <div className="bg-white border border-[#FED2B3]/60 px-6 py-3.5 rounded-2xl flex flex-col text-left shadow-sm min-w-[130px]">
+                <span className="text-2xl md:text-3xl font-black text-dark leading-none">
+                  10<span className="text-secondary font-bold ml-0.5">+</span>
+                </span>
+                <span className="text-[11px] font-semibold text-dark/40 mt-1.5 leading-none">
+                  Schools Partnered
+                </span>
+              </div>
+              {/* Stat 2 */}
+              <div className="bg-white border border-[#FED2B3]/60 px-6 py-3.5 rounded-2xl flex flex-col text-left shadow-sm min-w-[130px]">
+                <span className="text-2xl md:text-3xl font-black text-dark leading-none">
+                  300<span className="text-secondary font-bold ml-0.5">+</span>
+                </span>
+                <span className="text-[11px] font-semibold text-dark/40 mt-1.5 leading-none">
+                  Students Impacted
+                </span>
+              </div>
+              {/* Stat 3 */}
+              <div className="bg-white border border-[#FED2B3]/60 px-6 py-3.5 rounded-2xl flex flex-col text-left shadow-sm min-w-[130px]">
+                <span className="text-2xl md:text-3xl font-black text-dark leading-none">
+                  100<span className="text-secondary font-bold ml-0.5">%</span>
+                </span>
+                <span className="text-[11px] font-semibold text-dark/40 mt-1.5 leading-none">
+                  Hands On
+                </span>
+              </div>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
               <Link
-                href="/contact"
+                href="/workshop"
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200 w-full sm:w-auto text-center"
               >
-                Book a presentation →
+                Know More <ArrowRight size={18} />
               </Link>
               <a
                 href="/dezu schools Browcher.pdf"
                 download="dezu schools Browcher.pdf"
                 className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 w-full sm:w-auto text-center"
               >
-                Download brochure ↓
+                Workshop Brochure <Download size={18} />
               </a>
             </div>
           </div>
@@ -167,23 +203,20 @@ export default function Home() {
                 />
               </div>
 
-              {/* Purple outline concentric loops */}
-              <div className="absolute top-[12%] right-[-8%] -z-10 text-primary/30 w-44 h-44">
-                <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-full h-full">
-                  <path d="M10,50 Q25,20 50,20 T90,50 T50,80 Z" />
-                  <path d="M15,48 Q28,25 50,25 T85,48 T50,75 Z" />
-                  <path d="M20,46 Q31,30 50,30 T80,46 T50,70 Z" />
-                </svg>
-              </div>
 
-              {/* Light orange blob at bottom right */}
-              <div className="absolute bottom-4 right-[-5%] w-36 h-36 bg-[#FED2B3]/50 rounded-full blur-xl -z-10"></div>
+
+              {/* Purple background blob */}
+              <img
+                src={heroBlob.src}
+                alt="Hero Background Blob"
+                className="absolute top-[16%] left-1/2 -translate-x-1/2 w-[90%] h-auto object-contain z-0"
+              />
 
               {/* Teenager Boy Image Cutout */}
               <img
                 src={tenageboy.src}
                 alt="Student future creator"
-                className="w-full h-full object-contain object-bottom mix-blend-multiply grayscale-[10%]"
+                className="w-full h-full object-contain object-bottom grayscale-[10%] relative z-10"
               />
             </div>
 
@@ -229,116 +262,222 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 2: TRUSTED BY SCHOOLS */}
-      <section id="programs" className="py-20 w-full relative overflow-visible">
-        {/* Diagonal Orange Band Image */}
-        <img
-          src={secondSectionLine.src}
-          alt="Second Section Background Line"
-          className="absolute inset-0 w-full h-full -z-10 object-cover pointer-events-none"
-        />
-
-        <div className="max-w-7xl mx-auto px-6 w-full relative">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-dark leading-tight">
-                Trusted by <br />
+      {/* SECTION 3: MULTIPLE MODES OF DELIVERY (Moved up from Section 6) */}
+      <section className="py-20 bg-cream/50 border-y border-dark/5">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+            <div className="lg:col-span-6 text-left">
+              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
+                Multiple modes of <br />
                 <span
                   style={{
                     fontFamily: "var(--font-instrument), serif",
                     fontWeight: 400,
                     fontStyle: "italic",
-                    lineHeight: "67.73px",
-                    letterSpacing: "-0.68px",
-                    verticalAlign: "middle"
                   }}
-                  className="text-primary inline-block"
+                  className="text-primary italic font-normal text-3xl md:text-[58px]"
                 >
-                  forward thinking
-                </span> <br />
-                Schools Across India
+                  delivery
+                </span>
               </h2>
             </div>
-
-            {/* Slider Arrow Controls */}
-            <div className="flex gap-4">
-              <button
-                onClick={() => scroll('left')}
-                className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
-              >
-                <ArrowLeft size={20} />
-              </button>
-              <button
-                onClick={() => scroll('right')}
-                className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
-              >
-                <ArrowRight size={20} />
-              </button>
+            <div className="lg:col-span-6 text-dark/75 font-medium leading-relaxed text-left">
+              Our specially-designed delivery formats are customisable and easy to integrate with the school timetables and curricula. We help you choose the right format and curation for your school
             </div>
           </div>
 
-          <div
-            ref={sliderRef}
-            onScroll={handleScroll}
-            className="flex overflow-x-auto pb-6 gap-6 scrollbar-hide w-full justify-start"
-          >
-            {[...cards, ...cards, ...cards].map((card, idx) => {
-              const cardContent = (
-                <div className="relative w-[300px] h-[375px] rounded-[22px] overflow-hidden shadow-lg border border-dark/5 bg-white flex flex-col justify-end">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
+          {(() => {
+            const isCard1Active = hoveredFormat === null || hoveredFormat === 1;
+            const isCard2Active = hoveredFormat === 2;
+            const isCard3Active = hoveredFormat === 3;
+            const isCard4Active = hoveredFormat === 4;
 
-                  <div className="relative p-6 text-white text-left">
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-display), sans-serif",
-                        fontWeight: 400,
-                        fontSize: "24px",
-                        lineHeight: "24px",
-                        verticalAlign: "middle",
-                        textTransform: "uppercase"
-                      }}
-                      className="mb-1"
-                    >
-                      {card.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-sans), sans-serif",
-                        fontWeight: 400,
-                        fontSize: "13px",
-                        lineHeight: "20.15px",
-                        verticalAlign: "middle"
-                      }}
-                      className="text-white/80"
-                    >
-                      {card.location}
+            return (
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+                {/* Format 01: Workshop */}
+                <div
+                  onMouseEnter={() => setHoveredFormat(1)}
+                  onMouseLeave={() => setHoveredFormat(null)}
+                  className={`rounded-[32px] p-8 flex flex-col justify-between min-h-[550px] border transition-all duration-300 cursor-pointer ${isCard1Active
+                    ? "bg-primary text-white shadow-xl -translate-y-2 border-primary"
+                    : "bg-white text-dark shadow-sm border-dark/10 hover:border-dark/20"
+                    }`}
+                >
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <span className={`text-xs font-mono tracking-wider ${isCard1Active ? "text-white/60" : "text-dark/40"}`}>FORMAT 01</span>
+                      <span className="bg-secondary text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full font-display">Flagship</span>
+                    </div>
+                    <h3 className="text-3xl font-display font-black mb-4 uppercase tracking-tight">WORKSHOP</h3>
+                    <p className={`text-xs md:text-sm leading-relaxed mb-6 font-medium ${isCard1Active ? "text-white/80" : "text-dark/60"}`}>
+                      A high-intensity introduction to the DEZU studio model. Ideal for school leadership exploring fit before committing.
                     </p>
                   </div>
-                </div>
-              );
 
-              const wrapperClass = `group flex-shrink-0 ${card.tilt} hover:rotate-0 hover:scale-[1.02] transition-all duration-300`;
-
-              return card.link ? (
-                <Link key={idx} href={card.link} className={wrapperClass}>
-                  {cardContent}
-                </Link>
-              ) : (
-                <div key={idx} className={wrapperClass}>
-                  {cardContent}
+                  <div className="space-y-0 pt-2 text-xs md:text-sm">
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
+                      <span className="font-semibold">3 days</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
+                      <span className="font-semibold">On-site studio</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
+                      <span className="font-semibold">Grades 5 – 10</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
+                      <span className="font-semibold">30 – 120 students</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
+                      <span className="font-semibold">Plug-in week</span>
+                    </div>
+                  </div>
                 </div>
-              );
-            })}
-          </div>
+
+                {/* Format 02: Design Elective */}
+                <div
+                  onMouseEnter={() => setHoveredFormat(2)}
+                  onMouseLeave={() => setHoveredFormat(null)}
+                  className={`rounded-[32px] p-8 flex flex-col justify-between min-h-[550px] border transition-all duration-300 cursor-pointer ${isCard2Active
+                    ? "bg-primary text-white shadow-xl -translate-y-2 border-primary"
+                    : "bg-white text-dark shadow-sm border-dark/10 hover:border-dark/20"
+                    }`}
+                >
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <span className={`text-xs font-mono tracking-wider ${isCard2Active ? "text-white/60" : "text-dark/40"}`}>FORMAT 02</span>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider ${isCard2Active ? "text-white/60" : "text-dark/40"}`}>SEMESTER</span>
+                    </div>
+                    <h3 className="text-3xl font-display font-black mb-4 uppercase tracking-tight">DESIGN ELECTIVE</h3>
+                    <p className={`text-xs md:text-sm leading-relaxed mb-6 font-medium ${isCard2Active ? "text-white/80" : "text-dark/60"}`}>
+                      A semester-long elective taught by DEZU mentors with your in-house teachers as co-facilitators.
+                    </p>
+                  </div>
+
+                  <div className="space-y-0 pt-2 text-xs md:text-sm">
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
+                      <span className="font-semibold">16 weeks</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
+                      <span className="font-semibold">2 sessions / week</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
+                      <span className="font-semibold">Grades 6 – 12</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
+                      <span className="font-semibold">20 – 40 students</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
+                      <span className="font-semibold">Add to elective bank</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Format 03: Cross Curriculum */}
+                <div
+                  onMouseEnter={() => setHoveredFormat(3)}
+                  onMouseLeave={() => setHoveredFormat(null)}
+                  className={`rounded-[32px] p-8 flex flex-col justify-between min-h-[550px] border transition-all duration-300 cursor-pointer ${isCard3Active
+                    ? "bg-primary text-white shadow-xl -translate-y-2 border-primary"
+                    : "bg-white text-dark shadow-sm border-dark/10 hover:border-dark/20"
+                    }`}
+                >
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <span className={`text-xs font-mono tracking-wider ${isCard3Active ? "text-white/60" : "text-dark/40"}`}>FORMAT 03</span>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider ${isCard3Active ? "text-white/60" : "text-dark/40"}`}>INTEGRATED</span>
+                    </div>
+                    <h3 className="text-3xl font-display font-black mb-4 uppercase tracking-tight">CROSS CURRICULUM</h3>
+                    <p className={`text-xs md:text-sm leading-relaxed mb-6 font-medium ${isCard3Active ? "text-white/80" : "text-dark/60"}`}>
+                      DEZU methods woven into existing subjects – science, English, social studies – so every teacher becomes a studio teacher.
+                    </p>
+                  </div>
+
+                  <div className="space-y-0 pt-2 text-xs md:text-sm">
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
+                      <span className="font-semibold">Full academic year</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
+                      <span className="font-semibold">Teacher PD + co-design</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
+                      <span className="font-semibold">All grades</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
+                      <span className="font-semibold">Whole grade level</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
+                      <span className="font-semibold">Embedded model</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Format 04: DEZU Studio */}
+                <div
+                  onMouseEnter={() => setHoveredFormat(4)}
+                  onMouseLeave={() => setHoveredFormat(null)}
+                  className={`rounded-[32px] p-8 flex flex-col justify-between min-h-[550px] border transition-all duration-300 cursor-pointer ${isCard4Active
+                    ? "bg-primary text-white shadow-xl -translate-y-2 border-primary"
+                    : "bg-white text-dark shadow-sm border-dark/10 hover:border-dark/20"
+                    }`}
+                >
+                  <div>
+                    <div className="flex justify-between items-center mb-6">
+                      <span className={`text-xs font-mono tracking-wider ${isCard4Active ? "text-white/60" : "text-dark/40"}`}>FORMAT 04</span>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider ${isCard4Active ? "text-white/60" : "text-dark/40"}`}>YEAR-ROUND</span>
+                    </div>
+                    <h3 className="text-3xl font-display font-black mb-4 uppercase tracking-tight">DEZU STUDIO</h3>
+                    <p className={`text-xs md:text-sm leading-relaxed mb-6 font-medium ${isCard4Active ? "text-white/80" : "text-dark/60"}`}>
+                      A dedicated, year-round studio space inside your school. The deepest version of DEZU – for schools ready to lead.
+                    </p>
+                  </div>
+
+                  <div className="space-y-0 pt-2 text-xs md:text-sm">
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
+                      <span className="font-semibold">Year-round</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
+                      <span className="font-semibold">Dedicated studio space</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
+                      <span className="font-semibold">Whole school</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
+                      <span className="font-semibold">Unlimited</span>
+                    </div>
+                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
+                      <span className="font-semibold">Full transformation</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            );
+          })()}
         </div>
       </section>
 
-      {/* SECTION 3: CORE CAPABILITIES */}
+      {/* SECTION 4: CORE CAPABILITIES */}
       <section className="py-20 bg-cream/50 border-y border-dark/5">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
@@ -498,395 +637,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 4: THOUGHT LEADERSHIP (SIR KEN ROBINSON QUOTE) */}
-      <section className="bg-lavender py-20 px-6 relative overflow-hidden">
-        {/* Background wavy circle elements */}
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] border border-primary/10 rounded-full -z-10"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] border border-primary/10 rounded-full -z-10"></div>
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-          {/* Quote Header / Side */}
-          <div className="lg:col-span-4 flex flex-col items-center text-center justify-center">
-            <span className="text-8xl font-display text-primary leading-none mb-2">“</span>
-            <p className="text-sm text-primary/80 font-bold leading-relaxed max-w-xs">
-              A reminder from the field — quoted often, lived rarely.
-            </p>
-          </div>
-
-          {/* Quote Body */}
-          <div className="lg:col-span-8 flex flex-col items-start">
-            <blockquote className="text-3xl md:text-5xl font-display font-black tracking-tight text-dark leading-tight mb-8">
-              Creativity is now{" "}
-              <span
-                style={{
-                  fontFamily: "var(--font-instrument), serif",
-                  fontWeight: 400,
-                  fontStyle: "italic",
-                  verticalAlign: "middle",
-                }}
-                className="text-primary italic font-normal"
-              >
-                as important
-              </span>{" "}
-              in education as literacy and we should treat it with{" "}
-              <span className="bg-secondary text-white px-6 py-2 rounded-full inline-block mt-2 shadow-md transform rotate-1">
-                the same status.
-              </span>
-            </blockquote>
-
-            {/* Author Block */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
-                SKR
-              </div>
-              <div className="text-left">
-                <h4 className="font-extrabold text-lg text-dark leading-none mb-1">Sir Ken Robinson</h4>
-                <p className="text-xs text-dark/70 font-semibold">Educator · TED's most-watched speaker · cited 89M+ times</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 5: WHY ADAPT DEZU */}
-      <section id="why-dezu" className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end mb-16">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-              Why Adapt <span className="text-primary">dezu?</span>
-            </h2>
-          </div>
-          <div className="text-dark/75 font-medium max-w-md">
-            Six learner capabilities that show up in grade sheets, portfolios, college essays, board interviews, and eventually, the world of work.
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* Card 1: Critical Thinking */}
-          <div className="bg-primary text-white rounded-3xl p-8 shadow-lg flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-            <div>
-              <span className="text-xs font-bold tracking-wider text-white/60 uppercase block mb-3">01 · COGNITION</span>
-              <h3 className="text-2xl font-display font-black tracking-tight mb-3">CRITICAL THINKING</h3>
-            </div>
-            <p className="text-sm text-white/80 font-medium">
-              Students learn to challenge assumptions, weigh evidence, and arrive at conclusions they can defend.
-            </p>
-          </div>
-
-          {/* Card 2: Creative Confidence */}
-          <div className="bg-lavender text-dark rounded-3xl p-8 shadow-sm border border-dark/5 flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-            <div>
-              <span className="text-xs font-bold tracking-wider text-dark/65 uppercase block mb-3">02 · CONFIDENCE</span>
-              <h3 className="text-2xl font-display font-black tracking-tight mb-3">CREATIVE CONFIDENCE</h3>
-            </div>
-            <p className="text-sm text-dark/75 font-medium">
-              From "I'm not creative" to "watch this." A measurable shift in self-belief by week six.
-            </p>
-          </div>
-
-          {/* Card 3: Innovative Mindset */}
-          <div className="bg-muted/40 text-dark rounded-3xl p-8 shadow-sm border border-dark/5 flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-            <div>
-              <span className="text-xs font-bold tracking-wider text-dark/65 uppercase block mb-3">03 · MINDSET</span>
-              <h3 className="text-2xl font-display font-black tracking-tight mb-3">INNOVATIVE MINDSET</h3>
-            </div>
-            <p className="text-sm text-dark/75 font-medium">
-              Bias toward making instead of waiting. Toward iterating instead of seeking perfection.
-            </p>
-          </div>
-
-          {/* Card 4: Human-Centered Problem Solving */}
-          <div className="bg-muted/40 text-dark rounded-3xl p-8 shadow-sm border border-dark/5 flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-            <div>
-              <span className="text-xs font-bold tracking-wider text-dark/65 uppercase block mb-3">04 · EMPATHY</span>
-              <h3 className="text-2xl font-display font-black tracking-tight mb-3">HUMAN CENTRED</h3>
-            </div>
-            <p className="text-sm text-dark/75 font-medium">
-              Students design and build with the people they want to solve for. They learn to empathise and analyse from the human perspective.
-            </p>
-          </div>
-
-          {/* Card 5: AI Readiness */}
-          <div className="bg-[#FED2B3] text-dark rounded-3xl p-8 shadow-sm border border-dark/5 flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-            <div>
-              <span className="text-xs font-bold tracking-wider text-dark/65 uppercase block mb-3">05 · FLUENCY</span>
-              <h3 className="text-2xl font-display font-black tracking-tight mb-3">AI READINESS</h3>
-            </div>
-            <p className="text-sm text-dark/75 font-medium">
-              Prompting, critique, ethics and creative collaboration with intelligent tools — built into every studio cycle.
-            </p>
-          </div>
-
-          {/* Card 6: Communication Skills */}
-          <div className="bg-secondary text-white rounded-3xl p-8 shadow-lg flex flex-col justify-between min-h-[220px] transition-transform hover:-translate-y-1">
-            <div>
-              <span className="text-xs font-bold tracking-wider text-white/60 uppercase block mb-3">06 · VOICE</span>
-              <h3 className="text-2xl font-display font-black tracking-tight mb-3">COMMUNICATION</h3>
-            </div>
-            <p className="text-sm text-white/80 font-medium">
-              Storytelling, presenting, sketching, and pitching. The skills every future leader is expected to have.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-      {/* SECTION 6: FORMATS / ENTRY POINTS */}
-      <section className="py-20 bg-cream/50 border-y border-dark/5">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
-            <div className="lg:col-span-6">
-              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                <span
-                  style={{
-                    fontFamily: "var(--font-instrument), serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    verticalAlign: "middle",
-                  }}
-                  className="text-primary italic font-normal"
-                >
-                  one vision
-                </span>{" "}
-                <br />
-                Many entry points
-              </h2>
-            </div>
-            <div className="lg:col-span-6 text-dark/75 font-medium leading-relaxed">
-              Whether you're piloting with one grade or integrating across the curriculum, there's a DEZU format for your school's calendar, budget and ambition.
-            </div>
-          </div>
-
-          {(() => {
-            const isCard1Active = hoveredFormat === null || hoveredFormat === 1;
-            const isCard2Active = hoveredFormat === 2;
-            const isCard3Active = hoveredFormat === 3;
-            const isCard4Active = hoveredFormat === 4;
-
-            return (
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-
-                {/* Format 01: Workshop */}
-                <div 
-                  onMouseEnter={() => setHoveredFormat(1)}
-                  onMouseLeave={() => setHoveredFormat(null)}
-                  className={`rounded-3xl p-6 flex flex-col justify-between min-h-[380px] border transition-all duration-300 ${
-                    isCard1Active 
-                      ? "bg-primary text-white shadow-xl -translate-y-1 border-white/5" 
-                      : "bg-white text-dark shadow-sm border-dark/5"
-                  }`}
-                >
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <span className={`text-xs font-bold transition-opacity duration-300 ${isCard1Active ? "opacity-60" : "text-dark/50"}`}>FORMAT 01</span>
-                      <span className={`text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full font-display transition-all duration-300 ${
-                        isCard1Active 
-                          ? "bg-secondary text-white" 
-                          : "bg-dark/5 text-dark"
-                      }`} style={{ border: "1.06px solid transparent" }}>Flagship</span>
-                    </div>
-                    <h3 className="text-3xl font-display font-black mb-4">WORKSHOP</h3>
-                    <p className={`text-xs leading-relaxed font-medium mb-6 transition-colors duration-300 ${
-                      isCard1Active ? "text-white/80" : "text-dark/70"
-                    }`}>
-                      A high-intensity introduction to the DEZU studio model. Ideal for school leadership exploring fit before committing.
-                    </p>
-                  </div>
-
-                  <div className={`space-y-3 pt-4 border-t text-xs transition-colors duration-300 ${
-                    isCard1Active ? "border-white/10" : "border-dark/5"
-                  }`}>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard1Active ? "opacity-60" : "opacity-50"}`}>DURATION</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard1Active ? "text-white" : "text-dark/95"}`}>3 days</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard1Active ? "opacity-60" : "opacity-50"}`}>FORMAT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard1Active ? "text-white" : "text-dark/95"}`}>On-site studio</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard1Active ? "opacity-60" : "opacity-50"}`}>AGES</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard1Active ? "text-white" : "text-dark/95"}`}>Grades 5 – 10</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard1Active ? "opacity-60" : "opacity-50"}`}>COHORT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard1Active ? "text-white" : "text-dark/95"}`}>30 – 120 students</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard1Active ? "opacity-60" : "opacity-50"}`}>IMPLEMENT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard1Active ? "text-white" : "text-dark/95"}`}>Plug-in week</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Format 02: Design Elective */}
-                <div 
-                  onMouseEnter={() => setHoveredFormat(2)}
-                  onMouseLeave={() => setHoveredFormat(null)}
-                  className={`rounded-3xl p-6 flex flex-col justify-between min-h-[380px] border transition-all duration-300 ${
-                    isCard2Active 
-                      ? "bg-primary text-white shadow-xl -translate-y-1 border-white/5" 
-                      : "bg-white text-dark shadow-sm border-dark/5"
-                  }`}
-                >
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <span className={`text-xs font-bold transition-opacity duration-300 ${isCard2Active ? "opacity-60" : "text-dark/50"}`}>FORMAT 02</span>
-                      <span className={`text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full font-display transition-all duration-300 ${
-                        isCard2Active 
-                          ? "bg-secondary text-white" 
-                          : "bg-dark/5 text-dark"
-                      }`} style={{ border: "1.06px solid transparent" }}>SEMESTER</span>
-                    </div>
-                    <h3 className="text-3xl font-display font-black mb-4">DESIGN ELECTIVE</h3>
-                    <p className={`text-xs leading-relaxed font-medium mb-6 transition-colors duration-300 ${
-                      isCard2Active ? "text-white/80" : "text-dark/70"
-                    }`}>
-                      A semester-long elective taught by DEZU mentors with your in-house teachers as co-facilitators.
-                    </p>
-                  </div>
-
-                  <div className={`space-y-3 pt-4 border-t text-xs transition-colors duration-300 ${
-                    isCard2Active ? "border-white/10" : "border-dark/5"
-                  }`}>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard2Active ? "opacity-60" : "opacity-50"}`}>DURATION</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard2Active ? "text-white" : "text-dark/95"}`}>16 weeks</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard2Active ? "opacity-60" : "opacity-50"}`}>FORMAT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard2Active ? "text-white" : "text-dark/95"}`}>2 sessions / week</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard2Active ? "opacity-60" : "opacity-50"}`}>AGES</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard2Active ? "text-white" : "text-dark/95"}`}>Grades 6 – 12</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard2Active ? "opacity-60" : "opacity-50"}`}>COHORT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard2Active ? "text-white" : "text-dark/95"}`}>20 – 40 students</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard2Active ? "opacity-60" : "opacity-50"}`}>IMPLEMENT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard2Active ? "text-white" : "text-dark/95"}`}>Add to elective</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Format 03: Cross Curriculum */}
-                <div 
-                  onMouseEnter={() => setHoveredFormat(3)}
-                  onMouseLeave={() => setHoveredFormat(null)}
-                  className={`rounded-3xl p-6 flex flex-col justify-between min-h-[380px] border transition-all duration-300 ${
-                    isCard3Active 
-                      ? "bg-primary text-white shadow-xl -translate-y-1 border-white/5" 
-                      : "bg-white text-dark shadow-sm border-dark/5"
-                  }`}
-                >
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <span className={`text-xs font-bold transition-opacity duration-300 ${isCard3Active ? "opacity-60" : "text-dark/50"}`}>FORMAT 03</span>
-                      <span className={`text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full font-display transition-all duration-300 ${
-                        isCard3Active 
-                          ? "bg-secondary text-white" 
-                          : "bg-dark/5 text-dark"
-                      }`} style={{ border: "1.06px solid transparent" }}>INTEGRATED</span>
-                    </div>
-                    <h3 className="text-3xl font-display font-black mb-4">CROSS CURRICULUM</h3>
-                    <p className={`text-xs leading-relaxed font-medium mb-6 transition-colors duration-300 ${
-                      isCard3Active ? "text-white/80" : "text-dark/70"
-                    }`}>
-                      Dezu methods woven into existing subjects like Social Science, Science and languages.
-                    </p>
-                  </div>
-
-                  <div className={`space-y-3 pt-4 border-t text-xs transition-colors duration-300 ${
-                    isCard3Active ? "border-white/10" : "border-dark/5"
-                  }`}>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard3Active ? "opacity-60" : "opacity-50"}`}>DURATION</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard3Active ? "text-white" : "text-dark/95"}`}>Full academic year</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard3Active ? "opacity-60" : "opacity-50"}`}>FORMAT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard3Active ? "text-white" : "text-dark/95"}`}>Teacher PD + co-design</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard3Active ? "opacity-60" : "opacity-50"}`}>AGES</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard3Active ? "text-white" : "text-dark/95"}`}>All grades</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard3Active ? "opacity-60" : "opacity-50"}`}>COHORT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard3Active ? "text-white" : "text-dark/95"}`}>Whole grade level</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard3Active ? "opacity-60" : "opacity-50"}`}>IMPLEMENT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard3Active ? "text-white" : "text-dark/95"}`}>Embedded model</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Format 04: DEZU Studio */}
-                <div 
-                  onMouseEnter={() => setHoveredFormat(4)}
-                  onMouseLeave={() => setHoveredFormat(null)}
-                  className={`rounded-3xl p-6 flex flex-col justify-between min-h-[380px] border transition-all duration-300 ${
-                    isCard4Active 
-                      ? "bg-primary text-white shadow-xl -translate-y-1 border-white/5" 
-                      : "bg-white text-dark shadow-sm border-dark/5"
-                  }`}
-                >
-                  <div>
-                    <div className="flex justify-between items-center mb-6">
-                      <span className={`text-xs font-bold transition-opacity duration-300 ${isCard4Active ? "opacity-60" : "text-dark/50"}`}>FORMAT 04</span>
-                      <span className={`text-[9px] font-extrabold uppercase px-2 py-0.5 rounded-full font-display transition-all duration-300 ${
-                        isCard4Active 
-                          ? "bg-secondary text-white" 
-                          : "bg-dark/5 text-dark"
-                      }`} style={{ border: "1.06px solid transparent" }}>YEAR-ROUND</span>
-                    </div>
-                    <h3 className="text-3xl font-display font-black mb-4">DEZU STUDIO</h3>
-                    <p className={`text-xs leading-relaxed font-medium mb-6 transition-colors duration-300 ${
-                      isCard4Active ? "text-white/80" : "text-dark/70"
-                    }`}>
-                      A dedicated, year-round studio inside your school. The deepest version of DEZU for schools that want to lead.
-                    </p>
-                  </div>
-
-                  <div className={`space-y-3 pt-4 border-t text-xs transition-colors duration-300 ${
-                    isCard4Active ? "border-white/10" : "border-dark/5"
-                  }`}>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard4Active ? "opacity-60" : "opacity-50"}`}>DURATION</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard4Active ? "text-white" : "text-dark/95"}`}>Full school year</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard4Active ? "opacity-60" : "opacity-50"}`}>FORMAT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard4Active ? "text-white" : "text-dark/95"}`}>Dedicated space</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard4Active ? "opacity-60" : "opacity-50"}`}>AGES</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard4Active ? "text-white" : "text-dark/95"}`}>Whole school</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard4Active ? "opacity-60" : "opacity-50"}`}>COHORT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard4Active ? "text-white" : "text-dark/95"}`}>Whole school</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className={`transition-opacity duration-300 ${isCard4Active ? "opacity-60" : "opacity-50"}`}>IMPLEMENT</span>
-                      <span className={`font-bold transition-colors duration-300 ${isCard4Active ? "text-white" : "text-dark/95"}`}>Full transform</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            );
-          })()}
-        </div>
-      </section>
-
-      {/* SECTION 7: FLAGSHIP PROGRAM (WORKSHOP DAYS & TAKEAWAYS) */}
+      {/* SECTION 5: FLAGSHIP PROGRAM (WORKSHOP DAYS & TAKEAWAYS) (Moved up from Section 7) */}
       <section id="workshop" className="py-20 px-6 max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-12 items-start text-left">
@@ -1033,99 +784,58 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 8: MENTORS / PROFESSIONALS */}
-      <section id="mentors" className="py-20 bg-cream/50 border-y border-dark/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 relative">
-          {/* Decorative Orange Grid Boxes */}
-          <div className="absolute bottom-[-80px] left-[-56px] w-20 h-20 bg-[#FF7122] -z-10"></div>
-          <div className="absolute bottom-0 left-[24px] w-20 h-20 bg-[#FF7122] -z-10"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                Taught By Practicing <br />
-                <span
-                  style={{
-                    fontFamily: "var(--font-instrument), serif",
-                    fontWeight: 400,
-                  }}
-                  className="text-primary italic font-normal text-5xl md:text-6xl"
-                >
-                  Professionals
-                </span>
-              </h2>
-            </div>
-            <div className="text-dark/75 font-medium max-w-md">
-              Our facilitators are working designers, technologists and researchers who bring real-world studio experience into your school. Every mentor is vetted, trained and DEZU-certified.
-            </div>
+      {/* SECTION 6: THOUGHT LEADERSHIP (SIR KEN ROBINSON QUOTE) (Moved up from Section 4) */}
+      <section className="bg-lavender py-20 px-6 relative overflow-hidden">
+        {/* Background wavy circle elements */}
+        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] border border-primary/10 rounded-full -z-10"></div>
+        <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] border border-primary/10 rounded-full -z-10"></div>
+
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+          {/* Quote Header / Side */}
+          <div className="lg:col-span-4 flex flex-col items-center text-center justify-center">
+            <span className="text-8xl font-display text-primary leading-none mb-2">“</span>
+            <p className="text-sm text-primary/80 font-bold leading-relaxed max-w-xs">
+              A reminder from the field — quoted often, lived rarely.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+          {/* Quote Body */}
+          <div className="lg:col-span-8 flex flex-col items-start">
+            <blockquote className="text-3xl md:text-5xl font-display font-black tracking-tight text-dark leading-tight mb-8">
+              Creativity is now{" "}
+              <span
+                style={{
+                  fontFamily: "var(--font-instrument), serif",
+                  fontWeight: 400,
+                  fontStyle: "italic",
+                  verticalAlign: "middle",
+                }}
+                className="text-primary italic font-normal"
+              >
+                as important
+              </span>{" "}
+              in education as literacy and we should treat it with{" "}
+              <span className="bg-secondary text-white px-6 py-2 rounded-full inline-block mt-2 shadow-md transform rotate-1">
+                the same status.
+              </span>
+            </blockquote>
 
-            {/* Card 1 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img
-                  src={himajaaImg.src}
-                  alt="Himajaa Indukuri - CEO, Studio Dezu"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+            {/* Author Block */}
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
+                SKR
               </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, Studio Dezu</p>
+              <div className="text-left">
+                <h4 className="font-extrabold text-lg text-dark leading-none mb-1">Sir Ken Robinson</h4>
+                <p className="text-xs text-dark/70 font-semibold">Educator · TED's most-watched speaker · cited 89M+ times</p>
               </div>
             </div>
-
-            {/* Card 2 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img
-                  src={balamuraliImg.src}
-                  alt="Balamurali Bhaskaran - Design Thinking Mentor"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Design Thinking Mentor (IBM certified)</p>
-              </div>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img
-                  src={bhavanaImg.src}
-                  alt="Bhavana Ghanta - Senior Designer, Schlemberger"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Senior Designer, Schlemberger</p>
-              </div>
-            </div>
-
-            {/* Card 4 */}
-            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
-              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                <img
-                  src={prathikImg.src}
-                  alt="Prathik Gadde - CEO, PhotonX"
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div className="text-left px-1">
-                <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
-                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, PhotonX</p>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
 
-      {/* SECTION 9: MEASURABLE RESULTS / METRICS */}
+      {/* SECTION 7: MEASURABLE RESULTS / METRICS (Moved up from Section 9) */}
       <section className="bg-lavender py-24 px-6 relative overflow-hidden">
         {/* Background wavy pink stroke line with orange starburst */}
         <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
@@ -1211,138 +921,336 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 10: PARTNER TIERS */}
-      <section className="py-20 px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end mb-16">
-          <div>
-            <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-              Three Ways to <br />
-              <span
-                style={{
-                  fontFamily: "var(--font-instrument), serif",
-                  fontWeight: 400,
-                }}
-                className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
-              >
-                Partner with
-              </span>{" "}
-              dezu
-            </h2>
-          </div>
-          <div className="text-dark/75 font-medium max-w-md">
-            Each tier is calibrated for a different stage of transformation. All include mentor-led delivery, teacher training and post-program reports for the board.
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-          {/* Tier 01 */}
-          <div className="bg-white rounded-3xl p-8 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[500px]">
+      {/* SECTION 8: MENTORS / PROFESSIONALS (Moved up from Section 8) */}
+      <section id="mentors" className="py-20 bg-cream/50 border-y border-dark/5 relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 relative">
+          {/* Decorative Orange Grid Boxes */}
+          <div className="absolute bottom-[-80px] left-[-56px] w-20 h-20 bg-[#FF7122] -z-10"></div>
+          <div className="absolute bottom-0 left-[24px] w-20 h-20 bg-[#FF7122] -z-10"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end mb-16">
             <div>
-              <div className="flex justify-between items-center mb-6">
-                <span className="text-xs font-bold text-dark/50">TIER 01</span>
-              </div>
-              <h3 className="text-3xl font-display font-black mb-2">WORKSHOP MODEL</h3>
-              <p className="text-sm text-dark/70 font-medium leading-relaxed mb-6">
-                A focused, plug-in cohort to introduce DEZU into your school calendar.
-              </p>
-
-              <div className="py-6 border-y border-dark/5 mb-6 text-3xl font-black">
-                3 Days <span className="text-xs font-bold text-dark/50 tracking-wider">/ PILOT</span>
-              </div>
-
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> 3-day Future Creator workshop</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Up to 120 students per cohort</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> 2 DEZU mentors on site</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Teacher observer playbook</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Innovation showcase on Day 3</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Post-program impact report</li>
-              </ul>
+              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
+                Taught By Practicing <br />
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                  }}
+                  className="text-primary italic font-normal text-5xl md:text-6xl"
+                >
+                  Professionals
+                </span>
+              </h2>
             </div>
-
-            <Link
-              href="/contact"
-              className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white py-3 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 mt-8 w-full text-center"
-            >
-              Start a pilot →
-            </Link>
+            <div className="text-dark/75 font-medium max-w-md">
+              Our facilitators are working designers, technologists and researchers who bring real-world studio experience into your school. Every mentor is vetted, trained and DEZU-certified.
+            </div>
           </div>
 
-          {/* Tier 02 (MOST CHOSEN) */}
-          <div className="bg-primary text-white rounded-3xl p-8 shadow-xl text-left flex flex-col justify-between min-h-[500px] relative border border-white/10">
-            <div className="absolute top-[-16px] right-6 bg-secondary text-white text-[10px] font-extrabold uppercase px-4 py-1.5 rounded-full shadow-md tracking-wider">
-              MOST CHOSEN
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+
+            {/* Card 1 */}
+            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                <img
+                  src={himajaaImg.src}
+                  alt="Himajaa Indukuri - CEO, Studio Dezu"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="text-left px-1">
+                <div className="flex justify-between items-center w-full mb-1.5">
+                  <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
+                  <a href="https://www.linkedin.com/in/himajaa/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                      <rect x="2" y="2" width="20" height="20" fill="white" />
+                      <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, Studio Dezu</p>
+              </div>
             </div>
 
-            <div>
-              <div className="flex justify-between items-center mb-6">
-                <span className="text-xs font-bold opacity-60">TIER 02</span>
+            {/* Card 2 */}
+            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                <img
+                  src={balamuraliImg.src}
+                  alt="Balamurali Bhaskaran - Design Thinking Mentor"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
-              <h3 className="text-3xl font-display font-black mb-2">SEMESTER PROGRAM</h3>
-              <p className="text-sm text-white/80 font-medium leading-relaxed mb-6">
-                A full semester elective taught with your faculty as co-facilitators.
-              </p>
-
-              <div className="py-6 border-y border-white/10 mb-6 text-3xl font-black">
-                16 Weeks <span className="text-xs font-bold opacity-60 tracking-wider">/ COHORT</span>
+              <div className="text-left px-1">
+                <div className="flex justify-between items-center w-full mb-1.5">
+                  <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
+                  <a href="https://www.linkedin.com/in/bhaskaranbalamurali5/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                      <rect x="2" y="2" width="20" height="20" fill="white" />
+                      <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Design Thinking Mentor (IBM certified)</p>
               </div>
-
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-secondary" /> Twice-weekly studio sessions</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-secondary" /> 3 DEZU mentors rotating in</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-secondary" /> Teacher certification track</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-secondary" /> Student portfolio output</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-secondary" /> Mid-term + final showcase</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-secondary" /> Parent & board briefing decks</li>
-              </ul>
             </div>
 
-            <Link
-              href="/contact"
-              className="bg-secondary text-white hover:bg-opacity-95 py-3 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 mt-8 shadow-lg w-full text-center"
-            >
-              Plan a semester →
-            </Link>
+            {/* Card 3 */}
+            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                <img
+                  src={bhavanaImg.src}
+                  alt="Bhavana Ghanta - Senior Designer, Schlemberger"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="text-left px-1">
+                <div className="flex justify-between items-center w-full mb-1.5">
+                  <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
+                  <a href="https://www.linkedin.com/in/bhavana-ghanta-a8880b215/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                      <rect x="2" y="2" width="20" height="20" fill="white" />
+                      <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Senior Designer, Schlemberger</p>
+              </div>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-lavender rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
+              <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
+                <img
+                  src={prathikImg.src}
+                  alt="Prathik Gadde - CEO, PhotonX"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              </div>
+              <div className="text-left px-1">
+                <div className="flex justify-between items-center w-full mb-1.5">
+                  <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
+                  <a href="https://www.linkedin.com/in/prathikgadde/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                      <rect x="2" y="2" width="20" height="20" fill="white" />
+                      <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                    </svg>
+                  </a>
+                </div>
+                <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, PhotonX</p>
+              </div>
+            </div>
+
           </div>
-
-          {/* Tier 03 */}
-          <div className="bg-white rounded-3xl p-8 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[500px]">
-            <div>
-              <div className="flex justify-between items-center mb-6">
-                <span className="text-xs font-bold text-dark/50">TIER 03</span>
-              </div>
-              <h3 className="text-3xl font-display font-black mb-2">YEAR-ROUND PROGRAM</h3>
-              <p className="text-sm text-dark/70 font-medium leading-relaxed mb-6">
-                A dedicated DEZU Studio inside your school for the deepest integration.
-              </p>
-
-              <div className="py-6 border-y border-dark/5 mb-6 text-3xl font-black">
-                12 Months <span className="text-xs font-bold text-dark/50 tracking-wider">/ YEAR</span>
-              </div>
-
-              <ul className="space-y-4">
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Dedicated DEZU studio space</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Full grade integration model</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Whole-faculty professional dev</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Annual DEZU Creator Week event</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> External research partner report</li>
-                <li className="flex items-center gap-3 text-sm font-semibold"><Check size={16} className="text-primary" /> Founding school designation</li>
-              </ul>
-            </div>
-
-            <Link
-              href="/contact"
-              className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white py-3 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 mt-8 w-full text-center"
-            >
-              Transform the school →
-            </Link>
-          </div>
-
         </div>
       </section>
 
-      {/* SECTION 11: ONBOARDING PROCESS TIMELINE */}
+      {/* SECTION 9: TRUSTED BY SCHOOLS (Moved down from Section 2) */}
+      <section id="programs" className="py-20 w-full relative overflow-visible">
+        {/* Diagonal Orange Band Image */}
+        <img
+          src={secondSectionLine.src}
+          alt="Second Section Background Line"
+          className="absolute inset-0 w-full h-full -z-10 object-cover pointer-events-none"
+        />
+
+        <div className="max-w-7xl mx-auto px-6 w-full relative">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+            <div>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-dark leading-tight">
+                Trusted by <br />
+                <span
+                  style={{
+                    fontFamily: "var(--font-instrument), serif",
+                    fontWeight: 400,
+                    fontStyle: "italic",
+                    lineHeight: "67.73px",
+                    letterSpacing: "-0.68px",
+                    verticalAlign: "middle"
+                  }}
+                  className="text-primary inline-block"
+                >
+                  forward thinking
+                </span> <br />
+                Schools Across India
+              </h2>
+            </div>
+
+            {/* Slider Arrow Controls */}
+            <div className="flex gap-4">
+              <button
+                onClick={() => scroll('left')}
+                className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
+              >
+                <ArrowLeft size={20} />
+              </button>
+              <button
+                onClick={() => scroll('right')}
+                className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
+              >
+                <ArrowRight size={20} />
+              </button>
+            </div>
+          </div>
+
+          <div
+            ref={sliderRef}
+            onScroll={handleScroll}
+            className="flex overflow-x-auto pb-6 gap-6 scrollbar-hide w-full justify-start"
+          >
+            {[...cards, ...cards, ...cards].map((card, idx) => {
+              const cardContent = (
+                <div className="relative w-[300px] h-[375px] rounded-[22px] overflow-hidden shadow-lg border border-dark/5 bg-white flex flex-col justify-end">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
+
+                  <div className="relative p-6 text-white text-left">
+                    <h3
+                      style={{
+                        fontFamily: "var(--font-display), sans-serif",
+                        fontWeight: 400,
+                        fontSize: "24px",
+                        lineHeight: "24px",
+                        verticalAlign: "middle",
+                        textTransform: "uppercase"
+                      }}
+                      className="mb-1"
+                    >
+                      {card.title}
+                    </h3>
+                    <p
+                      style={{
+                        fontFamily: "var(--font-sans), sans-serif",
+                        fontWeight: 400,
+                        fontSize: "13px",
+                        lineHeight: "20.15px",
+                        verticalAlign: "middle"
+                      }}
+                      className="text-white/80"
+                    >
+                      {card.location}
+                    </p>
+                  </div>
+                </div>
+              );
+
+              const wrapperClass = `group flex-shrink-0 ${card.tilt} hover:rotate-0 hover:scale-[1.02] transition-all duration-300`;
+
+              return card.link ? (
+                <Link key={idx} href={card.link} className={wrapperClass}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <div key={idx} className={wrapperClass}>
+                  {cardContent}
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 10: TESTIMONIALS (Moved up from Section 12) */}
+      <section id="stories" className="py-24 bg-lavender px-6 overflow-hidden">
+        {/* Testimonials List */}
+        {(() => {
+          const testimonialsList = [
+            {
+              quote: (
+                <>
+                  "It changed how I teach. The studio model gives me permission to be a coach instead of a <span className="italic text-primary font-bold">lecturer</span> — and the students respond instantly."
+                </>
+              ),
+              name: "Mr. Aniket Rao",
+              role: "Head of Design · Pathways Pune",
+              avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
+            },
+            {
+              quote: (
+                <>
+                  "I didn't know I was a <span className="italic text-primary font-bold">creator</span>. I have a portfolio, three prototypes, and I presented to actual designers from Bengaluru."
+                </>
+              ),
+              name: "Aarav, Grade 8",
+              role: "Student · Ekya School",
+              avatar: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=150&auto=format&fit=crop"
+            },
+            {
+              quote: (
+                <>
+                  "DEZU gave our students something the textbook simply <span className="italic text-primary font-bold">cannot</span>. Within five days, I saw the quiet ones leading critiques and the noisy ones listening."
+                </>
+              ),
+              name: "Mrs. Lakshmi Pillai",
+              role: "Principal · DPS Noida",
+              avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop"
+            }
+          ];
+
+          return (
+            <>
+              {/* Header block */}
+              <div className="max-w-7xl mx-auto mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+                  <div className="lg:col-span-7">
+                    <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight text-left">
+                      What the people <br />
+                      in the room{" "}
+                      <span
+                        style={{
+                          fontFamily: "var(--font-instrument), serif",
+                          fontWeight: 400,
+                        }}
+                        className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
+                      >
+                        say.
+                      </span>
+                    </h2>
+                  </div>
+                  <div className="lg:col-span-5 text-dark/75 font-semibold leading-relaxed text-left lg:max-w-md lg:ml-auto">
+                    Unedited reflections from principals, teachers and students after their first DEZU studio.
+                  </div>
+                </div>
+              </div>
+
+              {/* Infinite Scrolling Loop Wrapper (Full Width) */}
+              <div className="w-full overflow-hidden py-4">
+                <div className="animate-marquee-inline flex gap-6 hover:[animation-play-state:paused] w-max">
+                  {[...testimonialsList, ...testimonialsList, ...testimonialsList, ...testimonialsList].map((t, idx) => (
+                    <div
+                      key={idx}
+                      className="bg-white rounded-[32px] p-8 shadow-lg flex flex-col justify-between min-h-[280px] w-[320px] md:w-[380px] text-left border border-dark/5 flex-shrink-0 relative"
+                    >
+                      {/* Big Quote Symbol */}
+                      <span className="absolute top-6 right-6 text-primary text-4xl font-display font-black leading-none opacity-80">”</span>
+
+                      <p className="text-base md:text-lg text-dark/80 font-medium leading-relaxed italic mb-8 relative pr-6">
+                        {t.quote}
+                      </p>
+
+                      <div className="flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
+                          <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
+                        </div>
+                        <div>
+                          <h4 className="font-extrabold text-dark leading-none mb-1">{t.name}</h4>
+                          <p className="text-xs text-dark/60 font-semibold">{t.role}</p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </>
+          );
+        })()}
+      </section>
+
+      {/* SECTION 11: ONBOARDING PROCESS TIMELINE (Moved up from Section 11) */}
       <section className="py-20 bg-cream/50 border-y border-dark/5 relative">
         {/* Background thick orange wavy line */}
         <div className="absolute top-[40%] left-0 w-full h-[60px] opacity-15 pointer-events-none -z-10">
@@ -1427,103 +1335,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 12: TESTIMONIALS */}
-      <section id="stories" className="py-24 bg-lavender px-6 overflow-hidden">
-        {/* Testimonials List */}
-        {(() => {
-          const testimonialsList = [
-            {
-              quote: (
-                <>
-                  "It changed how I teach. The studio model gives me permission to be a coach instead of a <span className="italic text-primary font-bold">lecturer</span> — and the students respond instantly."
-                </>
-              ),
-              name: "Mr. Aniket Rao",
-              role: "Head of Design · Pathways Pune",
-              avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=150&auto=format&fit=crop"
-            },
-            {
-              quote: (
-                <>
-                  "I didn't know I was a <span className="italic text-primary font-bold">creator</span>. I have a portfolio, three prototypes, and I presented to actual designers from Bengaluru."
-                </>
-              ),
-              name: "Aarav, Grade 8",
-              role: "Student · Ekya School",
-              avatar: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=150&auto=format&fit=crop"
-            },
-            {
-              quote: (
-                <>
-                  "DEZU gave our students something the textbook simply <span className="italic text-primary font-bold">cannot</span>. Within five days, I saw the quiet ones leading critiques and the noisy ones listening."
-                </>
-              ),
-              name: "Mrs. Lakshmi Pillai",
-              role: "Principal · DPS Noida",
-              avatar: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop"
-            }
-          ];
 
-          return (
-            <>
-              {/* Header block */}
-              <div className="max-w-7xl mx-auto mb-16">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-                  <div className="lg:col-span-7">
-                    <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight text-left">
-                      What the people <br />
-                      in the room{" "}
-                      <span
-                        style={{
-                          fontFamily: "var(--font-instrument), serif",
-                          fontWeight: 400,
-                        }}
-                        className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
-                      >
-                        say.
-                      </span>
-                    </h2>
-                  </div>
-                  <div className="lg:col-span-5 text-dark/75 font-semibold leading-relaxed text-left lg:max-w-md lg:ml-auto">
-                    Unedited reflections from principals, teachers and students after their first DEZU studio.
-                  </div>
-                </div>
-              </div>
 
-              {/* Infinite Scrolling Loop Wrapper (Full Width) */}
-              <div className="w-full overflow-hidden py-4">
-                <div className="animate-marquee-inline flex gap-6 hover:[animation-play-state:paused] w-max">
-                  {[...testimonialsList, ...testimonialsList, ...testimonialsList, ...testimonialsList].map((t, idx) => (
-                    <div 
-                      key={idx} 
-                      className="bg-white rounded-[32px] p-8 shadow-lg flex flex-col justify-between min-h-[280px] w-[320px] md:w-[380px] text-left border border-dark/5 flex-shrink-0 relative"
-                    >
-                      {/* Big Quote Symbol */}
-                      <span className="absolute top-6 right-6 text-primary text-4xl font-display font-black leading-none opacity-80">”</span>
-                      
-                      <p className="text-base md:text-lg text-dark/80 font-medium leading-relaxed italic mb-8 relative pr-6">
-                        {t.quote}
-                      </p>
-
-                      <div className="flex items-center gap-4">
-                        <div className="w-12 h-12 rounded-full overflow-hidden bg-primary/10 flex-shrink-0">
-                          <img src={t.avatar} alt={t.name} className="w-full h-full object-cover" />
-                        </div>
-                        <div>
-                          <h4 className="font-extrabold text-dark leading-none mb-1">{t.name}</h4>
-                          <p className="text-xs text-dark/60 font-semibold">{t.role}</p>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </>
-          );
-        })()}
-      </section>
-
-      {/* SECTION 13: FOOTER CALL TO ACTION */}
+      {/* SECTION 12: FOOTER CALL TO ACTION */}
       <section id="contact" className="py-24 px-6 max-w-5xl mx-auto text-center">
         <h2 className="text-5xl md:text-7xl font-display font-black text-dark leading-tight mb-6">
           Let's build{" "}

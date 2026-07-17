@@ -4,10 +4,10 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
-import { 
-  ArrowRight, 
-  Check, 
-  Sparkles, 
+import {
+  ArrowRight,
+  Check,
+  Sparkles,
   Instagram,
   Linkedin,
   Briefcase,
@@ -23,14 +23,16 @@ import whyDezuHeroImage from "../../Assets/whydezu hero section image.png";
 import heroStar from "../../Assets/Home-herosection-start.png";
 import whyDezuHeroLine from "../../Assets/why dezu hero line.png";
 import creatorsUnderline from "../../Assets/home-hero-create-underline.png";
+import homeHeroCurvs from "../../Assets/Home herosection curvs.png";
 
 export default function WhyDezu() {
 
   return (
     <div className="min-h-screen bg-[linear-gradient(to_right,rgba(28,27,31,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(28,27,31,0.04)_1px,transparent_1px)] bg-[size:120px_120px] relative text-dark font-sans selection:bg-primary selection:text-white">
-      
+
       {/* INLINE CSS MARQUEE ANIMATION */}
-      <style dangerouslySetInnerHTML={{__html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes marquee {
           0% { transform: translateX(0%); }
           100% { transform: translateX(-50%); }
@@ -48,12 +50,16 @@ export default function WhyDezu() {
       {/* SECTION 1: HERO */}
       <section className="pt-36 pb-0 w-full relative overflow-visible flex flex-col justify-center">
         {/* Background decorative elements */}
-        <div className="absolute top-16 left-[-40px] w-32 h-32 bg-[#C3B3F9] rounded-full opacity-80 -z-10"></div>
+        <img
+          src={homeHeroCurvs.src}
+          alt="Hero Curves"
+          className="absolute top-8 left-[-40px] w-56 h-56 object-contain -z-10"
+        />
         <div className="absolute bottom-24 right-48 w-48 h-48 bg-secondary/10 rounded-full blur-2xl -z-10"></div>
 
 
         <div className="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          
+
           {/* Hero Left Content */}
           <div className="lg:col-span-7 flex flex-col items-start text-left">
             <h1 className="text-4xl md:text-6xl font-display font-black text-dark tracking-tight leading-[1.25] mb-6">
@@ -89,9 +95,9 @@ export default function WhyDezu() {
               Dezu bridges the foundational academic years with the pulse of modern design, founding, planning, and design-thinking. We connect practicing designers, technology innovators, architects, and researchers directly with school environments.
             </p>
 
-            <Link 
-              href="https://studiodezu.com" 
-              target="_blank" 
+            <Link
+              href="https://studiodezu.com"
+              target="_blank"
               rel="noopener noreferrer"
               className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200 mt-2"
             >
@@ -102,10 +108,10 @@ export default function WhyDezu() {
           {/* Hero Right Content - Cutout with Background Circle & Star */}
           <div className="lg:col-span-5 relative flex justify-center lg:justify-end h-[340px] md:h-[400px] lg:h-[450px] items-end overflow-visible">
             <div className="relative w-full max-w-[340px] md:max-w-[400px] lg:max-w-[440px] h-[340px] md:h-[400px] lg:h-[450px] flex items-end justify-center">
-              
+
               {/* Purple Circle in Background */}
               <div className="absolute top-[10%] md:top-[8%] lg:top-[6%] w-[240px] md:w-[280px] lg:w-[340px] h-[240px] md:h-[280px] lg:h-[340px] bg-[#C3B3F9] rounded-full -z-10 shadow-inner"></div>
-              
+
               {/* Orange Star Decal */}
               <div className="absolute top-[6%] md:top-[4%] lg:top-[2%] -right-8 md:-right-12 lg:-right-16 w-16 md:w-20 lg:w-24 h-16 md:h-20 lg:h-24 z-0">
                 <Image
@@ -117,9 +123,9 @@ export default function WhyDezu() {
 
               {/* Three Experts Cutout */}
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[480px] md:w-[560px] lg:w-[660px] h-[480px] md:h-[560px] lg:h-[660px] flex items-end justify-center z-10 overflow-visible">
-                <Image 
-                  src={whyDezuHeroImage} 
-                  alt="Taught by real-time experts from different industries" 
+                <Image
+                  src={whyDezuHeroImage}
+                  alt="Taught by real-time experts from different industries"
                   className="w-full h-full object-contain object-bottom select-none"
                   priority
                 />
@@ -143,7 +149,7 @@ export default function WhyDezu() {
       {/* SECTION 2: WHO ARE WE & DESIGN X EDUCATION */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
+
           {/* Left Column: Text & CTA */}
           <div className="lg:col-span-6 space-y-8 text-left">
             <div>
@@ -165,13 +171,13 @@ export default function WhyDezu() {
             </div>
 
             <div className="pt-2">
-              <Link 
-                href="https://studiodezu.com" 
-                target="_blank" 
+              <Link
+                href="https://studiodezu.com"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
               >
-                Learn more <ArrowRight size={18} /> 
+                Learn more <ArrowRight size={18} />
               </Link>
             </div>
           </div>
@@ -187,7 +193,7 @@ export default function WhyDezu() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
-              
+
               {/* Card 1: Industry Studios */}
               <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
                 <div className="text-secondary">
@@ -269,7 +275,7 @@ export default function WhyDezu() {
           <span>Figma</span>
           <span>Zoho</span>
           <span>TCS</span>
-          
+
           <span>Adobe</span>
           <span>Google</span>
           <span>Microsoft</span>
@@ -311,18 +317,26 @@ export default function WhyDezu() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
-              
+
               {/* Card 1 */}
               <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
                 <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                  <img 
-                    src={himajaaImg.src} 
-                    alt="Himajaa Indukuri - CEO, Studio Dezu" 
+                  <img
+                    src={himajaaImg.src}
+                    alt="Himajaa Indukuri - CEO, Studio Dezu"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="text-left px-1">
-                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
+                  <div className="flex justify-between items-center w-full mb-1.5">
+                    <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Himajaa Indukuri</h3>
+                    <a href="https://www.linkedin.com/in/himajaa/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                        <rect x="2" y="2" width="20" height="20" fill="white" />
+                        <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                      </svg>
+                    </a>
+                  </div>
                   <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, Studio Dezu</p>
                 </div>
               </div>
@@ -330,14 +344,22 @@ export default function WhyDezu() {
               {/* Card 2 */}
               <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
                 <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                  <img 
-                    src={balamuraliImg.src} 
-                    alt="Balamurali Bhaskaran - Design Thinking Mentor" 
+                  <img
+                    src={balamuraliImg.src}
+                    alt="Balamurali Bhaskaran - Design Thinking Mentor"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="text-left px-1">
-                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
+                  <div className="flex justify-between items-center w-full mb-1.5">
+                    <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Balamurali Bhaskaran</h3>
+                    <a href="https://www.linkedin.com/in/bhaskaranbalamurali5/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                        <rect x="2" y="2" width="20" height="20" fill="white" />
+                        <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                      </svg>
+                    </a>
+                  </div>
                   <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Design Thinking Mentor (IBM certified)</p>
                 </div>
               </div>
@@ -345,14 +367,22 @@ export default function WhyDezu() {
               {/* Card 3 */}
               <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
                 <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                  <img 
-                    src={prathikImg.src} 
-                    alt="Prathik Gadde - CEO, PhotonX" 
+                  <img
+                    src={prathikImg.src}
+                    alt="Prathik Gadde - CEO, PhotonX"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="text-left px-1">
-                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
+                  <div className="flex justify-between items-center w-full mb-1.5">
+                    <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Prathik Gadde</h3>
+                    <a href="https://www.linkedin.com/in/prathikgadde/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                        <rect x="2" y="2" width="20" height="20" fill="white" />
+                        <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                      </svg>
+                    </a>
+                  </div>
                   <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>CEO, PhotonX</p>
                 </div>
               </div>
@@ -360,14 +390,22 @@ export default function WhyDezu() {
               {/* Card 4 */}
               <div className="bg-[#D5C7FF] rounded-3xl p-4 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[360px] group transition-all duration-300 hover:shadow-xl relative overflow-hidden">
                 <div className="w-full aspect-[4/5] rounded-2xl overflow-hidden bg-primary/10 mb-4 relative">
-                  <img 
-                    src={bhavanaImg.src} 
-                    alt="Bhavana Ghanta - Senior Designer, Schlemberger" 
+                  <img
+                    src={bhavanaImg.src}
+                    alt="Bhavana Ghanta - Senior Designer, Schlemberger"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
                 <div className="text-left px-1">
-                  <h3 className="font-sans text-left mb-1.5" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
+                  <div className="flex justify-between items-center w-full mb-1.5">
+                    <h3 className="font-sans text-left" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 700, fontSize: "20px", lineHeight: "100%", color: "#0D0C0C" }}>Bhavana Ghanta</h3>
+                    <a href="https://www.linkedin.com/in/bhavana-ghanta-a8880b215/" target="_blank" rel="noopener noreferrer" className="text-dark hover:opacity-80 transition-opacity flex-shrink-0 ml-2">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className="w-[20px] h-[20px]">
+                        <rect x="2" y="2" width="20" height="20" fill="white" />
+                        <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.12 20.45H3.56V9H7.12v11.45zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06 1.14 0 2.06.92 2.06 2.06 0 1.14-.92 2.06-2.06 2.06zm15.11 13.02h-3.56v-5.6c0-1.34-.03-3.05-1.86-3.05-1.86 0-2.14 1.45-2.14 2.95v5.7H9.33V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29z" fill="#0D0C0C" />
+                      </svg>
+                    </a>
+                  </div>
                   <p className="font-sans text-left mt-1" style={{ fontFamily: "var(--font-bai-jamjuree), sans-serif", fontWeight: 600, fontSize: "12px", lineHeight: "100%", color: "#0D0C0C" }}>Senior Designer, Schlemberger</p>
                 </div>
               </div>
@@ -379,10 +417,10 @@ export default function WhyDezu() {
 
       {/* SECTION 5: APPLY TO MENTOR CTA */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
-        
+
         {/* Card Wrapper */}
         <div className="relative w-full overflow-visible pb-8 pr-4">
-          
+
           {/* Orange Scalloped Badge on Top-Left */}
           <div className="absolute -top-4 -left-4 md:-top-6 md:-left-6 z-20 w-16 h-16 md:w-20 md:h-20 pointer-events-none">
             <svg viewBox="0 0 100 100" fill="#FF6A1F" className="w-full h-full drop-shadow-lg">
@@ -399,7 +437,7 @@ export default function WhyDezu() {
           </div>
 
           <div className="bg-primary rounded-[36px] p-8 md:p-16 text-white relative overflow-hidden shadow-xl border border-white/10 flex flex-col items-start justify-center text-left min-h-[360px] z-10">
-            
+
             {/* Background Decorative Waves */}
             <svg className="absolute inset-0 w-full h-full pointer-events-none z-0" viewBox="0 0 1000 300" fill="none" preserveAspectRatio="none">
               <path d="M-100,300 C200,280 400,100 1100,220" stroke="white" strokeWidth="4" strokeOpacity="0.12" />
@@ -414,8 +452,8 @@ export default function WhyDezu() {
                 Dezu is always looking to expand its mentor cohort. If you believe that design education should be available to every student in India not just the ones in metros we'd love to hear from you. Mentors commit to 2-3 school visits per year. Everything else is flexible.
               </p>
               <div className="pt-2">
-                <Link 
-                  href="mailto:info@dezu.in" 
+                <Link
+                  href="mailto:info@dezu.in"
                   className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200"
                 >
                   Apply to Mentor <ArrowRight size={18} />
