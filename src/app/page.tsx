@@ -315,26 +315,26 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="space-y-0 pt-2 text-xs md:text-sm">
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
-                      <span className="font-semibold">3 days</span>
+                  <div className="space-y-0 pt-2 text-xs md:text-sm md:min-h-[245px]">
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>DURATION</span>
+                      <span className="font-semibold text-right">3 days</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
-                      <span className="font-semibold">On-site studio</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>FORMAT</span>
+                      <span className="font-semibold text-right">On-site studio</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
-                      <span className="font-semibold">Grades 5 – 10</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>AGES</span>
+                      <span className="font-semibold text-right">Grades 5 – 10</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
-                      <span className="font-semibold">30 – 120 students</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>COHORT</span>
+                      <span className="font-semibold text-right">30 – 120 students</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
-                      <span className="font-semibold">Plug-in week</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard1Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard1Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>IMPLEMENTATION</span>
+                      <span className="font-semibold text-right">Plug-in week</span>
                     </div>
                   </div>
                 </div>
@@ -359,26 +359,26 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="space-y-0 pt-2 text-xs md:text-sm">
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
-                      <span className="font-semibold">16 weeks</span>
+                  <div className="space-y-0 pt-2 text-xs md:text-sm md:min-h-[245px]">
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>DURATION</span>
+                      <span className="font-semibold text-right">16 weeks</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
-                      <span className="font-semibold">2 sessions / week</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>FORMAT</span>
+                      <span className="font-semibold text-right">2 sessions / week</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
-                      <span className="font-semibold">Grades 6 – 12</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>AGES</span>
+                      <span className="font-semibold text-right">Grades 6 – 12</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
-                      <span className="font-semibold">20 – 40 students</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>COHORT</span>
+                      <span className="font-semibold text-right">20 – 40 students</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
-                      <span className="font-semibold">Add to elective bank</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard2Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard2Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>IMPLEMENTATION</span>
+                      <span className="font-semibold text-right">Add to elective bank</span>
                     </div>
                   </div>
                 </div>
@@ -403,26 +403,26 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="space-y-0 pt-2 text-xs md:text-sm">
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
-                      <span className="font-semibold">Full academic year</span>
+                  <div className="space-y-0 pt-2 text-xs md:text-sm md:min-h-[245px]">
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>DURATION</span>
+                      <span className="font-semibold text-right">Full academic year</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
-                      <span className="font-semibold">Teacher PD + co-design</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>FORMAT</span>
+                      <span className="font-semibold text-right">Teacher PD + co-design</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
-                      <span className="font-semibold">All grades</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>AGES</span>
+                      <span className="font-semibold text-right">All grades</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
-                      <span className="font-semibold">Whole grade level</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>COHORT</span>
+                      <span className="font-semibold text-right">Whole grade level</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
-                      <span className="font-semibold">Embedded model</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard3Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard3Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>IMPLEMENTATION</span>
+                      <span className="font-semibold text-right">Embedded model</span>
                     </div>
                   </div>
                 </div>
@@ -447,26 +447,26 @@ export default function Home() {
                     </p>
                   </div>
 
-                  <div className="space-y-0 pt-2 text-xs md:text-sm">
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>DURATION</span>
-                      <span className="font-semibold">Year-round</span>
+                  <div className="space-y-0 pt-2 text-xs md:text-sm md:min-h-[245px]">
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>DURATION</span>
+                      <span className="font-semibold text-right">Year-round</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>FORMAT</span>
-                      <span className="font-semibold">Dedicated studio space</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>FORMAT</span>
+                      <span className="font-semibold text-right">Dedicated studio space</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>AGES</span>
-                      <span className="font-semibold">Whole school</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>AGES</span>
+                      <span className="font-semibold text-right">Whole school</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>COHORT</span>
-                      <span className="font-semibold">Unlimited</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>COHORT</span>
+                      <span className="font-semibold text-right">Unlimited</span>
                     </div>
-                    <div className={`flex justify-between py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
-                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider`}>IMPLEMENTATION</span>
-                      <span className="font-semibold">Full transformation</span>
+                    <div className={`flex justify-between items-start gap-4 py-3 border-t border-dashed ${isCard4Active ? "border-white/10" : "border-dark/10"}`}>
+                      <span className={`${isCard4Active ? "text-white/60" : "text-dark/40"} font-bold text-[10px] md:text-xs tracking-wider flex-shrink-0`}>IMPLEMENTATION</span>
+                      <span className="font-semibold text-right">Full transformation</span>
                     </div>
                   </div>
                 </div>
@@ -478,158 +478,120 @@ export default function Home() {
       </section>
 
       {/* SECTION 4: CORE CAPABILITIES */}
-      <section className="py-20 bg-cream/50 border-y border-dark/5">
+      <section className="py-20 bg-cream/50 border-y border-dark/5 relative overflow-hidden">
+        {/* Background curving line */}
+        <div className="absolute inset-0 w-full h-full pointer-events-none -z-10 overflow-hidden">
+          <svg width="100%" height="100%" viewBox="0 0 1440 600" preserveAspectRatio="none" className="opacity-80">
+            <path
+              d="M -50 120 C 300 240, 450 480, 700 400 C 950 320, 1150 450, 1500 580"
+              stroke="#FED2B3"
+              strokeWidth="10"
+              strokeLinecap="round"
+              fill="none"
+            />
+          </svg>
+        </div>
+
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
             <div className="lg:col-span-7">
               <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                Schools Of Tomorrow <br />
-                Teach{" "}
+                Non-negotiable skills <br />
+                for the{" "}
                 <span
                   style={{
                     fontFamily: "var(--font-instrument), serif",
                     fontWeight: 400,
                     fontStyle: "italic",
-                    lineHeight: "85.26px",
-                    letterSpacing: "-0.85px",
-                    verticalAlign: "middle",
-                    fontSize: "58px"
                   }}
-                  className="text-primary inline-block"
+                  className="text-primary inline-block font-normal italic lowercase text-5xl md:text-[58px]"
                 >
-                  how to think
+                  future
                 </span>
               </h2>
             </div>
             <div className="lg:col-span-5 text-dark/75 font-medium leading-relaxed">
-              In a world increasingly shaped by technology, the ability to think visually, communicate clearly,
-              and solve problems creatively is no longer a "nice to have." It is the <strong className="text-primary font-extrabold">competitive edge</strong> your students deserve.
+              We build skills that create a strong innovation foundation and thinking capabilities for students to thrive in an <strong className="text-primary font-extrabold">AI-driven future</strong>.
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
 
-            {/* Card 01 - Design Thinking (Orange) */}
-            <div className="bg-secondary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[300px] shadow-lg hover:shadow-xl transition-all relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
-              <div className="flex justify-between items-start">
-                <span className="text-sm font-bold opacity-75">01</span>
-                <span className="bg-white/20 text-white text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
-                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                  CORE
-                </span>
-              </div>
-              <div className="mt-12">
-                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Design Thinking</h3>
-                <p className="text-sm text-white/85 font-medium leading-relaxed mb-6">
-                  Students develop empathy, creativity, rapid prototyping, and real-world problem-solving through hands-on projects.
+            {/* Card 01 - Critical Thinking (Cognition) */}
+            <div className="bg-primary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
+              <span className="text-[10px] font-bold tracking-widest text-white/60 uppercase">01 · COGNITION</span>
+              <div className="mt-8">
+                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
+                  Critical <br /> Thinking
+                </h3>
+                <p className="text-xs md:text-sm text-white/80 font-medium leading-relaxed">
+                  Students develop the judgment to analyze information, solve complex problems, and make informed decisions in an increasingly uncertain world.
                 </p>
-              </div>
-              <div className="flex items-center gap-2 text-xs font-bold border-t border-white/20 pt-4">
-                <div className="bg-white/20 p-1 rounded-full"><Check size={12} /></div>
-                <span>HUMAN CENTRED INNOVATION SKILLS</span>
               </div>
             </div>
 
-            {/* Card 05 - Entrepreneurship (Beige) */}
-            <div className="bg-muted/40 rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all relative group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
-              <div className="flex justify-between items-start">
-                <span className="text-sm font-bold text-dark/65">05</span>
-                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
-                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                  LAB
-                </span>
-              </div>
-              <div className="mt-12 mb-6">
-                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Entrepreneurship</h3>
-                <p className="text-sm text-dark/75 font-medium leading-relaxed">
-                  Develop students who identify opportunities, take initiative, and create meaningful value for their communities.
+            {/* Card 02 - Creative Confidence (Confidence) */}
+            <div className="bg-[#E4DDFF] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#E4DDFF" }}>
+              <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">02 · CONFIDENCE</span>
+              <div className="mt-8">
+                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
+                  Creative <br /> Confidence
+                </h3>
+                <p className="text-xs md:text-sm text-dark/75 font-medium leading-relaxed">
+                  Students build the confidence to think independently, take creative risks, and turn ideas into action.
                 </p>
-              </div>
-              <div className="text-[10px] font-extrabold tracking-widest text-secondary uppercase border-t border-dark/10 pt-4 z-10">
-                FROM IDEAS TO IMPACT
-              </div>
-
-            </div>
-
-            {/* Card 03 - Storytelling & Communication (Peach) */}
-            <div className="bg-[#FED2B3] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
-              <div className="flex justify-between items-start">
-                <span className="text-sm font-bold text-dark/65">03</span>
-                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
-                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                  CORE
-                </span>
-              </div>
-              <div className="mt-12">
-                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Storytelling & Communication</h3>
-                <p className="text-sm text-dark/75 font-medium leading-relaxed mb-6">
-                  Build confident communicators who can express ideas clearly, influence others, and lead with conviction.
-                </p>
-              </div>
-              <div className="text-[10px] font-extrabold tracking-widest text-secondary uppercase border-t border-dark/10 pt-4">
-                CONFIDENCE BEYOND THE CLASSROOM
               </div>
             </div>
 
-            {/* Card 06 - Systems Thinking (Lavender) */}
-            <div className="bg-[#E4DDFF] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all group relative overflow-hidden lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
-              <div className="flex justify-between items-start">
-                <span className="text-sm font-bold text-dark/65">06</span>
-                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
-                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                  CORE
-                </span>
-              </div>
-              <div className="mt-12 mb-6">
-                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Systems Thinking</h3>
-                <p className="text-sm text-dark/75 font-medium leading-relaxed">
-                  Equip students to understand complexity, identify patterns, and make better decisions in an interconnected world.
+            {/* Card 03 - Innovation Mindset (Mindset) */}
+            <div className="bg-[#F2F1EC] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#F2F1EC" }}>
+              <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">03 · MINDSET</span>
+              <div className="mt-8">
+                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
+                  Innovation <br /> Mindset
+                </h3>
+                <p className="text-xs md:text-sm text-dark/75 font-medium leading-relaxed">
+                  Students cultivate the curiosity and adaptability needed to embrace change and create new opportunities.
                 </p>
-              </div>
-              <div className="text-[10px] font-extrabold tracking-widest text-secondary uppercase border-t border-dark/10 pt-4 z-10">
-                COMPLEX PROBLEMS. BETTER THINKERS.
-              </div>
-
-
-            </div>
-
-            {/* Card 07 - Leadership & Collaboration (Beige) */}
-            <div className="bg-muted/40 rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[300px] shadow-sm hover:shadow-lg transition-all group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
-              <div className="flex justify-between items-start">
-                <span className="text-sm font-bold text-dark/65">07</span>
-                <span className="bg-dark/5 text-dark text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
-                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                  CORE
-                </span>
-              </div>
-              <div className="mt-12 mb-6">
-                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">Leadership & Collaboration</h3>
-                <p className="text-sm text-dark/75 font-medium leading-relaxed">
-                  Nurture empathetic leaders who collaborate effectively, embrace diverse perspectives, and inspire positive change.
-                </p>
-              </div>
-              <div className="text-[10px] font-extrabold tracking-widest text-secondary uppercase border-t border-dark/10 pt-4">
-                LEAD WITH EMPATHY
               </div>
             </div>
 
-            {/* Card 04 - AI as a Co-Creator (Purple) */}
-            <div className="bg-primary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[300px] shadow-lg hover:shadow-xl transition-all group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
-              <div className="flex justify-between items-start">
-                <span className="text-sm font-bold opacity-75">04</span>
-                <span className="bg-white/20 text-white text-xs font-bold uppercase px-3 py-1 rounded-full inline-flex items-center gap-1.5" style={{ border: "1.06px solid #15140F" }}>
-                  <span className="w-2 h-2 rounded-full bg-secondary"></span>
-                  LAB
-                </span>
-              </div>
-              <div className="mt-12 mb-6">
-                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-4 group-hover:translate-x-1 transition-transform">AI as a Co-Creator</h3>
-                <p className="text-sm text-white/85 font-medium leading-relaxed">
-                  Prepare students to collaborate with AI responsibly while strengthening critical thinking and human judgment.
+            {/* Card 04 - Human-Centered Problem Solving (Empathy) */}
+            <div className="bg-[#F2F1EC] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#F2F1EC" }}>
+              <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">04 · EMPATHY</span>
+              <div className="mt-8">
+                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
+                  Human-Centered <br /> Problem Solving
+                </h3>
+                <p className="text-xs md:text-sm text-dark/75 font-medium leading-relaxed">
+                  Students learn to understand people deeply and design solutions that address real-world needs.
                 </p>
               </div>
-              <div className="text-[10px] font-extrabold tracking-widest text-secondary uppercase border-t border-white/20 pt-4">
-                AI-READY. HUMAN-FIRST.
+            </div>
+
+            {/* Card 05 - AI Readiness (Fluency) */}
+            <div className="bg-[#FED2B3] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#FED2B3" }}>
+              <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">05 · FLUENCY</span>
+              <div className="mt-8">
+                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
+                  AI <br /> Readiness
+                </h3>
+                <p className="text-xs md:text-sm text-dark/75 font-medium leading-relaxed">
+                  Students learn to work alongside AI with critical thinking, ethical judgment, and creative problem-solving.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 06 - Communication Skills (Voice) */}
+            <div className="bg-secondary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
+              <span className="text-[10px] font-bold tracking-widest text-white/60 uppercase">06 · VOICE</span>
+              <div className="mt-8">
+                <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
+                  Communication <br /> Skills
+                </h3>
+                <p className="text-xs md:text-sm text-white/80 font-medium leading-relaxed">
+                  Students gain the confidence to communicate ideas clearly, collaborate effectively, and lead with influence.
+                </p>
               </div>
             </div>
 
@@ -784,25 +746,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 6: THOUGHT LEADERSHIP (SIR KEN ROBINSON QUOTE) (Moved up from Section 4) */}
-      <section className="bg-lavender py-20 px-6 relative overflow-hidden">
-        {/* Background wavy circle elements */}
-        <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] border border-primary/10 rounded-full -z-10"></div>
-        <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] border border-primary/10 rounded-full -z-10"></div>
-
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      {/* SECTION 6: THOUGHT LEADERSHIP (SIR KEN ROBINSON QUOTE) */}
+      <section className="py-12 px-6 max-w-7xl mx-auto">
+        <div className="bg-lavender rounded-[32px] p-8 md:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative overflow-hidden group shadow-sm hover:shadow-md transition-all duration-300" style={{ border: "1.06px solid #15140F" }}>
+          {/* Background wavy circle elements */}
+          <div className="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] border border-primary/10 rounded-full -z-10"></div>
+          <div className="absolute bottom-[-10%] left-[-10%] w-[300px] h-[300px] border border-primary/10 rounded-full -z-10"></div>
 
           {/* Quote Header / Side */}
-          <div className="lg:col-span-4 flex flex-col items-center text-center justify-center">
+          <div className="lg:col-span-4 flex flex-col items-start text-left justify-center">
             <span className="text-8xl font-display text-primary leading-none mb-2">“</span>
-            <p className="text-sm text-primary/80 font-bold leading-relaxed max-w-xs">
+            <p className="text-xs text-primary/80 font-bold leading-relaxed max-w-xs mb-8">
               A reminder from the field — quoted often, lived rarely.
             </p>
+
+            {/* Author Block */}
+            <div className="flex items-center gap-4 mt-auto">
+              <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
+                SKR
+              </div>
+              <div className="text-left">
+                <h4 className="font-extrabold text-md text-dark leading-none mb-1">Sir Ken Robinson</h4>
+                <p className="text-[10px] text-dark/70 font-semibold leading-tight">Educator · TED's most-watched speaker · cited 89M+ times</p>
+              </div>
+            </div>
           </div>
 
           {/* Quote Body */}
           <div className="lg:col-span-8 flex flex-col items-start">
-            <blockquote className="text-3xl md:text-5xl font-display font-black tracking-tight text-dark leading-tight mb-8">
+            <blockquote className="text-3xl md:text-[44px] md:leading-[1.1] font-display font-black tracking-tight text-dark text-left">
               Creativity is now{" "}
               <span
                 style={{
@@ -816,107 +788,75 @@ export default function Home() {
                 as important
               </span>{" "}
               in education as literacy and we should treat it with{" "}
-              <span className="bg-secondary text-white px-6 py-2 rounded-full inline-block mt-2 shadow-md transform rotate-1">
+              <span className="bg-secondary text-white px-5 py-2.5 rounded-[20px] inline-block font-display mt-2 shadow-sm font-black uppercase text-xl md:text-3xl leading-none" style={{ border: "1.5px solid #15140F" }}>
                 the same status.
               </span>
             </blockquote>
-
-            {/* Author Block */}
-            <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
-                SKR
-              </div>
-              <div className="text-left">
-                <h4 className="font-extrabold text-lg text-dark leading-none mb-1">Sir Ken Robinson</h4>
-                <p className="text-xs text-dark/70 font-semibold">Educator · TED's most-watched speaker · cited 89M+ times</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
 
-      {/* SECTION 7: MEASURABLE RESULTS / METRICS (Moved up from Section 9) */}
-      <section className="bg-lavender py-24 px-6 relative overflow-hidden">
-        {/* Background wavy pink stroke line with orange starburst */}
+      {/* SECTION 7: MEASURABLE RESULTS / METRICS */}
+      <section className="py-12 px-6 relative overflow-hidden">
+        {/* Background curving peach line */}
         <div className="absolute inset-0 w-full h-full pointer-events-none -z-10">
-          <svg width="100%" height="100%" viewBox="0 0 1440 400" preserveAspectRatio="none">
+          <svg width="100%" height="100%" viewBox="0 0 1440 300" preserveAspectRatio="none">
             <path
-              d="M -50 380 C 200 260, 350 130, 520 150 C 690 170, 780 250, 920 220 C 1100 180, 1250 80, 1380 48"
+              d="M -50 250 C 300 200, 500 80, 800 120 C 1100 160, 1250 80, 1500 50"
               stroke="#FED2B3"
               strokeWidth="8"
               strokeLinecap="round"
               fill="none"
             />
           </svg>
-          {/* Starburst absolute positioned to align with the path end */}
-          <div className="absolute top-[10%] right-[3%] md:right-[4%] lg:right-[5%] transform translate-x-1/2 -translate-y-1/2">
-            <svg viewBox="0 0 100 100" fill="#FF7122" className="w-16 h-16 md:w-20 md:h-20" style={{ animation: "spin 25s linear infinite" }}>
-              <path d="M50 0 L56 12 L68 6 L70 19 L82 17 L80 30 L91 32 L85 44 L95 50 L85 56 L91 68 L80 70 L82 83 L70 81 L68 94 L56 88 L50 100 L44 88 L32 94 L30 81 L18 83 L20 70 L9 68 L15 56 L5 50 L15 44 L9 32 L20 30 L18 17 L30 19 L32 6 L44 12 Z" />
-            </svg>
-          </div>
         </div>
 
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Left-aligned Header */}
-          <h2 className="text-4xl md:text-5xl font-display font-black text-dark tracking-tight mb-16 text-left">
-            Design Education Delivers <br />
-            <span
-              style={{
-                fontFamily: "var(--font-instrument), serif",
-                fontWeight: 400,
-              }}
-              className="text-primary italic font-normal text-4xl md:text-[52px] lg:text-[56px] block mt-1"
-            >
-              measurable results
-            </span>
-          </h2>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12">
-
-            {/* Metric 1 */}
-            <div className="flex flex-col items-start text-left">
-              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
-                91<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">%</span>
+          <div className="lg:col-span-5 text-left">
+            <h2 className="text-4xl md:text-5xl font-display font-black text-dark tracking-tight">
+              Design Education Delivers <br />
+              <span
+                style={{
+                  fontFamily: "var(--font-instrument), serif",
+                  fontWeight: 400,
+                }}
+                className="text-primary italic font-normal text-4xl md:text-[52px] lg:text-[56px] block mt-1"
+              >
+                measurable results
               </span>
-              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">HIGHER CONFIDENCE</h4>
-              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
-                Students self-report higher creative confidence after a single DEZU cohort.
-              </p>
-            </div>
+            </h2>
+          </div>
 
-            {/* Metric 2 */}
-            <div className="flex flex-col items-start text-left">
-              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
-                78<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">%</span>
-              </span>
-              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">BETTER COLLABORATION</h4>
-              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
-                Teachers observe stronger team dynamics in cross-subject project work.
-              </p>
-            </div>
+          {/* Metrics Orange Card */}
+          <div className="lg:col-span-7">
+            <div className="bg-secondary rounded-[32px] p-6 md:p-8 text-white grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch shadow-md relative overflow-hidden" style={{ border: "1.06px solid #15140F" }}>
+              
+              {/* Metric 1 */}
+              <div className="flex flex-col justify-between text-left">
+                <span className="text-4xl md:text-[42px] lg:text-[48px] font-display font-black leading-none mb-2">91%</span>
+                <p className="text-[10px] md:text-xs text-white/90 leading-snug font-medium">of students showed improvement in creative confidence</p>
+              </div>
 
-            {/* Metric 3 */}
-            <div className="flex flex-col items-start text-left">
-              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
-                3<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">x</span>
-              </span>
-              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">MORE PARTICIPATION</h4>
-              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
-                Quiet students contribute three times more often in studio-format classes.
-              </p>
-            </div>
+              {/* Metric 2 */}
+              <div className="flex flex-col justify-between text-left md:border-l md:border-white/20 md:pl-4">
+                <span className="text-4xl md:text-[42px] lg:text-[48px] font-display font-black leading-none mb-2">78%</span>
+                <p className="text-[10px] md:text-xs text-white/90 leading-snug font-medium">of students improved critical thinking skills</p>
+              </div>
 
-            {/* Metric 4 */}
-            <div className="flex flex-col items-start text-left">
-              <span className="text-6xl md:text-8xl font-display font-black text-dark tracking-tight leading-none mb-4 inline-flex items-baseline">
-                100<span className="text-3xl md:text-5xl font-black text-dark ml-0.5">%</span>
-              </span>
-              <h4 className="text-[10px] font-black tracking-wider text-dark/80 uppercase mb-2">PROJECT COMPLETION</h4>
-              <p className="text-xs md:text-sm text-dark/70 leading-relaxed font-semibold max-w-[240px]">
-                Every student finishes the program with a presented, peer-reviewed prototype.
-              </p>
-            </div>
+              {/* Metric 3 */}
+              <div className="flex flex-col justify-between text-left md:border-l md:border-white/20 md:pl-4">
+                <span className="text-4xl md:text-[42px] lg:text-[48px] font-display font-black leading-none mb-2">3x</span>
+                <p className="text-[10px] md:text-xs text-white/90 leading-snug font-medium">increase in problem solving ability</p>
+              </div>
 
+              {/* Metric 4 */}
+              <div className="flex flex-col justify-between text-left md:border-l md:border-white/20 md:pl-4">
+                <span className="text-4xl md:text-[42px] lg:text-[48px] font-display font-black leading-none mb-2">100%</span>
+                <p className="text-[10px] md:text-xs text-white/90 leading-snug font-medium">teachers would recommend Dezu programs</p>
+              </div>
+
+            </div>
           </div>
         </div>
       </section>
