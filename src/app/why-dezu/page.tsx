@@ -34,13 +34,14 @@ export default function WhyDezu() {
       <style dangerouslySetInnerHTML={{
         __html: `
         @keyframes marquee {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(-50%, 0, 0); }
         }
         .animate-marquee-inline {
           display: flex;
           width: max-content;
           animation: marquee 25s linear infinite;
+          will-change: transform;
         }
       `}} />
 
@@ -69,30 +70,15 @@ export default function WhyDezu() {
               <span className="font-sans font-medium text-dark text-3xl md:text-5xl mx-2 align-baseline">
                 by
               </span>
-              <span className="text-primary relative font-normal font-serif italic tracking-wide whitespace-nowrap">
+              <span className="text-primary relative font-normal font-serif italic tracking-wide whitespace-nowrap mr-3">
                 real-time experts
-                {/* Custom Orange Paint Stroke */}
-                <img
-                  src={creatorsUnderline.src}
-                  alt="underline"
-                  className="absolute bottom-[-15px] left-0 w-full object-contain"
-                />
               </span>
               <br />
-              from <span className="font-extrabold">Different</span>{" "}
-              <span className="text-primary relative font-normal font-serif italic tracking-wide">
-                industries.
-                {/* Custom Orange Paint Stroke */}
-                <img
-                  src={creatorsUnderline.src}
-                  alt="underline"
-                  className="absolute bottom-[-15px] left-0 w-full object-contain"
-                />
-              </span>
+              <span className="font-display font-black">from Different Industries</span>
             </h1>
 
             <p className="text-base md:text-lg font-medium max-w-xl mb-8 leading-relaxed mt-4 text-[#1E293BCC]">
-              Dezu bridges the foundational academic years with the pulse of modern design, founding, planning, and design-thinking. We connect practicing designers, technology innovators, architects, and researchers directly with school environments.
+              We believe that real and future-forward learning should be integrated in students right from schooling. We bring practicing designers, technology innovators, architects, and researchers to directly teach from their experience.
             </p>
 
             <Link
@@ -101,7 +87,7 @@ export default function WhyDezu() {
               rel="noopener noreferrer"
               className="bg-secondary text-white px-8 py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg inline-flex items-center gap-2 hover:translate-x-1 duration-200 mt-2"
             >
-              More On dezu <ArrowRight size={18} />
+              Check out Studio Dezu <ArrowRight size={18} />
             </Link>
           </div>
 
@@ -154,19 +140,19 @@ export default function WhyDezu() {
           <div className="lg:col-span-6 space-y-8 text-left">
             <div>
               <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight mb-4">
-                Who are <span className="font-serif italic font-normal text-primary">we</span>?
+                Who <span className="font-serif italic font-normal text-primary">we</span> are?
               </h2>
               <p className="text-base md:text-lg font-medium leading-relaxed text-[#1E293BCC]">
-                Dezu is a design education platform that bridges the gap between classroom learning and industry practice. We bring working professionals into schools to teach, mentor, and inspire the next generation of creative thinkers.
+                Dezu started as a futuristic design studio that helps companies transform through design and user experience. We build user-first brands, systems and products for emerging innovation.
               </p>
             </div>
 
             <div>
               <h2 className="text-3xl md:text-4xl font-serif italic font-normal text-primary leading-tight mb-4">
-                design X education
+                dezu X education
               </h2>
               <p className="text-base md:text-lg font-medium leading-relaxed text-[#1E293BCC]">
-                Through hands-on workshops, semester-long programs, and year-round partnerships, we help schools integrate real-world design thinking, innovation, and problem-solving into their curriculum.
+                We discovered that a more robust and hands-on design education is critical for an AI-driven future. This led us to start building a integrated design ecosystem where education and execution go hand-in-hand.
               </p>
             </div>
 
@@ -194,58 +180,58 @@ export default function WhyDezu() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
 
-              {/* Card 1: Industry Studios */}
+              {/* Card 1: Clients */}
               <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
                 <div className="text-secondary">
                   <Briefcase size={28} className="stroke-[2.5]" />
                 </div>
                 <div className="mt-6">
-                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">20+</span>
-                  <h3 className="text-base font-display font-black text-dark mb-2">Industry Studios</h3>
+                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">50+</span>
+                  <h3 className="text-base font-display font-black text-dark mb-2">Clients</h3>
                   <p className="text-xs text-dark/75 font-semibold leading-relaxed">
-                    Practicing creative labs offering studio modules directly to partner classrooms.
+                    We have designed and delivered to clients across the globe.
                   </p>
                 </div>
               </div>
 
-              {/* Card 2: Partner Schools */}
+              {/* Card 2: University Partnerships */}
               <div className="bg-primary text-white rounded-3xl p-8 border border-white/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1 shadow-lg">
                 <div className="text-secondary">
                   <BookOpen size={28} className="stroke-[2.5]" />
                 </div>
                 <div className="mt-6">
-                  <span className="text-3xl md:text-4xl font-display font-black text-white block mb-1">50+</span>
-                  <h3 className="text-base font-display font-black text-white mb-2">Partner Schools</h3>
+                  <span className="text-3xl md:text-4xl font-display font-black text-white block mb-1">5+</span>
+                  <h3 className="text-base font-display font-black text-white mb-2">University Partnerships</h3>
                   <p className="text-xs text-white/80 font-medium leading-relaxed">
+                    We are partnered with top universities where we drive real-time learning.
+                  </p>
+                </div>
+              </div>
+
+              {/* Card 3: Partner Schools */}
+              <div className="bg-[#FFE5D3] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
+                <div className="text-secondary">
+                  <BookOpen size={28} className="stroke-[2.5]" />
+                </div>
+                <div className="mt-6">
+                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">10+</span>
+                  <h3 className="text-base font-display font-black text-dark mb-2">Partner Schools</h3>
+                  <p className="text-xs text-dark/75 font-semibold leading-relaxed">
                     Leading educational institutions running standard Dezu-powered classes weekly.
                   </p>
                 </div>
               </div>
 
-              {/* Card 3: Students Educated */}
-              <div className="bg-[#FFE5D3] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
+              {/* Card 4: Students Educated */}
+              <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
                 <div className="text-secondary">
                   <Users size={28} className="stroke-[2.5]" />
                 </div>
                 <div className="mt-6">
-                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">1000+</span>
+                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">350+</span>
                   <h3 className="text-base font-display font-black text-dark mb-2">Students Educated</h3>
                   <p className="text-xs text-dark/75 font-semibold leading-relaxed">
-                    Active school kids acquiring design research, sketching, and prototype capabilities.
-                  </p>
-                </div>
-              </div>
-
-              {/* Card 4: Projects Built */}
-              <div className="bg-[#F2EFE9] rounded-3xl p-8 border border-dark/5 text-left flex flex-col justify-between min-h-[240px] transition-transform hover:-translate-y-1">
-                <div className="text-secondary">
-                  <Sparkles size={28} className="stroke-[2.5]" />
-                </div>
-                <div className="mt-6">
-                  <span className="text-3xl md:text-4xl font-display font-black text-dark block mb-1">200+</span>
-                  <h3 className="text-base font-display font-black text-dark mb-2">Projects Built</h3>
-                  <p className="text-xs text-dark/75 font-semibold leading-relaxed">
-                    Real functional ideas, models, physical architecture prototypes, and user layouts.
+                    Active students acquiring design research, sketching, and prototype capabilities.
                   </p>
                 </div>
               </div>
@@ -268,27 +254,41 @@ export default function WhyDezu() {
           </p>
         </div>
 
-        <div className="animate-marquee-inline whitespace-nowrap flex items-center gap-24 text-3xl md:text-4xl font-black text-[#94A3B8] select-none">
-          <span>Adobe</span>
-          <span>Google</span>
-          <span>Microsoft</span>
-          <span>Figma</span>
-          <span>Zoho</span>
-          <span>TCS</span>
-
-          <span>Adobe</span>
-          <span>Google</span>
-          <span>Microsoft</span>
-          <span>Figma</span>
-          <span>Zoho</span>
-          <span>TCS</span>
-
-          <span>Adobe</span>
-          <span>Google</span>
-          <span>Microsoft</span>
-          <span>Figma</span>
-          <span>Zoho</span>
-          <span>TCS</span>
+        <div className="w-full overflow-hidden py-4">
+          <div className="animate-marquee-inline flex w-max">
+            <div className="flex gap-16 md:gap-24 pr-16 md:pr-24 items-center text-3xl md:text-4xl font-black text-[#94A3B8] select-none">
+              <span>Adobe</span>
+              <span>Google</span>
+              <span>Microsoft</span>
+              <span>Figma</span>
+              <span>Zoho</span>
+              <span>TCS</span>
+            </div>
+            <div className="flex gap-16 md:gap-24 pr-16 md:pr-24 items-center text-3xl md:text-4xl font-black text-[#94A3B8] select-none">
+              <span>Adobe</span>
+              <span>Google</span>
+              <span>Microsoft</span>
+              <span>Figma</span>
+              <span>Zoho</span>
+              <span>TCS</span>
+            </div>
+            <div className="flex gap-16 md:gap-24 pr-16 md:pr-24 items-center text-3xl md:text-4xl font-black text-[#94A3B8] select-none">
+              <span>Adobe</span>
+              <span>Google</span>
+              <span>Microsoft</span>
+              <span>Figma</span>
+              <span>Zoho</span>
+              <span>TCS</span>
+            </div>
+            <div className="flex gap-16 md:gap-24 pr-16 md:pr-24 items-center text-3xl md:text-4xl font-black text-[#94A3B8] select-none">
+              <span>Adobe</span>
+              <span>Google</span>
+              <span>Microsoft</span>
+              <span>Figma</span>
+              <span>Zoho</span>
+              <span>TCS</span>
+            </div>
+          </div>
         </div>
       </section>
 

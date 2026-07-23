@@ -185,7 +185,7 @@ export default function Home() {
                 download="dezu schools Browcher.pdf"
                 className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 w-full sm:w-auto text-center"
               >
-                Workshop Brochure <Download size={18} />
+                Workshop brochure <Download size={18} />
               </a>
             </div>
           </div>
@@ -518,9 +518,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8">
 
             {/* Card 01 - Critical Thinking (Cognition) */}
-            <div className="bg-primary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
+            <div className="bg-primary rounded-[32px] p-6 text-white flex flex-col justify-between min-h-[230px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <span className="text-[10px] font-bold tracking-widest text-white/60 uppercase">01 · COGNITION</span>
-              <div className="mt-8">
+              <div className="mt-4">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
                   Critical <br /> Thinking
                 </h3>
@@ -531,9 +531,9 @@ export default function Home() {
             </div>
 
             {/* Card 02 - Creative Confidence (Confidence) */}
-            <div className="bg-[#E4DDFF] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#E4DDFF" }}>
+            <div className="bg-[#E4DDFF] rounded-[32px] p-6 text-dark flex flex-col justify-between min-h-[230px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#E4DDFF" }}>
               <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">02 · CONFIDENCE</span>
-              <div className="mt-8">
+              <div className="mt-4">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
                   Creative <br /> Confidence
                 </h3>
@@ -544,9 +544,9 @@ export default function Home() {
             </div>
 
             {/* Card 03 - Innovation Mindset (Mindset) */}
-            <div className="bg-[#F2F1EC] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#F2F1EC" }}>
+            <div className="bg-[#F2F1EC] rounded-[32px] p-6 text-dark flex flex-col justify-between min-h-[230px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#F2F1EC" }}>
               <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">03 · MINDSET</span>
-              <div className="mt-8">
+              <div className="mt-4">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
                   Innovation <br /> Mindset
                 </h3>
@@ -557,9 +557,9 @@ export default function Home() {
             </div>
 
             {/* Card 04 - Human-Centered Problem Solving (Empathy) */}
-            <div className="bg-[#F2F1EC] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#F2F1EC" }}>
+            <div className="bg-[#F2F1EC] rounded-[32px] p-6 text-dark flex flex-col justify-between min-h-[230px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-4 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#F2F1EC" }}>
               <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">04 · EMPATHY</span>
-              <div className="mt-8">
+              <div className="mt-4">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
                   Human-Centered <br /> Problem Solving
                 </h3>
@@ -570,9 +570,9 @@ export default function Home() {
             </div>
 
             {/* Card 05 - AI Readiness (Fluency) */}
-            <div className="bg-[#FED2B3] rounded-[32px] p-8 text-dark flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#FED2B3" }}>
+            <div className="bg-[#FED2B3] rounded-[32px] p-6 text-dark flex flex-col justify-between min-h-[230px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-3 md:col-span-1" style={{ border: "1.06px solid #15140F", backgroundColor: "#FED2B3" }}>
               <span className="text-[10px] font-bold tracking-widest text-dark/50 uppercase">05 · FLUENCY</span>
-              <div className="mt-8">
+              <div className="mt-4">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
                   AI <br /> Readiness
                 </h3>
@@ -583,9 +583,9 @@ export default function Home() {
             </div>
 
             {/* Card 06 - Communication Skills (Voice) */}
-            <div className="bg-secondary rounded-[32px] p-8 text-white flex flex-col justify-between min-h-[320px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
+            <div className="bg-secondary rounded-[32px] p-6 text-white flex flex-col justify-between min-h-[230px] shadow-sm hover:-translate-y-1 hover:shadow-lg transition-all duration-300 relative overflow-hidden group lg:col-span-5 md:col-span-1" style={{ border: "1.06px solid #15140F" }}>
               <span className="text-[10px] font-bold tracking-widest text-white/60 uppercase">06 · VOICE</span>
-              <div className="mt-8">
+              <div className="mt-4">
                 <h3 className="text-3xl font-display font-black tracking-tight leading-none mb-3 uppercase group-hover:translate-x-1 transition-transform duration-300">
                   Communication <br /> Skills
                 </h3>
@@ -737,7 +737,7 @@ export default function Home() {
                   href="/contact"
                   className="bg-secondary text-white w-full py-4 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200"
                 >
-                  Request workshop dates <ArrowRight size={18} />
+                  Book a workshop <ArrowRight size={18} />
                 </Link>
               </div>
             </div>
@@ -831,7 +831,7 @@ export default function Home() {
           {/* Metrics Orange Card */}
           <div className="lg:col-span-7">
             <div className="bg-secondary rounded-[32px] p-6 md:p-8 text-white grid grid-cols-2 md:grid-cols-4 gap-6 items-stretch shadow-md relative overflow-hidden" style={{ border: "1.06px solid #15140F" }}>
-              
+
               {/* Metric 1 */}
               <div className="flex flex-col justify-between text-left">
                 <span className="text-4xl md:text-[42px] lg:text-[48px] font-display font-black leading-none mb-2">91%</span>
@@ -867,23 +867,41 @@ export default function Home() {
           {/* Decorative Orange Grid Boxes */}
           <div className="absolute bottom-[-80px] left-[-56px] w-20 h-20 bg-[#FF7122] -z-10"></div>
           <div className="absolute bottom-0 left-[24px] w-20 h-20 bg-[#FF7122] -z-10"></div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-end mb-16">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                Taught By Practicing <br />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
+            <div className="lg:col-span-7">
+              <h2 className="text-4xl md:text-5xl lg:text-[54px] font-display font-black text-dark leading-tight text-left">
+                <span className="bg-primary text-white px-5 py-1 rounded-3xl font-display font-black text-2xl md:text-4xl inline-block mr-2 align-middle">
+                  Taught
+                </span>{" "}
+                <span className="align-middle">by</span>{" "}
                 <span
                   style={{
                     fontFamily: "var(--font-instrument), serif",
                     fontWeight: 400,
                   }}
-                  className="text-primary italic font-normal text-5xl md:text-6xl"
+                  className="text-primary italic font-normal text-3xl md:text-5xl inline-block align-middle ml-1 mr-3"
                 >
-                  Professionals
+                  real-time experts
+                </span>{" "}
+                <br />
+                <span className="font-display font-black text-dark">
+                  from Different Industries
                 </span>
               </h2>
             </div>
-            <div className="text-dark/75 font-medium max-w-md">
-              Our facilitators are working designers, technologists and researchers who bring real-world studio experience into your school. Every mentor is vetted, trained and DEZU-certified.
+
+            <div className="lg:col-span-5 flex flex-col items-start justify-between text-left">
+              <p className="text-dark/75 font-medium leading-relaxed text-sm md:text-base">
+                We believe that real and future-forward learning should be integrated in students right from schooling. We bring practicing designers, technology innovators, architects, and researchers to directly teach from their experience.
+              </p>
+              <div className="mt-6">
+                <Link
+                  href="/why-dezu"
+                  className="bg-secondary text-white px-7 py-3 rounded-full font-bold hover:bg-opacity-95 transition shadow-lg flex items-center justify-center gap-2 hover:translate-x-1 duration-200 inline-flex font-display text-sm md:text-base"
+                >
+                  Check out Studio Dezu <ArrowRight size={18} />
+                </Link>
+              </div>  
             </div>
           </div>
 
@@ -985,114 +1003,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SECTION 9: TRUSTED BY SCHOOLS (Moved down from Section 2) */}
-      <section id="programs" className="py-20 w-full relative overflow-visible">
-        {/* Diagonal Orange Band Image */}
-        <img
-          src={secondSectionLine.src}
-          alt="Second Section Background Line"
-          className="absolute inset-0 w-full h-full -z-10 object-cover pointer-events-none"
-        />
 
-        <div className="max-w-7xl mx-auto px-6 w-full relative">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
-            <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-black text-dark leading-tight">
-                Trusted by <br />
-                <span
-                  style={{
-                    fontFamily: "var(--font-instrument), serif",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    lineHeight: "67.73px",
-                    letterSpacing: "-0.68px",
-                    verticalAlign: "middle"
-                  }}
-                  className="text-primary inline-block"
-                >
-                  forward thinking
-                </span> <br />
-                Schools Across India
-              </h2>
-            </div>
-
-            {/* Slider Arrow Controls */}
-            <div className="flex gap-4">
-              <button
-                onClick={() => scroll('left')}
-                className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
-              >
-                <ArrowLeft size={20} />
-              </button>
-              <button
-                onClick={() => scroll('right')}
-                className="w-12 h-12 rounded-full bg-secondary text-white flex items-center justify-center shadow-md hover:bg-opacity-90 active:scale-95 transition-all cursor-pointer"
-              >
-                <ArrowRight size={20} />
-              </button>
-            </div>
-          </div>
-
-          <div
-            ref={sliderRef}
-            onScroll={handleScroll}
-            className="flex overflow-x-auto pb-6 gap-6 scrollbar-hide w-full justify-start"
-          >
-            {[...cards, ...cards, ...cards].map((card, idx) => {
-              const cardContent = (
-                <div className="relative w-[300px] h-[375px] rounded-[22px] overflow-hidden shadow-lg border border-dark/5 bg-white flex flex-col justify-end">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark/90 via-dark/40 to-transparent"></div>
-
-                  <div className="relative p-6 text-white text-left">
-                    <h3
-                      style={{
-                        fontFamily: "var(--font-display), sans-serif",
-                        fontWeight: 400,
-                        fontSize: "24px",
-                        lineHeight: "24px",
-                        verticalAlign: "middle",
-                        textTransform: "uppercase"
-                      }}
-                      className="mb-1"
-                    >
-                      {card.title}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: "var(--font-sans), sans-serif",
-                        fontWeight: 400,
-                        fontSize: "13px",
-                        lineHeight: "20.15px",
-                        verticalAlign: "middle"
-                      }}
-                      className="text-white/80"
-                    >
-                      {card.location}
-                    </p>
-                  </div>
-                </div>
-              );
-
-              const wrapperClass = `group flex-shrink-0 ${card.tilt} hover:rotate-0 hover:scale-[1.02] transition-all duration-300`;
-
-              return card.link ? (
-                <Link key={idx} href={card.link} className={wrapperClass}>
-                  {cardContent}
-                </Link>
-              ) : (
-                <div key={idx} className={wrapperClass}>
-                  {cardContent}
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
 
       {/* SECTION 10: TESTIMONIALS (Moved up from Section 12) */}
       <section id="stories" className="py-24 bg-lavender px-6 overflow-hidden">
@@ -1138,8 +1049,6 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
                   <div className="lg:col-span-7">
                     <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight text-left">
-                      What the people <br />
-                      in the room{" "}
                       <span
                         style={{
                           fontFamily: "var(--font-instrument), serif",
@@ -1147,8 +1056,10 @@ export default function Home() {
                         }}
                         className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
                       >
-                        say.
-                      </span>
+                        real feedback
+                      </span>{" "}
+                      from <br />
+                      schools and parents
                     </h2>
                   </div>
                   <div className="lg:col-span-5 text-dark/75 font-semibold leading-relaxed text-left lg:max-w-md lg:ml-auto">
@@ -1203,7 +1114,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-16">
             <div className="lg:col-span-6">
               <h2 className="text-4xl md:text-5xl font-display font-black text-dark leading-tight">
-                From first call to first <br />
+                From first call to <br />
                 <span
                   style={{
                     fontFamily: "var(--font-instrument), serif",
@@ -1211,13 +1122,13 @@ export default function Home() {
                   }}
                   className="text-primary italic font-normal text-[1.15em] inline-block leading-none"
                 >
-                  studio
+                  workshop
                 </span>{" "}
-                in 4 weeks.
+                in 4 steps.
               </h2>
             </div>
             <div className="lg:col-span-6 text-dark/75 font-medium leading-relaxed">
-              A calm, board-friendly onboarding. No hidden costs, no last-minute scrambling. Each week has named owners on both sides.
+              Our delivery process is smooth and school-friendly. We make sure that there are no hidden processes or expenses. Only clear communication and execution.
             </div>
           </div>
 
@@ -1226,7 +1137,7 @@ export default function Home() {
             {/* Week 1 */}
             <div className="bg-white rounded-3xl p-6 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[220px]">
               <div>
-                <span className="text-xs font-extrabold tracking-wider text-dark/50 uppercase block mb-3 font-display">WEEK 01</span>
+                <span className="text-xs font-extrabold tracking-wider text-dark/50 uppercase block mb-3 font-display">STEP 01</span>
                 <h3 className="text-2xl font-display font-black mb-2">Discovery Call</h3>
                 <p className="text-xs text-dark/75 leading-relaxed font-semibold">
                   30-minute call with your academic team. We listen to your vision and constraints.
@@ -1238,7 +1149,7 @@ export default function Home() {
             {/* Week 2 */}
             <div className="bg-white rounded-3xl p-6 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[220px]">
               <div>
-                <span className="text-xs font-extrabold tracking-wider text-dark/50 uppercase block mb-3 font-display">WEEK 02</span>
+                <span className="text-xs font-extrabold tracking-wider text-dark/50 uppercase block mb-3 font-display">STEP 02</span>
                 <h3 className="text-2xl font-display font-black mb-2">Program Planning</h3>
                 <p className="text-xs text-dark/75 leading-relaxed font-semibold">
                   We propose a tailored program brief, mentor mix and reporting model for board sign-off.
@@ -1250,7 +1161,7 @@ export default function Home() {
             {/* Week 3 */}
             <div className="bg-white rounded-3xl p-6 shadow-md border border-dark/5 text-left flex flex-col justify-between min-h-[220px]">
               <div>
-                <span className="text-xs font-extrabold tracking-wider text-dark/50 uppercase block mb-3 font-display">WEEK 03</span>
+                <span className="text-xs font-extrabold tracking-wider text-dark/50 uppercase block mb-3 font-display">STEP 03</span>
                 <h3 className="text-2xl font-display font-black mb-2">School Coordination</h3>
                 <p className="text-xs text-dark/75 leading-relaxed font-semibold">
                   Calendar lock-in, parent communication kit, room readiness, kit-of-parts shipped.
@@ -1262,7 +1173,7 @@ export default function Home() {
             {/* Week 4 */}
             <div className="bg-primary text-white rounded-3xl p-6 shadow-lg text-left flex flex-col justify-between min-h-[220px]">
               <div>
-                <span className="text-xs font-extrabold tracking-wider text-white/60 uppercase block mb-3 font-display">WEEK 04</span>
+                <span className="text-xs font-extrabold tracking-wider text-white/60 uppercase block mb-3 font-display">STEP 04</span>
                 <h3 className="text-2xl font-display font-black mb-2">Workshop Delivery</h3>
                 <p className="text-xs text-white/80 leading-relaxed font-medium">
                   Studio goes live on your campus. Final debrief with academic head.
@@ -1302,7 +1213,7 @@ export default function Home() {
             download="dezu schools Browcher.pdf"
             className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 w-full sm:w-auto text-center font-display"
           >
-            Download brochure <ArrowDown size={18} />
+            Workshop brochure <ArrowDown size={18} />
           </a>
         </div>
       </section>

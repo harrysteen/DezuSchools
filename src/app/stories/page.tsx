@@ -348,7 +348,7 @@ export default function Stories() {
                   </svg>
                 </div>
                 <div className="text-4xl md:text-5xl font-display font-black text-white mb-2">
-                  48<span className="text-[#FF6A1F] font-sans font-bold">+</span>
+                  10<span className="text-[#FF6A1F] font-sans font-bold">+</span>
                 </div>
                 <p className="text-sm text-white/70 font-semibold tracking-wide">Schools Partnered</p>
               </div>
@@ -361,7 +361,7 @@ export default function Stories() {
                   </svg>
                 </div>
                 <div className="text-4xl md:text-5xl font-display font-black text-white mb-2">
-                  1,500<span className="text-[#FF6A1F] font-sans font-bold">+</span>
+                  35<span className="text-[#FF6A1F] font-sans font-bold">+</span>
                 </div>
                 <p className="text-sm text-white/70 font-semibold tracking-wide">Students Impacted</p>
               </div>
@@ -375,7 +375,7 @@ export default function Stories() {
                   </svg>
                 </div>
                 <div className="text-4xl md:text-5xl font-display font-black text-white mb-2">
-                  12
+                  3
                 </div>
                 <p className="text-sm text-white/70 font-semibold tracking-wide">Cities Reached</p>
               </div>
@@ -991,7 +991,7 @@ export default function Stories() {
             download="dezu schools Browcher.pdf"
             className="border-2 border-[#FF6A1F] text-[#FF6A1F] hover:bg-[#FF6A1F] hover:text-white px-8 py-4 rounded-full font-bold transition flex items-center justify-center gap-2 duration-200 w-full sm:w-auto text-center font-display"
           >
-            Download brochure <Download size={18} />
+            Workshop brochure <Download size={18} />
           </a>
         </div>
       </section>

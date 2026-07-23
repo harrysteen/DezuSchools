@@ -133,7 +133,7 @@ export default function WorkshopPage() {
                 download="dezu schools Browcher.pdf"
                 className="border-2 border-secondary text-secondary font-bold px-8 py-4 rounded-full hover:bg-secondary/5 transition flex items-center justify-center gap-2 w-full sm:w-auto text-center"
               >
-                Download brochure <Download size={18} />
+                Workshop brochure <Download size={18} />
               </a>
             </div>
           </div>
@@ -480,7 +480,7 @@ export default function WorkshopPage() {
               href="#download"
               className="border-2 border-secondary text-secondary font-bold px-8 py-4 rounded-full hover:bg-secondary/5 transition flex items-center justify-center gap-2 w-full sm:w-auto"
             >
-              Download brochure <Download size={18} />
+              Workshop brochure <Download size={18} />
             </a>
           </div>
         </div>
